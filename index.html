@@ -69,6 +69,7 @@
   .gcard .gh{padding:15px 17px 4px}
   .gname{font-size:16.5px;font-weight:bold;display:flex;align-items:center;gap:8px;letter-spacing:-.2px}
   .gkick{font-size:9.5px;font-weight:bold;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .gper{display:inline-block;font-size:11.5px;font-weight:bold;color:var(--ragga);background:var(--ragga-soft);border:1px solid #D8E0F7;border-radius:20px;padding:5px 11px;margin:10px 0 2px;line-height:1.35}
   .dono{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:bold;padding:5px 11px;border-radius:18px;margin-top:9px;width:max-content}
   .dono .av{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:bold;flex:none}
   .gobj{font-size:12.5px;font-weight:bold;color:var(--muted);margin-top:7px;line-height:1.35}
@@ -97,6 +98,20 @@
   details.tg pre{margin:0;padding:11px 13px;font-family:"DejaVu Sans Mono",Consolas,monospace;font-size:12px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word;background:#fff;border-top:1px dashed var(--line)}
   details.tg .copy{width:100%;border:none;border-top:1px solid var(--line);background:#fff;color:var(--ragga);font-weight:bold;font-size:12.5px;padding:9px;cursor:pointer}
   details.tg .copy:hover{background:var(--ragga-soft)}
+  .pdfpad{margin-top:20px;background:#fff;border:1px solid var(--line);border-left:6px solid #C9781A;border-radius:14px;padding:16px 18px}
+  .pdfpad .ph{font-size:14px;font-weight:bold;color:#9A5A12;margin-bottom:4px}
+  .pdfpad .pp{font-size:13px;font-weight:bold;color:var(--muted);margin-bottom:10px}
+  .pdfpad pre{margin:0 0 10px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 13px;font-family:"DejaVu Sans Mono",Consolas,monospace;font-size:12.5px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word;color:var(--ink)}
+  .pdfpad .copy{font-family:Arial;font-size:13px;font-weight:bold;color:var(--ragga);background:var(--ragga-soft);border:1px solid #D8E0F7;border-radius:10px;padding:9px 14px;cursor:pointer}
+  .pdfpad .copy:hover{background:var(--ragga);color:#fff}
+  .konuse{margin-top:20px;background:#fff;border:1px solid var(--line);border-left:6px solid #C9781A;border-radius:14px;padding:16px 18px}
+  .konuse .kh{font-size:14px;font-weight:bold;color:#9A5A12;margin-bottom:10px}
+  .konuse .kgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .konuse .kc{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+  .konuse .kc b{display:block;font-size:12.5px;color:var(--ink);margin-bottom:3px}
+  .konuse .kc span{font-size:12px;color:var(--muted);line-height:1.45}
+  .konuse .kfoot{margin-top:11px;font-size:12.5px;color:var(--muted)}
+  @media(max-width:560px){.konuse .kgrid{grid-template-columns:1fr}}
 
   .donos{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:13px;margin-top:28px}
   .pcard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:18px;display:flex;gap:13px;align-items:flex-start}
@@ -111,6 +126,8 @@
   .stepcard h4{font-size:16.5px;margin-bottom:5px} .stepcard p{font-size:14px;color:var(--muted)}
   .stepcard .badge{display:inline-block;font-size:10.5px;font-weight:bold;letter-spacing:.7px;text-transform:uppercase;padding:3px 10px;border-radius:18px;margin-top:8px}
   .b-dec{background:#FBE7E4;color:var(--comercial-ink)} .b-build{background:var(--ragga-soft);color:var(--ragga)} .b-go{background:var(--compras-bg);color:var(--compras-ink)}
+  .prazo{display:inline-block;font-size:11.5px;font-weight:bold;padding:4px 12px;border-radius:18px;margin-top:9px;background:var(--ragga);color:#fff;letter-spacing:.2px}
+  .prazo.est{background:var(--ragga-soft);color:var(--ragga)}
 
   footer{padding:36px 0 56px;background:#fff}
   footer .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
@@ -265,6 +282,7 @@
       <a href="#grupos">Grupos & Indicadores</a>
       <a href="#donos">Donos</a>
       <a href="#fim">Próximos passos</a>
+      <a href="#construcao">Construção</a>
       <a href="#agente-gerador">Agente</a>
     </div>
   </div>
@@ -276,8 +294,8 @@
     <h1>Comunicação &amp; Indicadores <b>da Operação</b></h1>
     <p class="lede">Estrutura de grupos por setor, alimentada pelo KONCLUI e pelo WhatsApp, com indicadores de gestão da Ragga e fechamento consolidado para a diretoria.</p>
     <div class="stat-row">
-      <div class="stat"><div class="n">17</div><div class="l">Grupos de WhatsApp</div></div>
-      <div class="stat"><div class="n">6</div><div class="l">Áreas de gestão</div></div>
+      <div class="stat"><div class="n">18</div><div class="l">Grupos de WhatsApp</div></div>
+      <div class="stat"><div class="n">7</div><div class="l">Áreas de gestão</div></div>
       <div class="stat"><div class="n">10</div><div class="l">Donos responsáveis</div></div>
       <div class="stat"><div class="n">1</div><div class="l">Unidade-piloto</div></div>
     </div>
@@ -289,7 +307,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">01</span><span class="sec-kicker">Roadmap visual · O caminho da informação</span></div>
     <h2>Do operador à diretoria</h2>
-    <p class="sec-intro">A informação nasce com os líderes da unidade: parte vai direto nos grupos de WhatsApp, parte é registrada no KONCLUI e cai no grupo como relatório em PDF. Tudo converge no WhatsApp, passa pelas áreas da Ragga Gestão &amp; Educação e chega consolidada à diretoria.</p>
+    <p class="sec-intro">A informação nasce com os líderes da unidade. Cozinha, caixa e delivery registram o checklist no KONCLUI, que vira relatório em PDF (com texto-padrão) no grupo. Os gerentes administrativo e noturno reportam direto no grupo de WhatsApp — e têm no KONCLUI um checklist de rotina, só de conferência interna do fechamento. Tudo converge no WhatsApp, passa pelas áreas da Ragga Gestão &amp; Educação e chega consolidada à diretoria.</p>
     <div class="flowbox">
       <svg viewBox="0 0 960 690" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxograma do roadmap da operação">
         <defs>
@@ -312,15 +330,15 @@
           <text x="370" y="116" font-size="11.5" font-weight="bold" fill="#9A5A12">→ checklist KONCLUI</text>
           <g class="lk" onclick="openLider('gerente_adm')">
             <rect x="490" y="46" width="200" height="86" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
-            <text x="590" y="74"  font-size="13.5" font-weight="bold" fill="#22397A">Gerente</text>
-            <text x="590" y="92"  font-size="13.5" font-weight="bold" fill="#22397A">administrativo</text>
-            <text x="590" y="116" font-size="11.5" font-weight="bold" fill="#0E6B45">→ grupos de WhatsApp</text>
+            <text x="590" y="72"  font-size="13" font-weight="bold" fill="#22397A">Gerente administrativo</text>
+            <text x="590" y="96"  font-size="11.5" font-weight="bold" fill="#0E6B45">→ grupo de WhatsApp</text>
+            <text x="590" y="118" font-size="10" font-weight="bold" fill="#8A93A6">+ checklist de rotina</text>
           </g>
           <g class="lk" onclick="openLider('gerente_noturno')">
             <rect x="710" y="46" width="200" height="86" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
-            <text x="810" y="74"  font-size="13.5" font-weight="bold" fill="#22397A">Gerente</text>
-            <text x="810" y="92"  font-size="13.5" font-weight="bold" fill="#22397A">noturno</text>
-            <text x="810" y="116" font-size="11.5" font-weight="bold" fill="#0E6B45">→ grupos de WhatsApp</text>
+            <text x="810" y="72"  font-size="13" font-weight="bold" fill="#22397A">Gerente noturno</text>
+            <text x="810" y="96"  font-size="11.5" font-weight="bold" fill="#0E6B45">→ grupo de WhatsApp</text>
+            <text x="810" y="118" font-size="10" font-weight="bold" fill="#8A93A6">+ checklist de rotina</text>
           </g>
         </g>
         <g stroke="#2B4899" stroke-width="2" fill="none">
@@ -334,13 +352,13 @@
           <line x1="700" y1="156" x2="700" y2="184" marker-end="url(#ah)"/>
         </g>
         <rect x="120" y="186" width="280" height="80" rx="14" fill="#FBEFDB" stroke="#C9781A" stroke-width="1.8"/>
-        <text x="260" y="218" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#9A5A12">⚙️ KONCLUI</text>
-        <text x="260" y="240" text-anchor="middle" font-family="Arial" font-size="12.5" fill="#9A5A12">Checklist diário → relatório PDF</text>
+        <text x="260" y="214" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#9A5A12">⚙️ KONCLUI</text>
+        <text x="260" y="235" text-anchor="middle" font-family="Arial" font-size="12" fill="#9A5A12">Checklist-relatório → PDF</text>
         <rect x="560" y="186" width="280" height="80" rx="14" fill="#E4F4EC" stroke="#14915E" stroke-width="1.8"/>
-        <text x="700" y="218" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#0E6B45">💬 Grupos de WhatsApp</text>
-        <text x="700" y="240" text-anchor="middle" font-family="Arial" font-size="12.5" fill="#0E6B45">Canal único · comunicação por setor</text>
+        <text x="700" y="214" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#0E6B45">💬 Grupos de WhatsApp</text>
+        <text x="700" y="235" text-anchor="middle" font-family="Arial" font-size="12" fill="#0E6B45">Canal único · comunicação por setor</text>
         <line x1="400" y1="226" x2="558" y2="226" stroke="#C9781A" stroke-width="2.2" fill="none" marker-end="url(#ah)"/>
-        <text x="479" y="216" text-anchor="middle" font-family="Arial" font-size="11.5" font-weight="bold" fill="#9A5A12">PDF no grupo</text>
+        <text x="479" y="216" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#9A5A12">PDF + texto-padrão</text>
         <g stroke="#2B4899" stroke-width="2" fill="none">
           <line x1="700" y1="266" x2="700" y2="300"/>
           <line x1="700" y1="300" x2="480" y2="300"/>
@@ -349,19 +367,37 @@
         <rect x="60" y="340" width="840" height="152" rx="18" fill="#EAEEF8" stroke="#2B4899" stroke-width="2"/>
         <text x="480" y="372" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#22397A">RAGGA · GESTÃO &amp; EDUCAÇÃO</text>
         <text x="480" y="393" text-anchor="middle" font-family="Arial" font-size="12.5" fill="#5B6478">As áreas recebem, conferem e fazem o fechamento</text>
-        <g font-family="Arial" font-size="12.5" font-weight="bold" text-anchor="middle">
-          <rect x="92"  y="412" width="120" height="48" rx="11" fill="#E4F4EC" stroke="#14915E" stroke-width="1.4"/><text x="152" y="441" fill="#0E6B45">Compras</text>
-          <rect x="220" y="412" width="120" height="48" rx="11" fill="#E8ECF7" stroke="#2B4899" stroke-width="1.4"/><text x="280" y="441" fill="#22397A">Financeiro</text>
-          <rect x="348" y="412" width="120" height="48" rx="11" fill="#F2E9F8" stroke="#7A3CB0" stroke-width="1.4"/><text x="408" y="441" fill="#5E2D8A">Pessoas</text>
-          <rect x="476" y="412" width="120" height="48" rx="11" fill="#FBEFDB" stroke="#C9781A" stroke-width="1.4"/><text x="536" y="441" fill="#9A5A12">Operação</text>
-          <rect x="604" y="412" width="120" height="48" rx="11" fill="#FBE7E4" stroke="#D23B30" stroke-width="1.4"/><text x="664" y="441" fill="#A52D24">Delivery</text>
-          <rect x="732" y="412" width="120" height="48" rx="11" fill="#FAE7F3" stroke="#C0398F" stroke-width="1.4"/><text x="792" y="441" fill="#8E2A6B">Marketing</text>
+        <g font-family="Arial" font-size="11.5" font-weight="bold" text-anchor="middle">
+          <rect x="86"  y="412" width="104" height="48" rx="11" fill="#E4F4EC" stroke="#14915E" stroke-width="1.4"/><text x="138" y="441" fill="#0E6B45">Compras</text>
+          <rect x="200" y="412" width="104" height="48" rx="11" fill="#E8ECF7" stroke="#2B4899" stroke-width="1.4"/><text x="252" y="441" fill="#22397A">Financeiro</text>
+          <rect x="314" y="412" width="104" height="48" rx="11" fill="#F2E9F8" stroke="#7A3CB0" stroke-width="1.4"/><text x="366" y="441" fill="#5E2D8A">Pessoas</text>
+          <rect x="428" y="412" width="104" height="48" rx="11" fill="#FBEFDB" stroke="#C9781A" stroke-width="1.4"/><text x="480" y="441" fill="#9A5A12">Operação</text>
+          <rect x="542" y="412" width="104" height="48" rx="11" fill="#E3F4F1" stroke="#0E9C8E" stroke-width="1.4"/><text x="594" y="441" fill="#0B6F66">Qualidade</text>
+          <rect x="656" y="412" width="104" height="48" rx="11" fill="#FBE7E4" stroke="#D23B30" stroke-width="1.4"/><text x="708" y="441" fill="#A52D24">Delivery</text>
+          <rect x="770" y="412" width="104" height="48" rx="11" fill="#FAE7F3" stroke="#C0398F" stroke-width="1.4"/><text x="822" y="441" fill="#8E2A6B">Marketing</text>
         </g>
         <line x1="480" y1="492" x2="480" y2="566" stroke="#2B4899" stroke-width="2" fill="none" marker-end="url(#ah)"/>
         <rect x="340" y="568" width="280" height="76" rx="14" fill="#F2E9F8" stroke="#7A3CB0" stroke-width="2"/>
         <text x="480" y="600" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#5E2D8A">🏆 DIRETORIA</text>
         <text x="480" y="622" text-anchor="middle" font-family="Arial" font-size="12.5" fill="#5E2D8A">Recebe os fechamentos prontos → decisão</text>
       </svg>
+    </div>
+    <div class="konuse">
+      <div class="kh">⚙️ O KONCLUI tem dois usos diferentes</div>
+      <div class="kgrid">
+        <div class="kc"><b>📄 Checklist-relatório</b><span>Cozinha, caixa e delivery. O checklist vira PDF e vai pro grupo de WhatsApp com o texto-padrão. É a forma de reportar.</span></div>
+        <div class="kc"><b>✅ Checklist de rotina (fechamento)</b><span>Gerente administrativo e noturno. Conferência interna pra não esquecer nada — fechar portas, desligar gás, luzes, equipamentos. Não vira relatório, não vai pro grupo.</span></div>
+      </div>
+      <div class="kfoot">A comunicação do adm e do noturno (áudio de fechamento, ocorrências, números) vai <b>direto no grupo de WhatsApp</b> — é outra demanda.</div>
+    </div>
+    <div class="pdfpad">
+      <div class="ph">📎 Padrão de envio do relatório (PDF) no grupo</div>
+      <div class="pp">Para o PDF não ficar solto, mande sempre antes este texto-padrão e em seguida o arquivo:</div>
+      <pre id="pdfpad">📄 *RELATÓRIO — BIGG'S 13*
+🗂️ Tipo: ____ (Cozinha / Caixa / Delivery / Operação…)
+📅 Data: __/__ · 📆 ____ (dia da semana)
+📎 PDF do relatório em anexo 👇</pre>
+      <button class="copy" data-t="pdfpad">Copiar texto-padrão</button>
     </div>
     <div class="hint">👆 Clique em um líder (no diagrama ou nos cartões abaixo) para abrir o passo a passo</div>
     <div class="lidergrid" id="lider-cards"></div>
@@ -435,6 +471,29 @@
   </div>
 </section>
 
+<!-- 06 CONSTRUÇÃO EM PARALELO -->
+<section id="construcao">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><span class="sec-kicker">Construção em paralelo</span></div>
+    <h2>O que está sendo construído agora</h2>
+    <p class="sec-intro">Três frentes em andamento em paralelo à gestão dos grupos, cada uma com seu prazo.</p>
+    <div class="steps">
+      <div class="stepcard" style="border-left-color:var(--ragga)"><div class="k">🤖</div><div>
+        <h4>Dashboard de gestão automático · Área de Inovação (IA)</h4>
+        <p>A maior parte dos indicadores que já vivem em sistema passa a ser <b>enviada automaticamente</b> para os grupos. As respostas da loja são extraídas e viram um <b>dashboard de gestão</b>.</p>
+        <span class="prazo">📅 Prazo: 30 a 60 dias</span></div></div>
+      <div class="stepcard" style="border-left-color:var(--financeiro)"><div class="k">🗂️</div><div>
+        <h4>Nova arquitetura de pastas do Grupo Ragga</h4>
+        <p>Gestão 360 da organização de documentos: pastas de uso, estrutura padronizada e as planilhas usuais para a construção dos indicadores.</p>
+        <span class="prazo">📅 Prazo: 10/07</span></div></div>
+      <div class="stepcard" style="border-left-color:var(--operacao)"><div class="k">🏪</div><div>
+        <h4>Loja-piloto com novo sistema (Teknisa)</h4>
+        <p>Estudo para implantar o novo sistema em uma loja-piloto, com a operação cada vez mais <b>"no hands"</b> — tudo imputado direto no sistema.</p>
+        <span class="prazo est">🔎 Em estudo</span></div></div>
+    </div>
+  </div>
+</section>
+
 <div class="scrim" id="scrim" onclick="closeLider()"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true">
   <div class="dhead" id="dhead">
@@ -449,7 +508,7 @@
 <!-- 06 AGENTE GERADOR -->
 <section id="agente-gerador">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><span class="sec-kicker">Agente · Gerador de imagem</span></div>
+    <div class="sec-head"><span class="sec-num">07</span><span class="sec-kicker">Agente · Gerador de imagem</span></div>
     <h2>Joga a informação → sai a imagem de gestão</h2>
     <p class="sec-intro">Três formas de gerar a imagem: <b>Indicadores</b> (formulário por grupo), <b>Texto corrido</b> (cola um texto e vira imagem) ou <b>Arquivo</b> (sobe uma imagem ou um .txt). Depois é só baixar o PNG e enviar no WhatsApp.</p>
     <div id="ag-gen" class="genwrap">
@@ -461,7 +520,7 @@
         </div>
         <div class="row2">
           <div class="field"><label>Loja</label><input class="ag-loja" type="text" value="Bigg's 13"></div>
-          <div class="field"><label>Data</label><input class="ag-data" type="date"></div>
+          <div class="field"><label>Data / período</label><input class="ag-data" type="date"></div>
         </div>
         <div class="ag-mode" data-mode="form">
           <div class="field"><label>Grupo</label><select class="ag-select"><option value="">Selecione…</option></select></div>
@@ -502,35 +561,36 @@
 <script>
 const AREAS={comercial:'Comercial · Vendas',marketing:'Marketing',compras:'Compras & Estoque',financeiro:'Financeiro',operacao:'Operação',pessoas:'Pessoas · RH & DP'};
 const G=[
- {nome:'Performance + Vendas',obj:'Indicadores de venda da unidade, gerados pelo fechamento automático.',envia:'Loja acompanha · sugestões de venda e melhorias',area:'comercial',icon:'📊',av:'AG',dono:'Amanda Galvão',loja:['Acompanha os indicadores do dia','Sugestões de venda e melhorias'],ragga:['Ticket médio','% da meta','Salão × Delivery','Acumulado do mês'],rotina:'Fechamento de vendas automático (sistema) — sai pronto, diário.',modelo:"📊 *BIGGS 13 — ARTHUR THOMAS — Relatório do Dia 24/06/2026*\n💰 Faturamento Total: R$ 5.281,72\n🛒 Total de Vendas: 134 (134 clientes registrados)\n🏠 Comandas Salão: 68 comandas\n🎯 Ticket Médio Geral: R$ 39,42 | Salão: R$ 42,09 | Delivery: R$ 36,66\n\n💳 *Formas de Pagamento:*\nCartão de Crédito: 45,6% — R$ 2.409,99\nCartão de Débito: 16,1% — R$ 849,70\nDinheiro: 8,3% — R$ 439,59\nPIX: 7,3% — R$ 385,80\nVoucher: 1,7% — R$ 87,79\n↳ Bandeiras: Alelo Refeição / Alelo Alimentação / Pluxee Alimentação / Ticket Refeição / Ticket Alimentação\n\n🕐 *Vendas por Turno:*\n🌤️ Vespertino (14:01–18:00): 75 vend. — R$ 2.734,90 🏆\n☀️ Diurno (08:00–14:00): 42 vend. — R$ 1.581,80\n🌙 Noturno 1 (18:01–23:00): 17 vend. — R$ 965,02\n\n🏠 *Salão × 🛵 Delivery:*\nSalão: R$ 2.862,22 (54,2%) — 68 comandas — Ticket: R$ 42,09\nDelivery/Encomendas: R$ 2.419,50 (45,8%) — Ticket: R$ 36,66\n↳ 66 pedidos · Taxas arrecadadas: R$ 362,65\n↳ iFood: 57 ped. — R$ 1.570,00\n↳ App Próprio: 8 ped. — R$ 525,55\n↳ Telefone: 1 ped. — R$ 13,75\n\n👁️ *À Vista × Contas Assinadas:*\nÀ Vista: 104 vend. — R$ 4.172,87 (79,0%)\nContas Assinadas: 30 vend. — R$ 1.108,85 (21,0%) — Ticket: R$ 36,96\n\n🍽️ *Top 5 Produtos:*\nFrango Duplo — R$ 530,20\nCheese Burger Salada — R$ 275,70\nPf A Cavalo Alcatra — R$ 164,50\nPf Grelhado Frango — R$ 148,93\nDog Duplo - Promo Qua/Sex — R$ 123,75\n\n🏅 *Top 5 Vendedores:*\nAdm Biggs 13 — R$ 1.662,84 (31,48%)\nThais Jose da Silva — R$ 1.186,34 (22,46%)\nThayla Regina Luppi — R$ 587,83 (11,13%)\nGiovani Edurado de Lima — R$ 532,68 (10,09%)\nNayara Sayuri Souza Suzuki — R$ 487,57 (9,23%)\n\n⚠️ *Ajustes Operacionais:*\nCancelamentos: 1 — R$ 7,90 | Motivo principal: Troca de produto\nDescontos: 2 vendas — R$ 89,70\nItens excluídos PDV: 0 — R$ 0,00\nItens excluídos Comandas: 1 — R$ 7,90\nPagamentos de Caixa: R$ 483,00"},
- {nome:'Delivery',obj:'Comunicação do setor de delivery: metas, indicadores e ajustes.',envia:'Encarregado de delivery',area:'comercial',icon:'🛵',av:'LO',dono:'Luiz Otávio (dados)',loja:['Ocorrências de delivery'],ragga:['Avaliação iFood','Tempo de entrega','% cancelamentos','Faturamento delivery'],rotina:'Seg: avaliações iFood · Ter: indicadores.',modelo:"🛵 *INDICADORES DE DELIVERY — BIGG'S 13*\n📅 Semana: __/__\n⭐ Avaliação iFood: ____\n⏱️ Tempo médio: ____ | ❌ Cancelamentos: ____%\n💰 Fat. delivery: R$ ____"},
- {nome:'Marketing + Vendas',obj:'Campanhas, conteúdo e promoções da unidade.',envia:'Demandas conforme necessidade · foto quando solicitado',area:'marketing',icon:'📣',av:'MF',dono:'Maria Fernanda · Mkt',loja:['Demandas conforme necessidade','Foto quando solicitado'],ragga:['Alcance / engajamento','Campanhas ativas','Conversão de promoções','Calendário de conteúdo','NPS','Avaliação Google','Reclamações no Instagram','Cancelamentos','Problemas com cliente'],rotina:'Campanhas, conteúdo e promoções.',modelo:"📣 *MARKETING — BIGG'S 13*\n📅 ____\nCampanhas ativas: ____\nAlcance: ____\nPromoção em destaque: ____"},
- {nome:'Compras & Estoque',obj:'Comunicação entre a loja e o centro de compras.',envia:'Gerente',area:'compras',icon:'🛒',av:'ME',dono:'Maria Eduarda Alves',loja:['Rupturas / faltas do dia'],ragga:['Valor comprado','CMV %','Nº de rupturas','Comparativo de preço'],rotina:'Diário: cotação, compras e fechamento.',modelo:"📦 *FECHAMENTO DE COMPRAS — BIGG'S 13*\n📅 Data: __/__\n🛒 Comprado no dia: R$ ____\n⚠️ Rupturas: ____\n✅ Fechado por: ____"},
- {nome:'Adm/Financeiro · Entrada de Notas',obj:'Envio diário de NF e boletos para entrada de estoque.',envia:'Gerente',area:'financeiro',icon:'🧾',av:'RT',dono:'Rafaela Torres',loja:['Foto NF + boleto'],ragga:['Notas recebidas × lançadas','% de entrada','Prazo de lançamento'],rotina:'Gerente envia NF + boleto · fechamento ao final.',modelo:"🧾 *FECHAMENTO DE NOTAS — BIGG'S 13*\n📅 Data: __/__\n📄 Notas recebidas: ____\n✅ Todas com NF + boleto: (Sim/Não)\nGerente: ____"},
- {nome:'Adm/Financeiro · Pagamento',obj:'Gestão e evidência dos pagamentos do dia.',envia:'Financeiro (conduz)',area:'financeiro',icon:'💳',av:'FN',dono:'Financeiro Ragga',loja:['—  (financeiro conduz)'],ragga:['Saldo inicial','Nº de pagamentos / valor pago','Pagamentos urgentes','Contas a pagar da semana (CMV · OPEX · CMO · CF)','Saldo final consolidado da semana','% conciliado'],rotina:'Financeiro envia o resumo conciliado do dia.',modelo:"💳 *PAGAMENTOS — BIGG'S 13*\n📅 Data: __/__\n🏦 Saldo inicial: R$ ____\n🔢 Pagamentos: ____ | 💰 Total pago: R$ ____\n🚨 Urgentes: R$ ____\n🏦 Saldo final do dia: R$ ____\n📅 Contas a pagar (semana): R$ ____\n✅ Saldo final consolidado (semana): R$ ____\n📎 Conciliado no Cloudfy: (Sim/Não)"},
- {nome:'Adm/Financeiro · Caixas',obj:'Troco, quebra de caixa e maquininhas.',envia:'Gerente / operadores de caixa',area:'financeiro',icon:'💵',av:'MO',dono:'Monalisa',loja:['Troco dos caixas','Situação das maquininhas','Intercorrências e situações de caixa'],ragga:['Faturamento total do dia','Quebra de caixa','Crédito / Débito / Pix / Online / Voucher','Vendas a prazo (assinada / B2B)','Sangrias e retiradas (por categoria)','Cancelamentos e brindes','Divergências'],rotina:'Loja: troco diário · Financeiro: conciliação 1x/semana.',modelo:"💵 *CONCILIAÇÃO DE CAIXA — BIGG'S 13*\n📅 ____\n💳 Crédito: R$ ____ | Débito: R$ ____\n📲 Pix: R$ ____\n⚠️ Quebra: R$ ____"},
- {nome:'Operação · Gestão Diária',obj:'Escalas e fechamento diário da operação.',envia:'Gerente (diurno e noturno)',area:'operacao',icon:'🗓️',av:'LO',dono:'Luiz Otávio',loja:['Escala dos turnos','Áudio de fechamento'],ragga:['Aderência de escala','Headcount por turno','Horas extras','Incidentes'],rotina:'Escala até 16h · áudio de fechamento por turno.',modelo:"🗓️ *FECHAMENTO DE TURNO — BIGG'S 13*\n📅 Data: __/__ | Turno: (Diurno/Noturno)\n🎙️ Áudio do gerente com o andamento\n📝 Pontos do dia: ____"},
- {nome:'Cozinha (KONCLUI)',obj:'Gestão diária da cozinha, produção e qualidade.',envia:'Gerente de cozinha + nutricionista',area:'operacao',icon:'🍳',av:'CZ',dono:'Cozinha + Nutricionista',loja:['Checklist KONCLUI','Foto do desperdício','Itens em falta'],ragga:['% aderência ao checklist','Índice de desperdício','Conformidade de qualidade','Ficha técnica'],rotina:'Checklist KONCLUI diário + fotos.',modelo:"🍳 *FECHAMENTO DE COZINHA — BIGG'S 13*\n📅 ____ | Turno: ____\n✅ Checklist KONCLUI: [link]\n📷 Caderno | produção | desperdício\n⚠️ Qualidade: ____"},
- {nome:'Manutenção',obj:'Solicitações de manutenção da unidade.',envia:'Gerente',area:'operacao',icon:'🔧',av:'LO',dono:'Luiz Otávio',loja:['Solicitação + foto'],ragga:['Abertas / Concluídas','Tempo de atendimento','Gasto do mês','Recorrência'],rotina:'Solicitação por demanda · indicador até dia 3.',modelo:"🔧 *SOLICITAÇÃO DE MANUTENÇÃO — BIGG'S 13*\nO que precisa: ____\nLocal/equipamento: ____\nUrgência: (Alta/Média/Baixa) · 📷 foto"},
- {nome:'TI · Sistemas (Louro)',obj:'Suporte de sistema: integrações, impressões e cardápio.',envia:'Gerente',area:'operacao',icon:'🖥️',av:'TI',dono:'Suporte / Fornecedores',loja:['Problemas com impressora','Cardápio do sistema','Foto de problemas de lançamento'],ragga:['Tempo de resolução','Suporte','Recorrência','Intercorrências resolvidas'],rotina:'Consultar Cloudfy / Help Desk / IP Solution.',modelo:"🖥️ *CHAMADO DE SISTEMA — BIGG'S 13*\nProblema: ____\nOnde (PDV/iFood/impressora): ____\n📷 Foto do erro · Consultou fornecedor? (Sim/Não)"},
- {nome:'RS/RH · Recrutamento & Seleção',obj:'Comunicação do RH: contratações e integração.',envia:'Gerente (loja)',area:'pessoas',icon:'👋',av:'VI',dono:'Vitória',loja:['Status da integração','Avaliação do colaborador (35 e 70 dias)'],ragga:['Vagas em aberto','Tempo de preenchimento','% integração','Avaliações 35/70 dias'],rotina:'Seg: avaliação · Ter: contratações · Qua: vagas · Sex: pendências.',modelo:"📅 *RH DA SEMANA — BIGG'S 13*\nSeg: avaliação de experiência\nTer: contratações da semana\nQua: vagas em aberto\nSex: movimentações e pendências"},
- {nome:'DP · Vale Transporte',obj:'Conferência semanal do vale-transporte.',envia:'DP (lista) · gerência valida',area:'pessoas',icon:'🚌',av:'GM',dono:'Giovanna Modesta',loja:['Validação da listagem'],ragga:['% com VT conferido','Divergências','Custo de VT'],rotina:'Seg: DP envia listagem · gerência valida.',modelo:"🚌 *CONFERÊNCIA DE VT — BIGG'S 13*\n📅 Semana: __/__\n✅ Listagem conferida: (Sim)\nAjustes: ____"},
- {nome:'DP · Solicitação de Empréstimo',obj:'Solicitação de empréstimo dos colaboradores.',envia:'Gerente',area:'pessoas',icon:'🤝',av:'GM',dono:'Giovanna Modesta',loja:['Pedido (nome, CPF, valor)'],ragga:['Nº de solicitações','Valor total','% aprovado','Prazo de retorno'],rotina:'Empréstimo 1 até dia 5 · Empréstimo 2 até dia 14.',modelo:"🤝 *PEDIDO DE EMPRÉSTIMO — BIGG'S 13*\nColaborador: ____ | CPF: ____\nValor: R$ ____\nTipo: (1ª até dia 5 / 2ª até dia 14)"},
- {nome:'DP · Férias',obj:'Solicitação e programação de férias.',envia:'Gerente',area:'pessoas',icon:'🏖️',av:'GM',dono:'Giovanna Modesta',loja:['Solicitação de férias'],ragga:['% programado até dia 20','Férias vencidas / a vencer','Saldo de férias'],rotina:'Solicitar até dia 10 · DP responde até dia 20.',modelo:"🏖️ *SOLICITAÇÃO DE FÉRIAS — BIGG'S 13*\nColaborador: ____ | Cargo: ____\nPeríodo: __/__ a __/__"},
- {nome:'Ocorrências',obj:'Faltas, atestados e ocorrências de colaboradores.',envia:'Gerente',area:'pessoas',icon:'⚠️',av:'LO',dono:'Luiz Otávio',loja:['Ocorrência (nome, cargo, decisão)','Atestado'],ragga:['Absenteísmo','Faltas','Atestados','Advertências / Suspensões'],rotina:'Enviar até 13h · resposta até 15h.',modelo:"⚠️ *OCORRÊNCIA — BIGG'S 13*\nNome: ____ | Cargo: ____ | Turno: ____\nDescrição: ____\nDecisão: (Advertência/Suspensão/Outro)"},
- {nome:'Demissão',obj:'Pedidos de desligamento e documentação imediata.',envia:'Gerente',area:'pessoas',icon:'📤',av:'GM',dono:'Giovanna Modesta',loja:['Comunicação de desligamento'],ragga:['Turnover %','Motivo','Custo de rescisão','Tempo de casa'],rotina:'Comunicar na hora · Sex: turnover.',modelo:"📤 *DESLIGAMENTO — BIGG'S 13*\nColaborador: ____ | Cargo: ____\nTipo: (Pedido/Sem justa causa/Justa causa)\nData: __/__ | Motivo: ____"}
+ {nome:'Performance + Vendas',per:'Diário',obj:'Indicadores de venda da unidade, gerados pelo fechamento automático.',envia:'Loja acompanha · sugestões de venda e melhorias',area:'comercial',icon:'📊',av:'AG',dono:'Amanda Galvão',loja:['Acompanha os indicadores do dia','Sugestões de venda e melhorias'],ragga:['Ticket médio','% da meta','Salão × Delivery','Acumulado do mês'],rotina:'Fechamento de vendas automático (sistema) — sai pronto, diário.',mods:[{l:'Diário · Fechamento de vendas (automático)',t:"📊 *BIGG'S 13 — RELATÓRIO DO DIA*\n📅 __/__/____\n💰 Faturamento: R$ ____\n🛒 Pedidos: ____ | 🎯 Ticket médio: R$ ____\n🎯 % da meta: ____%\n🏠 Salão × 🛵 Delivery: ____% / ____%\n📈 Acumulado do mês: R$ ____"},{l:'Loja · Sugestão de venda / melhoria',t:"💡 *SUGESTÃO DE VENDA / MELHORIA — BIGG'S 13*\n📅 __/__\n📝 Sugestão: ____\n🎯 Impacto esperado: ____"}]},
+ {nome:'Delivery',per:'Semanal · seg–dom, envio na segunda',obj:'Comunicação do setor de delivery: metas, indicadores e ajustes.',envia:'Encarregado de delivery',area:'comercial',icon:'🛵',av:'LO',dono:'Luiz Otávio (dados)',loja:['Ocorrências de delivery'],ragga:['Meta de delivery','Custo logístico','Avaliação por plataforma','Cancelamento por plataforma','Índice de chamados por plataforma','Chamados não atendidos','Tempo online','Faturamento delivery'],rotina:'Seg: avaliações iFood · Ter: indicadores.',mods:[{l:'Semanal · Indicadores de delivery (envio segunda)',t:"🛵 *DELIVERY — BIGG'S 13*\n📅 Semana: __/__ a __/__\n🎯 Meta de delivery: R$ ____ | Atingido: ____%\n💰 Faturamento delivery: R$ ____\n🚚 Custo logístico: R$ ____ (____%)\n⭐ Avaliação/plataforma: iFood ____ | App ____\n❌ Cancelamento/plataforma: iFood ____% | App ____%\n📞 Índice de chamados/plataforma: ____\n⛔ Chamados não atendidos: ____\n🟢 Tempo online: ____%"},{l:'Loja · Ocorrência de delivery (conforme demanda)',t:"⚠️ *OCORRÊNCIA DE DELIVERY — BIGG'S 13*\n📅 __/__\nPlataforma: ____\nProblema: ____\n📷 Evidência anexada"}]},
+ {nome:'Marketing + Vendas',per:'Semanal · avaliações seg–dom, envio na segunda',obj:'Campanhas, conteúdo e promoções da unidade.',envia:'Demandas conforme necessidade · foto quando solicitado',area:'marketing',icon:'📣',av:'MF',dono:'Maria Fernanda · Mkt',loja:['Demandas conforme necessidade','Foto quando solicitado'],ragga:['Alcance / engajamento','Campanhas ativas','Conversão de promoções','Calendário de conteúdo','NPS','Avaliação Google','Reclamações no Instagram','Cancelamentos','Problemas com cliente'],rotina:'Campanhas, conteúdo e promoções.',mods:[{l:'Semanal · Indicadores de marketing (envio segunda)',t:"📣 *MARKETING — BIGG'S 13*\n📅 Semana: __/__ a __/__\n📢 Campanhas ativas: ____\n📈 Alcance / engajamento: ____\n🎯 Conversão de promoções: ____\n⭐ NPS: ____ | Avaliação Google: ____\n💬 Reclamações no Instagram: ____\n❌ Cancelamentos: ____ | 🙋 Problemas com cliente: ____"},{l:'Loja · Demanda de marketing (conforme necessidade)',t:"🖌️ *DEMANDA DE MARKETING — BIGG'S 13*\n📅 __/__\nO que precisa: ____\n📷 Foto (quando solicitado): anexada\nPrazo desejado: ____"}]},
+ {nome:'Compras & Estoque',per:'Diário · envio pela manhã',obj:'Comunicação entre a loja e o centro de compras.',envia:'Gerente',area:'compras',icon:'🛒',av:'ME',dono:'Maria Eduarda Alves',loja:['Rupturas / faltas do dia'],ragga:['Valor comprado','CMV %','Nº de rupturas','Comparativo de preço'],rotina:'Diário: cotação, compras e fechamento.',mods:[{l:'Diário · Fechamento de compras (manhã)',t:"🛒 *COMPRAS & ESTOQUE — BIGG'S 13*\n📅 __/__\n💰 Comprado no dia: R$ ____\n📉 CMV: ____%\n⚠️ Rupturas / faltas: ____\n🔁 Comparativo de preço: ____"},{l:'Loja · Ruptura de insumo (conforme demanda)',t:"⚠️ *RUPTURA DE INSUMO — BIGG'S 13*\n📅 __/__\nItem: ____\nQtd pedida × recebida: ____ / ____\nFornecedor: ____"}]},
+ {nome:'Adm/Financeiro · Entrada de Notas',per:'Diário · lançamento D-1 no sistema',obj:'Envio diário de NF e boletos para entrada de estoque.',envia:'Gerente',area:'financeiro',icon:'🧾',av:'RT',dono:'Rafaela Torres',loja:['Foto NF + boleto'],ragga:['Notas recebidas × lançadas','% de entrada','Prazo de lançamento'],rotina:'Gerente envia NF + boleto · fechamento ao final.',mods:[{l:'Diário · Fechamento de notas (D-1)',t:"🧾 *ENTRADA DE NOTAS — BIGG'S 13*\n📅 Referência (D-1): __/__\n📄 Notas recebidas: ____\n✅ Notas lançadas (XML): ____\n📊 % lançado: ____%\n⏱️ Prazo de lançamento: ____"},{l:'Loja · Envio de nota (conforme demanda)',t:"🧾 *NOTA / BOLETO — BIGG'S 13*\n📅 __/__\n📷 Foto LEGÍVEL da NF anexada\n📷 Foto LEGÍVEL do boleto anexada\nFornecedor: ____ | Valor: R$ ____"}]},
+ {nome:'Adm/Financeiro · Pagamento',per:'Diário',obj:'Gestão e evidência dos pagamentos do dia.',envia:'Financeiro (conduz)',area:'financeiro',icon:'💳',av:'FN',dono:'Financeiro Ragga · Rafaela',loja:['—  (financeiro conduz)'],ragga:['Saldo inicial','Nº de pagamentos / valor pago','Pagamentos urgentes','Contas a pagar da semana (CMV · OPEX · CMO · CF)','Saldo final consolidado da semana','% conciliado'],rotina:'Financeiro envia o resumo conciliado do dia.',mods:[{l:'Diário · Pagamentos conciliados',t:"💳 *PAGAMENTOS — BIGG'S 13*\n📅 __/__\n🏦 Saldo inicial: R$ ____\n🔢 Pagamentos: ____ | 💰 Total pago: R$ ____\n🚨 Urgentes: R$ ____\n🏦 Saldo final do dia: R$ ____\n📎 Conciliado no Cloudfy: (Sim/Não)"},{l:'Semanal · Contas a pagar (CMV·OPEX·CMO·CF)',t:"📅 *CONTAS A PAGAR DA SEMANA — BIGG'S 13*\nPeríodo: __/__ a __/__\n🥩 CMV: R$ ____\n🏢 OPEX: R$ ____\n👥 CMO: R$ ____\n📌 CF: R$ ____\n✅ Saldo final consolidado (semana): R$ ____"}]},
+ {nome:'Adm/Financeiro · Caixas',per:'Loja: diário · Monalisa: conciliação 2x/semana (ter e sex)',obj:'Troco, quebra de caixa e maquininhas.',envia:'Gerente / operadores de caixa',area:'financeiro',icon:'💵',av:'MO',dono:'Monalisa',loja:['Troco dos caixas','Situação das maquininhas','Intercorrências e situações de caixa','PDF do fechamento de caixa','Contagem do troco (diária)'],ragga:['Faturamento total do dia','Quebra de caixa','Crédito / Débito / Pix / Online / Voucher','Vendas a prazo (assinada / B2B)','Sangrias e retiradas (por categoria)','Cancelamentos e brindes','Divergências'],rotina:'Loja: troco e PDF de fechamento (diário) · Monalisa: conciliação 2x/semana (ter e sex).',mods:[{l:'Diário · Loja (troco + fechamento)',t:"💵 *CAIXAS — BIGG'S 13*\n📅 __/__\n💰 Troco dos caixas: R$ ____\n🖨️ Maquininhas (nº / situação): ____\n📎 PDF do fechamento de caixa anexado\n🧮 Contagem do troco: ____\n⚠️ Intercorrências: ____"},{l:'2x/semana · Conciliação Monalisa (ter e sex)',t:"💵 *CONCILIAÇÃO DE CAIXA — BIGG'S 13*\n📅 Período: __/__ a __/__\n💰 Faturamento total: R$ ____\n💳 Crédito: R$ ____ | Débito: R$ ____\n📲 Pix: R$ ____ | Online: R$ ____ | Voucher: R$ ____\n📝 A prazo (assinada/B2B): R$ ____\n💸 Sangrias/retiradas: R$ ____\n❌ Cancelamentos / 🎁 Brindes: ____ / ____\n⚠️ Quebra / divergências: R$ ____"}]},
+ {nome:'Operação · Gestão Diária',per:'Diário',obj:'Escalas e fechamento diário da operação.',envia:'Gerente (diurno e noturno)',area:'operacao',icon:'🗓️',av:'LO',dono:'Luiz Otávio',loja:['Escala de turno','Áudio de fechamento','SOS — problemas fora do padrão da loja'],ragga:['Desconformidades com a loja','Aderência da escala','Incidentes','Freelancer (orçado × realizado)'],rotina:'Escala até 16h · áudio de fechamento por turno.',mods:[{l:'Diário · Loja (escala + fechamento)',t:"🗓️ *OPERAÇÃO — BIGG'S 13*\n📅 __/__ | Turno: (Diurno/Noturno)\n👥 Escala do turno anexada\n🎙️ Áudio de fechamento do gerente\n📝 Pontos do dia: ____"},{l:'Loja · SOS (fora do padrão)',t:"🆘 *SOS — BIGG'S 13*\n📅 __/__ | Turno: ____\nProblema fora do padrão: ____\n📷 Evidência anexada\nO que precisa: ____"},{l:'Ragga · Indicadores de operação',t:"📊 *INDICADORES DE OPERAÇÃO — BIGG'S 13*\n📅 __/__\n⚠️ Desconformidades com a loja: ____\n📋 Aderência da escala: ____%\n🚨 Incidentes: ____\n🧑‍🍳 Freelancer (orçado × realizado): R$ ____ / R$ ____"}]},
+ {nome:'Cozinha (KONCLUI)',per:'Diário',obj:'Gestão diária da cozinha, produção e qualidade.',envia:'Gerente de cozinha + nutricionista',area:'operacao',icon:'🍳',av:'AV',dono:'Amanda Vespa',loja:['Checklist KONCLUI','Foto do desperdício','Itens em falta'],ragga:['% aderência ao checklist','Índice de desperdício','Conformidade de qualidade','Ficha técnica'],rotina:'Checklist KONCLUI diário + fotos.',mods:[{l:'Diário · Fechamento de cozinha (KONCLUI)',t:"🍳 *COZINHA — BIGG'S 13*\n📅 __/__ | Turno: ____\n✅ Checklist KONCLUI: [link]\n📷 Produção / desperdício anexados\n🗑️ Itens em falta: ____\n⚠️ Qualidade: ____"},{l:'Ragga · Indicadores de cozinha',t:"📊 *INDICADORES DE COZINHA — BIGG'S 13*\n📅 __/__\n📋 % aderência ao checklist: ____%\n🗑️ Índice de desperdício: ____% (R$ ____)\n✅ Conformidade de qualidade: ____\n📐 Ficha técnica: ____"}]},
+ {nome:'Manutenção',per:'Loja: diário (conforme necessidade) · Ragga: mensal',obj:'Solicitações de manutenção da unidade.',envia:'Gerente',area:'operacao',icon:'🔧',av:'AV',dono:'Amanda Vespa',loja:['Solicitação + foto','Orçamento'],ragga:['Abertas / Concluídas','Tempo de atendimento','Gasto do mês','Recorrência'],rotina:'Solicitação por demanda · indicador até dia 3.',mods:[{l:'Loja · Solicitação (conforme necessidade)',t:"🔧 *SOLICITAÇÃO DE MANUTENÇÃO — BIGG'S 13*\n📅 __/__\nO que precisa: ____\nLocal / equipamento: ____\nUrgência: (Alta/Média/Baixa)\n💰 Orçamento (se houver): R$ ____\n📷 Foto anexada"},{l:'Mensal · Indicadores (Ragga)',t:"📊 *MANUTENÇÃO DO MÊS — BIGG'S 13*\nMês: ____\n🔧 Abertas / Concluídas: ____ / ____\n⏱️ Tempo médio de atendimento: ____\n💰 Gasto do mês: R$ ____\n🔁 Recorrência: ____"}]},
+ {nome:'TI · Sistemas (Louro)',per:'Loja: diário (conforme necessidade) · Ragga: mensal (dia 5)',obj:'Suporte de sistema: integrações, impressões e cardápio.',envia:'Gerente',area:'operacao',icon:'🖥️',av:'TI',dono:'Johanatan (gestor interno) + fornecedores',loja:['Problemas com impressora','Cardápio do sistema','Foto de problemas de lançamento'],ragga:['Tempo de resolução','Suporte','Recorrência','Intercorrências resolvidas'],rotina:'Falar com Johanatan (gestor interno) · Cloudfy / Help Desk / IP Solution.',mods:[{l:'Loja · Chamado de sistema (conforme necessidade)',t:"🖥️ *CHAMADO DE SISTEMA — BIGG'S 13*\n📅 __/__\nProblema: (impressora / cardápio / lançamento)\nDescrição: ____\n📷 Foto do erro anexada\nJá consultou o fornecedor? (Sim/Não)"},{l:'Mensal · Indicadores (dia 5)',t:"📊 *TI · SISTEMAS DO MÊS — BIGG'S 13*\nMês: ____\n⏱️ Tempo de resolução: ____\n🛠️ Suporte (fornecedores): ____\n🔁 Recorrência: ____\n✅ Intercorrências resolvidas: ____"}]},
+ {nome:'RS/RH · Recrutamento & Seleção',per:'Loja: status toda quinta · Vitória: indicadores quarta + comunicado de novos (terça)',obj:'Comunicação do RH: contratações e integração.',envia:'Gerente (loja)',area:'pessoas',icon:'👋',av:'VI',dono:'Vitória',loja:['Status da integração','Avaliação do colaborador (45 e 90 dias)','Recebeu uniforme? (sim/não)'],ragga:['Vagas em aberto','Tempo de preenchimento','% integração','Avaliações 45/90 dias','Comunicado de novos colaboradores (terça)'],rotina:'Seg: avaliação · Ter: contratações · Qua: vagas · Sex: pendências.',mods:[{l:'Quinta · Status da loja',t:"📋 *RS/RH — STATUS DA LOJA — BIGG'S 13*\n📅 Quinta __/__\n🔄 Status da integração: ____\n📝 Avaliação do colaborador: (45 dias / 90 dias) — ____\n👕 Recebeu uniforme? (Sim/Não)"},{l:'Quarta · Indicadores (Vitória)',t:"📊 *RS/RH — INDICADORES — BIGG'S 13*\n📅 Quarta __/__\n🪑 Vagas em aberto: ____\n⏱️ Tempo de preenchimento: ____\n✅ % integração concluída: ____%\n📝 Avaliações 45/90 dias: ____"},{l:'Terça · Comunicado de novo colaborador',t:"📢 *NOVO COLABORADOR*\n📨 Data do comunicado: __/__/____ | 📅 Início: __/__/____\n🏪 Unidade: ____\n👤 Nome: ____\n💼 Cargo: ____ | 🎂 Idade: ____ | 🗓️ Folga fixa: ____\n💼 Última empresa: ____\n⏳ Experiência: ____ anos / Sem experiência\n👨🏻‍💼 Gerente do período: ____\n🎓 Responsável pelo treinamento: ____\n💳 VT: R$ ____ (__ dias) – pagamento pelo caixa\n✅ Ponto: Liberado\n☑️ *Confirmações da Loja*\n⬜ Uniforme completo entregue\n⬜ Integração realizada\n⬜ Treinamento iniciado"}]},
+ {nome:'DP · Vale Transporte',per:'Loja: validação terça · Giovanna: indicadores sexta (semanal)',obj:'Conferência semanal do vale-transporte.',envia:'DP (lista) · gerência valida',area:'pessoas',icon:'🚌',av:'GM',dono:'Giovanna Modesta',loja:['Validação da listagem'],ragga:['% com VT conferido','Divergências','Custo de VT'],rotina:'Seg: DP envia listagem · gerência valida.',mods:[{l:'Terça · Validação da loja',t:"🚌 *VALE TRANSPORTE — BIGG'S 13*\n📅 Terça __/__\n✅ Listagem conferida: (Sim/Não)\n⚠️ Divergências: ____\nColaboradores sem uso de VT: ____"},{l:'Sexta · Indicadores (Giovanna)',t:"📊 *VT — INDICADORES — BIGG'S 13*\n📅 Sexta __/__\n👥 % com VT conferido: ____%\n⚠️ Divergências: ____\n💰 Custo de VT: R$ ____"}]},
+ {nome:'DP · Solicitação de Empréstimo e Acordos',per:'Loja: emp.1 até dia 5, emp.2 até dia 14, acordo conforme demanda · Giovanna: indicadores emp.1 até dia 14, emp.2 até dia 23, acordo mensal',obj:'Solicitação de empréstimo dos colaboradores.',envia:'Gerente',area:'pessoas',icon:'🤝',av:'GM',dono:'Giovanna Modesta',loja:['Pedido (nome, CPF, valor)','Pedidos de acordo e empréstimos extras'],ragga:['Nº de solicitações','Valor total','% aprovado','Prazo de retorno'],rotina:'Empréstimo 1 até dia 5 · Empréstimo 2 até dia 14.',mods:[{l:'Loja · Pedido (emp.1 dia 5 / emp.2 dia 14)',t:"🤝 *PEDIDO DE EMPRÉSTIMO — BIGG'S 13*\n📅 __/__\nColaborador: ____ | CPF: ____\nValor: R$ ____\nTipo: (1ª até dia 5 / 2ª até dia 14)\nAcordo / extra (se houver): ____"},{l:'Loja · Pedido de acordo / empréstimo extra',t:"🤝 *PEDIDO DE ACORDO / EMPRÉSTIMO EXTRA — BIGG'S 13*\n📅 __/__\nColaborador: ____ | CPF: ____\nTipo: (Acordo / Empréstimo extra)\nValor: R$ ____\nMotivo / justificativa: ____\nForma de desconto: ____"},{l:'Ragga · Indicadores (emp.1 dia 14 / emp.2 dia 23 · acordo mensal)',t:"📊 *EMPRÉSTIMOS — INDICADORES — BIGG'S 13*\n📅 ____\n🔢 Nº de solicitações: ____\n💰 Valor total: R$ ____\n✅ % aprovado: ____%\n🤝 Acordos (mensal): ____"}]},
+ {nome:'DP · Férias',per:'Loja: solicita até dia 10 · DP: retorna até dia 20 · Indicadores: mensal (dia 5)',obj:'Solicitação e programação de férias.',envia:'Gerente',area:'pessoas',icon:'🏖️',av:'GM',dono:'Giovanna Modesta',loja:['Solicitação de férias'],ragga:['% programado até dia 20','Férias vencidas / a vencer','Saldo de férias'],rotina:'Solicitar até dia 10 · DP responde até dia 20.',mods:[{l:'Loja · Solicitação (até dia 10)',t:"🏖️ *SOLICITAÇÃO DE FÉRIAS — BIGG'S 13*\nColaborador: ____ | Cargo: ____\nPeríodo pretendido: __/__ a __/__"},{l:'DP · Retorno da programação (até dia 20)',t:"🏖️ *PROGRAMAÇÃO DE FÉRIAS — BIGG'S 13*\nColaborador: ____\nPeríodo aprovado: __/__ a __/__\nStatus: (Aprovado / Reprogramar)"},{l:'Mensal · Indicadores (dia 5)',t:"📊 *FÉRIAS — INDICADORES — BIGG'S 13*\nMês: ____\n📅 % programado até dia 20: ____%\n⚠️ Vencidas / a vencer: ____ / ____\n💰 Saldo de férias: ____"}]},
+ {nome:'DP · Cartão Ponto',per:'Semanal',obj:'Conferência semanal do cartão ponto da unidade.',envia:'Gerente (loja)',area:'pessoas',icon:'🕐',av:'GM',dono:'Giovanna Modesta',loja:['Cartão ponto ajustado (semanal)','Atestados, faltas e problemas'],ragga:['Horas extras','Ajustes em dia'],rotina:'Loja envia o cartão ponto ajustado toda semana.',mods:[{l:'Semanal · Loja (cartão ponto ajustado)',t:"🕐 *CARTÃO PONTO — BIGG'S 13*\n📅 Semana: __/__\n📋 Cartão ponto ajustado em anexo\n📎 Atestados / faltas / problemas: ____"},{l:'Ragga · Indicadores (Giovanna)',t:"📊 *CARTÃO PONTO — INDICADORES — BIGG'S 13*\n📅 Semana: __/__\n⏱️ Horas extras: ____\n✅ Ajustes em dia: (Sim/Não)"}]},
+ {nome:'Ocorrências',per:'Loja: conforme demanda · Ragga: indicadores mensal (dia 5)',obj:'Faltas, atestados e ocorrências de colaboradores.',envia:'Gerente',area:'pessoas',icon:'⚠️',av:'LO',dono:'Luiz Otávio',loja:['Ocorrências em geral','Troca de DSR','Troca de turno','Atestado'],ragga:['Absenteísmo','Faltas','Atestados','Advertências / Suspensões'],rotina:'Loja envia conforme a demanda.',mods:[{l:'Loja · Ocorrência (conforme demanda)',t:"⚠️ *OCORRÊNCIA — BIGG'S 13*\n📅 __/__\nNome: ____ | Cargo: ____ | Turno: ____\nTipo: (Geral / Troca de DSR / Troca de turno)\nDescrição: ____\nDecisão: (Advertência / Suspensão / Outro)"},{l:'Loja · Atestado',t:"🩺 *ATESTADO — BIGG'S 13*\nColaborador: ____\n📷 Foto legível anexada\nDias: ____ | Data: __/__"},{l:'Mensal · Indicadores (dia 5)',t:"📊 *OCORRÊNCIAS — INDICADORES — BIGG'S 13*\nMês: ____\n📉 Absenteísmo: ____%\n🚫 Faltas: ____ | 🩺 Atestados: ____\n⚠️ Advertências / Suspensões: ____ / ____"}]},
+ {nome:'Demissão',per:'Loja: conforme demanda · Ragga: mensal (dia 5)',obj:'Pedidos de desligamento e documentação imediata.',envia:'Gerente',area:'pessoas',icon:'📤',av:'GM',dono:'Giovanna Modesta',loja:['Comunicação de desligamento','Acordos e pedidos de saída do colaborador'],ragga:['Turnover %','Motivo','Custo de rescisão','Tempo de casa'],rotina:'Comunicar na hora · Sex: turnover.',mods:[{l:'Loja · Desligamento (conforme demanda)',t:"📤 *DESLIGAMENTO — BIGG'S 13*\nColaborador: ____ | Cargo: ____\nTipo: (Pedido / Sem justa causa / Justa causa / Acordo)\nData: __/__ | Motivo: ____"},{l:'Mensal · Indicadores (dia 5)',t:"📊 *DEMISSÕES — INDICADORES — BIGG'S 13*\nMês: ____\n🔄 Turnover: ____%\n📝 Motivo principal: ____\n💰 Custo de rescisão: R$ ____\n🕓 Tempo médio de casa: ____"}]}
 ];
 const DONOS=[
  {av:'ME',c:'compras',nome:'Maria Eduarda Alves',role:'Gestora de Compras',tags:['Compras & Estoque']},
- {av:'RT',c:'financeiro',nome:'Rafaela Torres',role:'Financeiro',tags:['Entrada de Notas']},
+ {av:'RT',c:'financeiro',nome:'Rafaela Torres',role:'Financeiro',tags:['Entrada de Notas','Pagamentos']},
  {av:'MO',c:'financeiro',nome:'Monalisa',role:'Financeiro · Caixa',tags:['Caixas']},
  {av:'MF',c:'marketing',nome:'Maria Fernanda',role:'Marketing · Ragga',tags:['Marketing + Vendas']},
  {av:'VI',c:'pessoas',nome:'Vitória',role:'RH',tags:['Recrutamento & Seleção']},
- {av:'GM',c:'pessoas',nome:'Giovanna Modesta',role:'DP',tags:['Vale Transporte','Empréstimo','Férias','Demissão']},
- {av:'LO',c:'operacao',nome:'Luiz Otávio',role:'Operação',tags:['Ocorrências','Gestão Diária','Manutenção','Delivery (dados)']},
+ {av:'GM',c:'pessoas',nome:'Giovanna Modesta',role:'DP',tags:['Vale Transporte','Empréstimo','Férias','Demissão','Cartão Ponto']},
+ {av:'LO',c:'operacao',nome:'Luiz Otávio',role:'Operação',tags:['Ocorrências','Gestão Diária','Delivery (dados)']},
  {av:'AG',c:'comercial',nome:'Amanda Galvão',role:'Comercial',tags:['Performance · Vendas']},
- {av:'CZ',c:'operacao',nome:'Cozinha',role:'Gerente de Cozinha + Nutricionista',tags:['Cozinha · KONCLUI']},
- {av:'TI',c:'operacao',nome:'Suporte TI (Louro)',role:'Fornecedores',tags:['Cloudfy','Help Desk','IP Solution']}
+ {av:'AV',c:'operacao',nome:'Amanda Vespa',role:'Operação · Ragga',tags:['Cozinha · KONCLUI','Manutenção']},
+ {av:'TI',c:'operacao',nome:'Suporte TI (Louro)',role:'Gestor interno + fornecedores',tags:['Johanatan (interno)','Cloudfy','Help Desk','IP Solution']}
 ];
 
 document.getElementById('legend').innerHTML=Object.keys(AREAS).map(a=>`<span style="background:var(--${a}-bg);color:var(--${a}-ink)">● ${AREAS[a]}</span>`).join('');
@@ -542,7 +602,7 @@ Object.keys(AREAS).forEach(a=>{
   gs.forEach((g,i)=>{
     gh+=`<div class="gcard"><div class="bar" style="background:var(--${a})"></div>
       <div class="gh"><div class="gkick">📲 Nome do grupo no WhatsApp</div><div class="gname">${g.icon} ${g.nome}</div>
-        <div class="gobj">${g.obj||''}</div></div>
+        <div class="gobj">${g.obj||''}</div>${g.per?`<div class="gper">🗓️ Periodicidade · ${g.per}</div>`:''}</div>
       <div class="gresp">
         <div class="rblk"><span class="rk">📤 Envia · loja</span><span class="rv"><span class="av2" style="background:#94a0b8">L</span>${g.envia||'—'}</span></div>
         <div class="rblk" style="background:var(--${a}-bg);border-color:transparent"><span class="rk" style="color:var(--${a}-ink)">🏢 Resolve · Ragga</span><span class="rv" style="color:var(--${a}-ink)"><span class="av2" style="background:var(--${a})">${g.av}</span>${g.dono}</span></div>
@@ -553,8 +613,7 @@ Object.keys(AREAS).forEach(a=>{
       </div>
       <details class="tg"><summary>📋 Rotina e mensagem-padrão (oculto)<span class="chev">›</span></summary>
         <div class="rt">${g.rotina}</div>
-        <pre id="m_${a}_${i}">${g.modelo.replace(/</g,'&lt;')}</pre>
-        <button class="copy" data-t="m_${a}_${i}">Copiar mensagem-padrão</button>
+        ${(g.mods||[{l:'Mensagem-padrão',t:g.modelo||''}]).map((m,mi)=>`<div class="rt" style="margin-top:${mi?'14px':'2px'}">📋 ${m.l}</div><pre id="m_${a}_${i}_${mi}">${m.t.replace(/</g,'&lt;')}</pre><button class="copy" data-t="m_${a}_${i}_${mi}">Copiar mensagem</button>`).join('')}
       </details></div>`;
   });
   gh+=`</div></div>`;
@@ -566,7 +625,7 @@ document.getElementById('donos-host').innerHTML=DONOS.map(d=>`
     <div><h4>${d.nome}</h4><div class="role">${d.role}</div>
       <div class="tags">${d.tags.map(t=>`<span>${t}</span>`).join('')}</div></div></div>`).join('');
 
-document.querySelectorAll('details.tg .copy').forEach(b=>{
+document.querySelectorAll('.copy[data-t]').forEach(b=>{
   b.addEventListener('click',()=>{
     const txt=document.getElementById(b.dataset.t).innerText;
     const done=()=>{b.textContent='✓ Copiado';setTimeout(()=>b.textContent='Copiar mensagem-padrão',1500);};
@@ -582,7 +641,7 @@ const so=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links
 // ===== LÍDERES DA UNIDADE — passo a passo (aba mastigada) =====
 const KONCLUI_URL='https://app.konclui.com/checklists';
 const LIDERES={
- gerente_adm:{nome:'Gerente administrativo',sub:'Turno diurno · canal principal',canal:'wa',icon:'🧑‍💼',
+ gerente_adm:{nome:'Gerente administrativo',sub:'Turno diurno · grupo + checklist de rotina',canal:'wa',icon:'🧑‍💼',
    funcao:'Coordena a loja no diurno e centraliza a comunicação com a Ragga. É o ponto único que joga as informações da unidade nos grupos.',
    entregas:['Notas fiscais e boletos (foto)','Troco e situação das maquininhas','Rupturas de estoque do dia','Escala dos turnos + áudio de fechamento do diurno','Ocorrências e atestados','Solicitações de manutenção e chamados de TI','Solicitações de DP (VT, empréstimo, férias, desligamento)'],
    ragga:[
@@ -591,12 +650,12 @@ const LIDERES={
      {grupo:'Compras & Estoque',area:'compras',setor:'Compras',resp:'Maria Eduarda',indicador:'Nº de rupturas + CMV %'},
      {grupo:'Operação · Gestão Diária',area:'operacao',setor:'Operação',resp:'Luiz Otávio',indicador:'Aderência de escala + incidentes'},
      {grupo:'Ocorrências',area:'pessoas',setor:'Operação / DP',resp:'Luiz Otávio',indicador:'Absenteísmo + advertências'},
-     {grupo:'Manutenção',area:'operacao',setor:'Operação',resp:'Luiz Otávio',indicador:'Tempo de atendimento + gasto'},
-     {grupo:'TI · Sistemas',area:'operacao',setor:'Suporte',resp:'Louro / fornecedores',indicador:'Chamados resolvidos'},
+     {grupo:'Manutenção',area:'operacao',setor:'Operação',resp:'Amanda Vespa',indicador:'Tempo de atendimento + gasto'},
+     {grupo:'TI · Sistemas',area:'operacao',setor:'Suporte',resp:'Johanatan (interno) / fornecedores',indicador:'Chamados resolvidos'},
      {grupo:'DP',area:'pessoas',setor:'DP',resp:'Giovanna Modesta',indicador:'Turnover + programação de férias'}
    ],
    passos:['Recebe a demanda na loja (nota, troco, ruptura, ocorrência…)','Registra no padrão (foto / áudio / texto)','Envia no grupo de WhatsApp certo','A área da Ragga recebe, confere e trata','A Ragga calcula o indicador e fecha o dia','O consolidado sobe para a diretoria (Estratégico PDCA)']},
- gerente_noturno:{nome:'Gerente noturno',sub:'Turno noturno · canal principal',canal:'wa',icon:'🌙',
+ gerente_noturno:{nome:'Gerente noturno',sub:'Turno noturno · grupo + checklist de rotina',canal:'wa',icon:'🌙',
    funcao:'Comanda o turno noturno e reporta o fechamento da noite. Concentra o que acontece depois que o gerente diurno sai.',
    entregas:['Áudio de fechamento da loja (noturno) + escala da noite','Ocorrências do turno noturno','Fechamento do caixa noturno','Reporte da cozinha noturna (caderno + desperdício)'],
    ragga:[
@@ -609,12 +668,12 @@ const LIDERES={
  nutricionista:{nome:'Nutricionista',sub:'Cozinha · via KONCLUI',canal:'kon',icon:'🥗',
    funcao:'Responsável pela qualidade e pela ficha técnica da cozinha. Preenche o checklist no KONCLUI.',
    entregas:['Checklist de qualidade preenchido (KONCLUI)','Conformidade com a ficha técnica'],
-   ragga:[{grupo:'Cozinha (KONCLUI)',area:'operacao',setor:'Qualidade / Gestão de cozinha',resp:'Amanda + gestão',indicador:'% de aderência + conformidade de qualidade'}],
+   ragga:[{grupo:'Cozinha (KONCLUI)',area:'operacao',setor:'Qualidade / Gestão de cozinha',resp:'Amanda Vespa',indicador:'% de aderência + conformidade de qualidade'}],
    passos:['Abre o checklist no KONCLUI (botão acima)','Confere qualidade e ficha técnica e preenche','O KONCLUI gera o relatório em PDF','O PDF cai no grupo de Cozinha','A Ragga acompanha a aderência e a qualidade']},
  gerente_cozinha:{nome:'Gerente de cozinha',sub:'Cozinha · via KONCLUI',canal:'kon',icon:'🍳',
    funcao:'Conduz a produção da cozinha e controla o desperdício. Registra tudo no KONCLUI.',
    entregas:['Foto do caderno de produção','Foto do desperdício','Itens em falta'],
-   ragga:[{grupo:'Cozinha (KONCLUI)',area:'operacao',setor:'Gestão de cozinha',resp:'Nutricionista + gestão',indicador:'Índice de desperdício (R$/%) + itens em falta'}],
+   ragga:[{grupo:'Cozinha (KONCLUI)',area:'operacao',setor:'Gestão de cozinha',resp:'Amanda Vespa + nutricionista',indicador:'Índice de desperdício (R$/%) + itens em falta'}],
    passos:['Abre o checklist no KONCLUI (botão acima)','Registra produção, desperdício e itens em falta','O KONCLUI gera o PDF','O PDF cai no grupo de Cozinha','A Ragga calcula o desperdício e acompanha']},
  enc_delivery:{nome:'Encarregado de delivery',sub:'Delivery · via KONCLUI',canal:'kon',icon:'🛵',
    funcao:'Cuida da operação de delivery e registra o desempenho no KONCLUI.',
@@ -668,92 +727,96 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLider();});
   const AAREAS={comercial:'Comercial · Vendas',marketing:'Marketing',compras:'Compras & Estoque',financeiro:'Financeiro',operacao:'Operação',pessoas:'Pessoas · RH & DP'};
 const GROUPS = [
   // COMERCIAL
-  { id:'performance', nome:'Performance + Vendas', area:'comercial', icon:'📊',
+  { id:'performance', nome:'Performance + Vendas', area:'comercial', icon:'📊', per:'Diário',
     loja:['Faturamento do dia','Nº de pedidos'], ragga:['Ticket médio','% da meta','Salão × Delivery','Acumulado do mês'],
     fields:[{k:'fat',l:'Faturamento do dia (R$)',t:'number'},{k:'ped',l:'Nº de pedidos',t:'number'},{k:'meta',l:'Meta do dia (R$)',t:'number'},{k:'sal',l:'Vendas salão (R$)',t:'number'},{k:'del',l:'Vendas delivery (R$)',t:'number'}],
     card:v=>{const fat=num(v.fat),ped=num(v.ped),meta=num(v.meta),sal=num(v.sal),del=num(v.del);const tm=ped?fat/ped:0;const pct=meta?fat/meta*100:0;const tot=(sal+del)||fat;const dp=tot?del/tot*100:0;const tone=!meta?'neutral':pct>=100?'good':pct>=85?'warn':'bad';
       return{kpis:[{l:'Faturamento',v:money(fat),tone:'good'},{l:'Pedidos',v:int(ped)},{l:'Ticket médio',v:money(tm)},{l:'% da meta',v:meta?pct.toFixed(0)+'%':'—',tone},{l:'Salão × Delivery',v:tot?(100-dp).toFixed(0)+'% / '+dp.toFixed(0)+'%':'—'}],
       status:{l:!meta?'Sem meta lançada':pct>=100?'Meta batida 🎉':pct>=85?'Perto da meta':'Abaixo da meta',tone},
       insight:meta?(pct>=100?'Meta do dia atingida.':'Faltam '+money(Math.max(0,meta-fat))+' para a meta.'):''};}},
-  { id:'delivery', nome:'Delivery', area:'comercial', icon:'🛵',
-    loja:['Ocorrências de delivery'], ragga:['Avaliação iFood','Tempo de entrega','% cancelamentos','Faturamento delivery'],
-    fields:[{k:'av',l:'Avaliação iFood (★)',t:'number',step:'0.01'},{k:'tmin',l:'Tempo médio (min)',t:'number'},{k:'canc',l:'Cancelamentos (%)',t:'number'},{k:'fd',l:'Faturamento delivery (R$)',t:'number'}],
-    card:v=>{const av=num(v.av),tm=num(v.tmin),c=num(v.canc),fd=num(v.fd);const tone=av>=4.7?'good':av>=4.3?'warn':'bad';const ct=c<=3?'good':c<=6?'warn':'bad';
-      return{kpis:[{l:'Avaliação iFood',v:av?av.toFixed(2)+'★':'—',tone},{l:'Tempo médio',v:tm?tm+' min':'—'},{l:'Cancelamentos',v:c?c+'%':'—',tone:ct},{l:'Fat. delivery',v:money(fd),tone:'good'}],
-      status:{l:av>=4.7?'Delivery saudável':'Atenção no delivery',tone},insight:c>5?'Cancelamentos acima do ideal — revisar operação.':''};}},
+  { id:'delivery', nome:'Delivery', area:'comercial', icon:'🛵', per:'Semanal (envio segunda)',
+    loja:['Ocorrências de delivery'], ragga:['Meta de delivery','Custo logístico','Avaliação por plataforma','Cancelamento por plataforma','Índice de chamados por plataforma','Chamados não atendidos','Tempo online','Faturamento delivery'],
+    fields:[{k:'meta',l:'Meta de delivery (R$)',t:'number'},{k:'fd',l:'Faturamento delivery (R$)',t:'number'},{k:'log',l:'Custo logístico (R$)',t:'number'},{k:'av',l:'Avaliação iFood (★)',t:'number',step:'0.01'},{k:'canc',l:'Cancelamentos (%)',t:'number'},{k:'cham',l:'Índice de chamados',t:'number'},{k:'chnao',l:'Chamados não atendidos',t:'number'},{k:'online',l:'Tempo online (%)',t:'number'}],
+    card:v=>{const meta=num(v.meta),fd=num(v.fd),log=num(v.log),av=num(v.av),c=num(v.canc),ch=num(v.cham),cn=num(v.chnao),on=num(v.online);const pct=meta?fd/meta*100:0;const lp=fd?log/fd*100:0;const tone=av>=4.7?'good':av>=4.3?'warn':'bad';const ct=c<=3?'good':c<=6?'warn':'bad';
+      return{hero:{l:'Faturamento delivery',v:money(fd)},kpis:[{l:'Meta de delivery',v:meta?money(meta)+' ('+pct.toFixed(0)+'%)':'—',tone:!meta?'neutral':pct>=100?'good':'warn'},{l:'Custo logístico',v:log?money(log)+(fd?' ('+lp.toFixed(0)+'%)':''):'—'},{l:'Avaliação iFood',v:av?av.toFixed(2)+'★':'—',tone},{l:'Cancelamentos',v:c?c+'%':'—',tone:ct},{l:'Índice de chamados',v:int(ch)},{l:'Chamados não atendidos',v:int(cn),tone:cn==0?'good':'warn'},{l:'Tempo online',v:on?on+'%':'—',tone:on>=95?'good':on>=90?'warn':'bad'}],
+      status:{l:(av>=4.7&&cn==0)?'Delivery saudável':'Atenção no delivery',tone:(av>=4.7&&cn==0)?'good':'warn'},insight:cn>0?(cn+' chamado(s) não atendido(s) — revisar.'):(c>5?'Cancelamentos acima do ideal.':'')};}},
   // MARKETING
-  { id:'marketing', nome:'Marketing + Vendas', area:'marketing', icon:'📣',
-    loja:['Demandas e fotos locais'], ragga:['Alcance / engajamento','Campanhas ativas','Conversão de promoções','Calendário de conteúdo'],
-    fields:[{k:'ca',l:'Campanhas ativas',t:'number'},{k:'al',l:'Alcance (pessoas)',t:'number'},{k:'promo',l:'Promoção em destaque',t:'text'}],
-    card:v=>({kpis:[{l:'Campanhas ativas',v:int(v.ca),tone:'good'},{l:'Alcance',v:int(v.al)},{l:'Promoção',v:v.promo||'—'}],status:{l:'Marketing em andamento',tone:'neutral'},insight:''})},
+  { id:'marketing', nome:'Marketing + Vendas', area:'marketing', icon:'📣', per:'Semanal (envio segunda)',
+    loja:['Demandas conforme necessidade','Foto quando solicitado'], ragga:['Alcance / engajamento','Campanhas ativas','Conversão de promoções','NPS','Avaliação Google','Reclamações no Instagram','Cancelamentos','Problemas com cliente'],
+    fields:[{k:'ca',l:'Campanhas ativas',t:'number'},{k:'al',l:'Alcance (pessoas)',t:'number'},{k:'nps',l:'NPS',t:'number'},{k:'gg',l:'Avaliação Google (★)',t:'number',step:'0.01'},{k:'ig',l:'Reclamações no Instagram',t:'number'},{k:'canc',l:'Cancelamentos',t:'number'},{k:'pc',l:'Problemas com cliente',t:'number'}],
+    card:v=>{const ig=num(v.ig),pc=num(v.pc),gg=num(v.gg);return{kpis:[{l:'Campanhas ativas',v:int(v.ca),tone:'good'},{l:'Alcance',v:int(v.al)},{l:'NPS',v:v.nps?num(v.nps):'—'},{l:'Avaliação Google',v:gg?gg.toFixed(2)+'★':'—',tone:gg>=4.5?'good':(gg>=4?'warn':(gg?'bad':'neutral'))},{l:'Reclamações Instagram',v:int(ig),tone:ig==0?'good':'warn'},{l:'Cancelamentos',v:int(v.canc)},{l:'Problemas com cliente',v:int(pc),tone:pc==0?'good':'warn'}],status:{l:(ig==0&&pc==0)?'Reputação saudável':'Atenção na reputação',tone:(ig==0&&pc==0)?'good':'warn'},insight:''};}},
   // COMPRAS
-  { id:'compras', nome:'Compras & Estoque', area:'compras', icon:'🛒',
+  { id:'compras', nome:'Compras & Estoque', area:'compras', icon:'🛒', per:'Diário (manhã)',
     loja:['Rupturas / faltas do dia'], ragga:['Valor comprado','CMV %','Nº de rupturas','Comparativo de preço'],
-    fields:[{k:'vc',l:'Comprado no dia (R$)',t:'number'},{k:'rup',l:'Nº de rupturas',t:'number'},{k:'prazo',l:'Pedidos no prazo?',t:'select',o:['Sim','Não']}],
-    card:v=>{const vc=num(v.vc),r=num(v.rup);const tone=r==0?'good':r<=2?'warn':'bad';
-      return{kpis:[{l:'Comprado no dia',v:money(vc)},{l:'Rupturas',v:int(r),tone},{l:'Pedidos no prazo',v:v.prazo||'—',tone:v.prazo==='Sim'?'good':'warn'}],
+    fields:[{k:'vc',l:'Comprado no dia (R$)',t:'number'},{k:'cmv',l:'CMV (%)',t:'number'},{k:'rup',l:'Nº de rupturas',t:'number'},{k:'comp',l:'Comparativo de preço',t:'text'}],
+    card:v=>{const vc=num(v.vc),cmv=num(v.cmv),r=num(v.rup);const tone=r==0?'good':r<=2?'warn':'bad';
+      return{kpis:[{l:'Comprado no dia',v:money(vc)},{l:'CMV',v:cmv?cmv+'%':'—',tone:cmv?(cmv<=32?'good':(cmv<=38?'warn':'bad')):'neutral'},{l:'Rupturas',v:int(r),tone},{l:'Comparativo de preço',v:v.comp||'—'}],
       status:{l:r==0?'Sem ruptura hoje':'Rupturas: '+r,tone},insight:r>0?'Registrar faltas e replanejar a compra.':''};}},
   // FINANCEIRO
-  { id:'fin_entrada', nome:'Adm/Financeiro · Entrada de Notas', area:'financeiro', icon:'🧾',
+  { id:'fin_entrada', nome:'Adm/Financeiro · Entrada de Notas', area:'financeiro', icon:'🧾', per:'Diário (D-1)',
     loja:['Foto NF + boleto'], ragga:['Notas recebidas × lançadas','% de entrada','Prazo de lançamento'],
-    fields:[{k:'nr',l:'Notas recebidas',t:'number'},{k:'nl',l:'Notas lançadas (XML)',t:'number'}],
+    fields:[{k:'nr',l:'Notas recebidas',t:'number'},{k:'nl',l:'Notas lançadas (XML)',t:'number'},{k:'prazo',l:'Lançamento no prazo (D-1)?',t:'select',o:['Sim','Não']}],
     card:v=>{const nr=num(v.nr),nl=num(v.nl);const p=nr?nl/nr*100:0;
-      return{kpis:[{l:'Notas recebidas',v:int(nr)},{l:'Notas lançadas',v:int(nl),tone:'good'},{l:'% lançado',v:nr?p.toFixed(0)+'%':'—',tone:p>=100?'good':'warn'}],
+      return{kpis:[{l:'Notas recebidas',v:int(nr)},{l:'Notas lançadas',v:int(nl),tone:'good'},{l:'% lançado',v:nr?p.toFixed(0)+'%':'—',tone:p>=100?'good':'warn'},{l:'Prazo (D-1)',v:v.prazo||'—',tone:v.prazo==='Sim'?'good':'warn'}],
       status:{l:p>=100?'Tudo lançado':'Pendência de lançamento',tone:p>=100?'good':'warn'},insight:''};}},
-  { id:'fin_pagamento', nome:'Adm/Financeiro · Pagamento', area:'financeiro', icon:'💳',
+  { id:'fin_pagamento', nome:'Adm/Financeiro · Pagamento', area:'financeiro', icon:'💳', per:'Diário · semanal',
     loja:['—  (financeiro Ragga conduz)'], ragga:['Saldo inicial','Nº de pagamentos / valor pago','Pagamentos urgentes','Contas a pagar da semana','Saldo final consolidado da semana','% conciliado'],
-    fields:[{k:'si',l:'Saldo inicial (R$)',t:'number'},{k:'qt',l:'Nº de pagamentos',t:'number'},{k:'vp',l:'Valor total pago (R$)',t:'number'},{k:'urg',l:'Pagamentos urgentes (R$)',t:'number'},{k:'sd',l:'Saldo final do dia (R$)',t:'number'},{k:'cap',l:'Contas a pagar da semana (R$)',t:'number'},{k:'sfc',l:'Saldo final consolidado da semana (R$)',t:'number'},{k:'conc',l:'Conciliado no Cloudfy?',t:'select',o:['Sim','Não']}],
-    card:v=>{const si=num(v.si),qt=num(v.qt),vp=num(v.vp),urg=num(v.urg),sd=num(v.sd),cap=num(v.cap),sfc=num(v.sfc);return{hero:{l:'Saldo final consolidado da semana',v:money(sfc)},kpis:[{l:'Saldo inicial',v:money(si)},{l:'Nº de pagamentos',v:int(qt)},{l:'Total pago',v:money(vp)},{l:'Pagamentos urgentes',v:money(urg),tone:urg>0?'warn':'good'},{l:'Saldo final do dia',v:money(sd),tone:'good'},{l:'Contas a pagar (semana)',v:money(cap)},{l:'Conciliado',v:v.conc||'—',tone:v.conc==='Sim'?'good':'warn'}],status:{l:v.conc==='Sim'?'Pagamentos conciliados':'Conferir conciliação',tone:v.conc==='Sim'?'good':'warn'},insight:urg>0?('Atenção: '+money(urg)+' em pagamentos urgentes.'):(cap>0?('Contas a pagar na semana: '+money(cap)+'.'):'')};}},
-  { id:'caixas', nome:'Adm/Financeiro · Caixas', area:'financeiro', icon:'💵',
+    fields:[{k:'si',l:'Saldo inicial (R$)',t:'number'},{k:'qt',l:'Nº de pagamentos',t:'number'},{k:'vp',l:'Valor total pago (R$)',t:'number'},{k:'urg',l:'Pagamentos urgentes (R$)',t:'number'},{k:'sd',l:'Saldo final do dia (R$)',t:'number'},{k:'cmv',l:'Contas a pagar — CMV (R$)',t:'number'},{k:'opex',l:'Contas a pagar — OPEX (R$)',t:'number'},{k:'cmo',l:'Contas a pagar — CMO (R$)',t:'number'},{k:'cf',l:'Contas a pagar — CF (R$)',t:'number'},{k:'sfc',l:'Saldo final consolidado da semana (R$)',t:'number'},{k:'conc',l:'Conciliado no Cloudfy?',t:'select',o:['Sim','Não']}],
+    card:v=>{const si=num(v.si),qt=num(v.qt),vp=num(v.vp),urg=num(v.urg),sd=num(v.sd),cmv=num(v.cmv),opex=num(v.opex),cmo=num(v.cmo),cf=num(v.cf),sfc=num(v.sfc);const cap=cmv+opex+cmo+cf;return{hero:{l:'Saldo final consolidado da semana',v:money(sfc)},kpis:[{l:'Saldo inicial',v:money(si)},{l:'Nº de pagamentos',v:int(qt)},{l:'Total pago',v:money(vp)},{l:'Pagamentos urgentes',v:money(urg),tone:urg>0?'warn':'good'},{l:'Saldo final do dia',v:money(sd),tone:'good'},{l:'CMV',v:money(cmv)},{l:'OPEX',v:money(opex)},{l:'CMO',v:money(cmo)},{l:'CF',v:money(cf)},{l:'Contas a pagar (semana)',v:money(cap),tone:'good'},{l:'Conciliado',v:v.conc||'—',tone:v.conc==='Sim'?'good':'warn'}],status:{l:v.conc==='Sim'?'Pagamentos conciliados':'Conferir conciliação',tone:v.conc==='Sim'?'good':'warn'},insight:urg>0?('Atenção: '+money(urg)+' em pagamentos urgentes.'):(cap>0?('Contas a pagar na semana: '+money(cap)+' (CMV+OPEX+CMO+CF).'):'')};}},
+  { id:'caixas', nome:'Adm/Financeiro · Caixas', area:'financeiro', icon:'💵', per:'Diário · 2x/sem (ter/sex)',
     loja:['Troco dos caixas','Situação das maquininhas'], ragga:['Faturamento total do dia','Quebra de caixa','Crédito / Débito / Pix / Online / Voucher','Vendas a prazo (assinada / B2B)','Sangrias e retiradas (por categoria)','Cancelamentos e brindes','Divergências'],
     fields:[{k:'cred',l:'Crédito (R$)',t:'number'},{k:'deb',l:'Débito (R$)',t:'number'},{k:'pix',l:'Pix (R$)',t:'number'},{k:'online',l:'Pagamento online (R$)',t:'number'},{k:'voucher',l:'Voucher (R$)',t:'number'},{k:'assinada',l:'Conta assinada — a prazo (R$)',t:'number'},{k:'b2b',l:'B2B — a prazo (R$)',t:'number'},{k:'sangrias',l:'Sangrias (R$)',t:'number'},{k:'retiradas',l:'Retiradas de caixa (R$)',t:'number'},{k:'retiradas_cat',l:'Categorias das retiradas',t:'text'},{k:'cancelamentos',l:'Cancelamentos (R$)',t:'number'},{k:'brindes',l:'Brindes (R$)',t:'number'},{k:'quebra',l:'Quebra de caixa (R$)',t:'number'}],
     card:v=>{const c=num(v.cred),d=num(v.deb),p=num(v.pix),o=num(v.online),vo=num(v.voucher),a=num(v.assinada),bb=num(v.b2b),sg=num(v.sangrias),re=num(v.retiradas),cn=num(v.cancelamentos),br=num(v.brindes),q=num(v.quebra);const rec=c+d+p+o+vo;const prazo=a+bb;const fat=rec+prazo;const cat=(v.retiradas_cat||'').trim();const tone=q==0?'good':q<=20?'warn':'bad';let ins=q>0?'Conferir diferença de caixa do dia.':(prazo>0?'A prazo (assinada + B2B): '+money(prazo)+' a receber.':'Sem quebra de caixa hoje.');if(cat)ins+=' Retiradas: '+cat+'.';
       return{hero:{l:'Faturamento total do dia',v:money(fat)},kpis:[{l:'Crédito',v:money(c)},{l:'Débito',v:money(d)},{l:'Pix',v:money(p)},{l:'Online',v:money(o)},{l:'Voucher',v:money(vo)},{l:'A prazo (assinada+B2B)',v:money(prazo)},{l:'Recebido no caixa',v:money(rec),tone:'good'},{l:'Sangrias',v:money(sg)},{l:'Retiradas de caixa',v:money(re)},{l:'Cancelamentos',v:money(cn),tone:cn==0?'good':'warn'},{l:'Brindes',v:money(br)},{l:'Quebra de caixa',v:money(q),tone}],
       status:{l:q==0?'Caixa fechado certo':'Quebra de '+money(q),tone},insight:ins};}},
   // OPERAÇÃO
-  { id:'operacao', nome:'Operação · Gestão Diária', area:'operacao', icon:'🗓️',
-    loja:['Escala dos turnos','Áudio de fechamento'], ragga:['Aderência de escala','Headcount por turno','Horas extras','Incidentes'],
-    fields:[{k:'hd',l:'Headcount diurno',t:'number'},{k:'hn',l:'Headcount noturno',t:'number'},{k:'fech',l:'Fechamento da loja',t:'select',o:['OK','Pendência']},{k:'inc',l:'Incidentes do dia',t:'number'}],
-    card:v=>{const inc=num(v.inc);return{kpis:[{l:'Headcount diurno',v:int(v.hd)},{l:'Headcount noturno',v:int(v.hn)},{l:'Fechamento',v:v.fech||'—',tone:v.fech==='OK'?'good':'warn'},{l:'Incidentes',v:int(inc),tone:inc==0?'good':'warn'}],status:{l:(v.fech==='OK'&&inc==0)?'Operação tranquila':'Atenção na operação',tone:(v.fech==='OK'&&inc==0)?'good':'warn'},insight:''};}},
-  { id:'cozinha', nome:'Cozinha (KONCLUI)', area:'operacao', icon:'🍳',
+  { id:'operacao', nome:'Operação · Gestão Diária', area:'operacao', icon:'🗓️', per:'Diário',
+    loja:['Escala de turno','Áudio de fechamento','SOS — fora do padrão'], ragga:['Desconformidades com a loja','Aderência da escala','Incidentes','Freelancer (orçado × realizado)'],
+    fields:[{k:'ader',l:'Aderência da escala (%)',t:'number'},{k:'desc',l:'Desconformidades com a loja',t:'number'},{k:'inc',l:'Incidentes do dia',t:'number'},{k:'fo',l:'Freelancer orçado (R$)',t:'number'},{k:'fr',l:'Freelancer realizado (R$)',t:'number'}],
+    card:v=>{const ad=num(v.ader),de=num(v.desc),inc=num(v.inc),fo=num(v.fo),fr=num(v.fr);return{kpis:[{l:'Aderência da escala',v:ad?ad+'%':'—',tone:ad>=95?'good':(ad>=85?'warn':(ad?'bad':'neutral'))},{l:'Desconformidades',v:int(de),tone:de==0?'good':'warn'},{l:'Incidentes',v:int(inc),tone:inc==0?'good':'warn'},{l:'Freelancer (orç./real.)',v:money(fo)+' / '+money(fr),tone:fr<=fo?'good':'warn'}],status:{l:(de==0&&inc==0)?'Operação tranquila':'Atenção na operação',tone:(de==0&&inc==0)?'good':'warn'},insight:fr>fo?('Freelancer acima do orçado em '+money(fr-fo)+'.'):''};}},
+  { id:'cozinha', nome:'Cozinha (KONCLUI)', area:'operacao', icon:'🍳', per:'Diário',
     loja:['Checklist KONCLUI','Foto do desperdício','Itens em falta'], ragga:['% aderência ao checklist','Índice de desperdício','Conformidade de qualidade','Aderência à ficha técnica'],
     fields:[{k:'ck',l:'Checklist KONCLUI preenchido?',t:'select',o:['Sim','Não']},{k:'desp',l:'Desperdício (R$)',t:'number'},{k:'falta',l:'Itens em falta',t:'number'},{k:'qual',l:'Qualidade',t:'select',o:['OK','Atenção']}],
     card:v=>{const d=num(v.desp),f=num(v.falta);const ok=v.ck==='Sim'&&v.qual==='OK';
       return{kpis:[{l:'Checklist KONCLUI',v:v.ck||'—',tone:v.ck==='Sim'?'good':'bad'},{l:'Desperdício',v:money(d),tone:d==0?'good':'warn'},{l:'Itens em falta',v:int(f),tone:f==0?'good':'warn'},{l:'Qualidade',v:v.qual||'—',tone:v.qual==='OK'?'good':'warn'}],
       status:{l:ok?'Cozinha em ordem':'Atenção na cozinha',tone:ok?'good':'warn'},insight:v.ck!=='Sim'?'Checklist do KONCLUI não preenchido.':''};}},
-  { id:'manutencao', nome:'Manutenção', area:'operacao', icon:'🔧',
-    loja:['Solicitação + foto'], ragga:['Abertas / Concluídas','Tempo de atendimento','Gasto do mês','Recorrência'],
-    fields:[{k:'ab',l:'Solicitações abertas',t:'number'},{k:'co',l:'Concluídas',t:'number'},{k:'g',l:'Gasto no mês (R$)',t:'number'}],
-    card:v=>{const ab=num(v.ab);return{kpis:[{l:'Abertas',v:int(ab),tone:ab==0?'good':'warn'},{l:'Concluídas',v:int(v.co),tone:'good'},{l:'Gasto no mês',v:money(v.g)}],status:{l:ab==0?'Sem pendências':ab+' em aberto',tone:ab==0?'good':'warn'},insight:''};}},
-  { id:'ti', nome:'TI · Sistemas (Louro)', area:'operacao', icon:'🖥️',
-    loja:['Chamado + foto'], ragga:['Chamados abertos / resolvidos','Tempo de resolução','Recorrência'],
-    fields:[{k:'ab',l:'Chamados abertos',t:'number'},{k:'re',l:'Chamados resolvidos',t:'number'}],
-    card:v=>{const a=num(v.ab),r=num(v.re);const p=(a+r)?r/(a+r)*100:0;return{kpis:[{l:'Abertos',v:int(a)},{l:'Resolvidos',v:int(r),tone:'good'},{l:'% resolvido',v:(a+r)?p.toFixed(0)+'%':'—',tone:p>=80?'good':'warn'}],status:{l:a==0?'Sistemas OK':a+' chamado(s) aberto(s)',tone:a==0?'good':'warn'},insight:''};}},
+  { id:'manutencao', nome:'Manutenção', area:'operacao', icon:'🔧', per:'Loja diário · Ragga mensal',
+    loja:['Solicitação + foto','Orçamento'], ragga:['Abertas / Concluídas','Tempo de atendimento','Gasto do mês','Recorrência'],
+    fields:[{k:'ab',l:'Solicitações abertas',t:'number'},{k:'co',l:'Concluídas',t:'number'},{k:'tmp',l:'Tempo médio de atendimento',t:'text'},{k:'g',l:'Gasto no mês (R$)',t:'number'},{k:'rec',l:'Recorrência (item/local)',t:'text'}],
+    card:v=>{const ab=num(v.ab);return{kpis:[{l:'Abertas',v:int(ab),tone:ab==0?'good':'warn'},{l:'Concluídas',v:int(v.co),tone:'good'},{l:'Tempo médio',v:v.tmp||'—'},{l:'Gasto no mês',v:money(v.g)},{l:'Recorrência',v:v.rec||'—'}],status:{l:ab==0?'Sem pendências':ab+' em aberto',tone:ab==0?'good':'warn'},insight:''};}},
+  { id:'ti', nome:'TI · Sistemas (Louro)', area:'operacao', icon:'🖥️', per:'Loja diário · Ragga mensal',
+    loja:['Problemas de impressora','Cardápio do sistema','Foto do erro de lançamento'], ragga:['Tempo de resolução','Suporte','Recorrência','Intercorrências resolvidas'],
+    fields:[{k:'ab',l:'Chamados abertos',t:'number'},{k:'re',l:'Chamados resolvidos',t:'number'},{k:'tmp',l:'Tempo médio de resolução',t:'text'},{k:'rec',l:'Recorrência',t:'text'}],
+    card:v=>{const a=num(v.ab),r=num(v.re);const p=(a+r)?r/(a+r)*100:0;return{kpis:[{l:'Abertos',v:int(a)},{l:'Resolvidos',v:int(r),tone:'good'},{l:'% resolvido',v:(a+r)?p.toFixed(0)+'%':'—',tone:p>=80?'good':'warn'},{l:'Tempo de resolução',v:v.tmp||'—'},{l:'Recorrência',v:v.rec||'—'}],status:{l:a==0?'Sistemas OK':a+' chamado(s) aberto(s)',tone:a==0?'good':'warn'},insight:''};}},
   // PESSOAS
-  { id:'recrutamento', nome:'RS/RH · Recrutamento & Seleção', area:'pessoas', icon:'👋',
-    loja:['Contratações','Status da integração'], ragga:['Vagas em aberto','Tempo de preenchimento','% integração concluída','Avaliações 35/70 dias'],
-    fields:[{k:'ct',l:'Contratações da semana',t:'number'},{k:'va',l:'Vagas em aberto',t:'number'},{k:'integ',l:'Integração do 1º dia OK?',t:'select',o:['Sim','Não']}],
-    card:v=>{const va=num(v.va);return{kpis:[{l:'Contratações',v:int(v.ct),tone:'good'},{l:'Vagas abertas',v:int(va),tone:va==0?'good':'warn'},{l:'Integração 1º dia',v:v.integ||'—',tone:v.integ==='Sim'?'good':'warn'}],status:{l:va==0?'Quadro completo':va+' vaga(s) aberta(s)',tone:va==0?'good':'warn'},insight:''};}},
-  { id:'vale_transporte', nome:'DP · Vale Transporte', area:'pessoas', icon:'🚌',
+  { id:'recrutamento', nome:'RS/RH · Recrutamento & Seleção', area:'pessoas', icon:'👋', per:'Status quinta · indic. quarta',
+    loja:['Status da integração','Avaliação 45/90 dias','Recebeu uniforme?'], ragga:['Vagas em aberto','Tempo de preenchimento','% integração concluída','Avaliações 45/90 dias','Comunicado de novos (terça)'],
+    fields:[{k:'ct',l:'Contratações da semana',t:'number'},{k:'va',l:'Vagas em aberto',t:'number'},{k:'integ',l:'Integração do 1º dia OK?',t:'select',o:['Sim','Não']},{k:'av',l:'Avaliações 45/90 dias',t:'text'}],
+    card:v=>{const va=num(v.va);return{kpis:[{l:'Contratações',v:int(v.ct),tone:'good'},{l:'Vagas abertas',v:int(va),tone:va==0?'good':'warn'},{l:'Integração 1º dia',v:v.integ||'—',tone:v.integ==='Sim'?'good':'warn'},{l:'Avaliações 45/90 dias',v:v.av||'—'}],status:{l:va==0?'Quadro completo':va+' vaga(s) aberta(s)',tone:va==0?'good':'warn'},insight:''};}},
+  { id:'vale_transporte', nome:'DP · Vale Transporte', area:'pessoas', icon:'🚌', per:'Loja terça · indic. sexta',
     loja:['Validação da listagem'], ragga:['% com VT conferido','Divergências','Custo de VT'],
-    fields:[{k:'tc',l:'Total de colaboradores',t:'number'},{k:'vt',l:'Com vale-transporte',t:'number'},{k:'dv',l:'Divergências',t:'number'}],
-    card:v=>{const tc=num(v.tc),vt=num(v.vt),dv=num(v.dv);const p=tc?vt/tc*100:0;return{kpis:[{l:'Colaboradores',v:int(tc)},{l:'Com VT',v:int(vt)},{l:'% com VT',v:tc?p.toFixed(0)+'%':'—'},{l:'Divergências',v:int(dv),tone:dv==0?'good':'warn'}],status:{l:dv==0?'Listagem conferida':dv+' divergência(s)',tone:dv==0?'good':'warn'},insight:''};}},
-  { id:'emprestimo', nome:'DP · Solicitação de Empréstimo', area:'pessoas', icon:'🤝',
+    fields:[{k:'tc',l:'Total de colaboradores',t:'number'},{k:'vt',l:'Com vale-transporte',t:'number'},{k:'dv',l:'Divergências',t:'number'},{k:'cu',l:'Custo de VT (R$)',t:'number'}],
+    card:v=>{const tc=num(v.tc),vt=num(v.vt),dv=num(v.dv);const p=tc?vt/tc*100:0;return{kpis:[{l:'Colaboradores',v:int(tc)},{l:'Com VT',v:int(vt)},{l:'% com VT',v:tc?p.toFixed(0)+'%':'—'},{l:'Divergências',v:int(dv),tone:dv==0?'good':'warn'},{l:'Custo de VT',v:money(v.cu)}],status:{l:dv==0?'Listagem conferida':dv+' divergência(s)',tone:dv==0?'good':'warn'},insight:''};}},
+  { id:'emprestimo', nome:'DP · Solicitação de Empréstimo e Acordos', area:'pessoas', icon:'🤝', per:'Mensal (dias 5/14)',
     loja:['Pedido (nome, CPF, valor)'], ragga:['Nº de solicitações','Valor total','% aprovado','Prazo de retorno'],
-    fields:[{k:'so',l:'Nº de solicitações',t:'number'},{k:'vt',l:'Valor total (R$)',t:'number'}],
-    card:v=>({kpis:[{l:'Solicitações',v:int(v.so)},{l:'Valor total',v:money(v.vt)}],status:{l:'Solicitações registradas',tone:'neutral'},insight:''})},
-  { id:'ferias', nome:'DP · Férias', area:'pessoas', icon:'🏖️',
+    fields:[{k:'so',l:'Nº de solicitações',t:'number'},{k:'ap',l:'Aprovados',t:'number'},{k:'vt',l:'Valor total (R$)',t:'number'}],
+    card:v=>{const so=num(v.so),ap=num(v.ap);const p=so?ap/so*100:0;return{kpis:[{l:'Solicitações',v:int(so)},{l:'Aprovados',v:int(ap)},{l:'% aprovado',v:so?p.toFixed(0)+'%':'—'},{l:'Valor total',v:money(v.vt)}],status:{l:'Solicitações registradas',tone:'neutral'},insight:''};}},
+  { id:'ferias', nome:'DP · Férias', area:'pessoas', icon:'🏖️', per:'Loja dia 10 · indic. mensal',
     loja:['Solicitação de férias'], ragga:['% programado até dia 20','Férias vencidas / a vencer','Saldo de férias'],
-    fields:[{k:'so',l:'Solicitações',t:'number'},{k:'pr',l:'Programadas',t:'number'}],
-    card:v=>{const so=num(v.so),pr=num(v.pr);const p=so?pr/so*100:0;return{kpis:[{l:'Solicitações',v:int(so)},{l:'Programadas',v:int(pr)},{l:'% programado',v:so?p.toFixed(0)+'%':'—',tone:p>=100?'good':'warn'}],status:{l:p>=100?'Tudo programado':'Programação pendente',tone:p>=100?'good':'warn'},insight:''};}},
-  { id:'ocorrencias', nome:'Ocorrências', area:'pessoas', icon:'⚠️',
+    fields:[{k:'so',l:'Solicitações',t:'number'},{k:'pr',l:'Programadas',t:'number'},{k:'ve',l:'Vencidas / a vencer',t:'text'},{k:'sa',l:'Saldo de férias',t:'text'}],
+    card:v=>{const so=num(v.so),pr=num(v.pr);const p=so?pr/so*100:0;return{kpis:[{l:'Solicitações',v:int(so)},{l:'Programadas',v:int(pr)},{l:'% programado',v:so?p.toFixed(0)+'%':'—',tone:p>=100?'good':'warn'},{l:'Vencidas / a vencer',v:v.ve||'—'},{l:'Saldo de férias',v:v.sa||'—'}],status:{l:p>=100?'Tudo programado':'Programação pendente',tone:p>=100?'good':'warn'},insight:''};}},
+  { id:'cartao_ponto', nome:'DP · Cartão Ponto', area:'pessoas', icon:'🕐', per:'Semanal',
+    loja:['Cartão ponto ajustado (semanal)','Atestados, faltas e problemas'], ragga:['Horas extras','Ajustes em dia'],
+    fields:[{k:'he',l:'Horas extras (h)',t:'number'},{k:'aj',l:'Ajustes em dia?',t:'select',o:['Sim','Não']},{k:'at',l:'Atestados / faltas',t:'number'}],
+    card:v=>{const he=num(v.he);return{kpis:[{l:'Horas extras',v:he?he+' h':'—',tone:he<=0?'good':'warn'},{l:'Ajustes em dia',v:v.aj||'—',tone:v.aj==='Sim'?'good':'warn'},{l:'Atestados / faltas',v:int(v.at)}],status:{l:v.aj==='Sim'?'Cartão ponto em dia':'Ajustes pendentes',tone:v.aj==='Sim'?'good':'warn'},insight:''};}},
+  { id:'ocorrencias', nome:'Ocorrências', area:'pessoas', icon:'⚠️', per:'Loja sob demanda · indic. mensal',
     loja:['Ocorrência (nome, cargo, decisão)','Atestado'], ragga:['Absenteísmo','Faltas','Atestados','Advertências / Suspensões'],
-    fields:[{k:'oc',l:'Ocorrências do dia',t:'number'},{k:'fa',l:'Faltas',t:'number'},{k:'at',l:'Atestados',t:'number'},{k:'ad',l:'Advertências',t:'number'}],
-    card:v=>{const oc=num(v.oc),fa=num(v.fa);return{kpis:[{l:'Ocorrências',v:int(oc),tone:oc==0?'good':'warn'},{l:'Faltas',v:int(fa),tone:fa==0?'good':'warn'},{l:'Atestados',v:int(v.at)},{l:'Advertências',v:int(v.ad)}],status:{l:oc==0?'Sem ocorrências':oc+' ocorrência(s)',tone:oc==0?'good':'warn'},insight:''};}},
-  { id:'demissao', nome:'Demissão', area:'pessoas', icon:'📤',
+    fields:[{k:'oc',l:'Ocorrências do dia',t:'number'},{k:'fa',l:'Faltas',t:'number'},{k:'at',l:'Atestados',t:'number'},{k:'ad',l:'Advertências / Suspensões',t:'number'},{k:'abs',l:'Absenteísmo (%)',t:'number'}],
+    card:v=>{const oc=num(v.oc),fa=num(v.fa),abs=num(v.abs);return{kpis:[{l:'Absenteísmo',v:abs?abs+'%':'—',tone:abs?(abs<=4?'good':(abs<=8?'warn':'bad')):'neutral'},{l:'Ocorrências',v:int(oc),tone:oc==0?'good':'warn'},{l:'Faltas',v:int(fa),tone:fa==0?'good':'warn'},{l:'Atestados',v:int(v.at)},{l:'Advertências / Suspensões',v:int(v.ad)}],status:{l:oc==0?'Sem ocorrências':oc+' ocorrência(s)',tone:oc==0?'good':'warn'},insight:''};}},
+  { id:'demissao', nome:'Demissão', area:'pessoas', icon:'📤', per:'Loja sob demanda · indic. mensal',
     loja:['Comunicação de desligamento'], ragga:['Turnover %','Motivo','Custo de rescisão','Tempo de casa'],
-    fields:[{k:'de',l:'Desligamentos',t:'number'},{k:'ad',l:'Admissões',t:'number'},{k:'mot',l:'Motivo principal',t:'text'}],
-    card:v=>{const de=num(v.de);return{kpis:[{l:'Desligamentos',v:int(de),tone:de==0?'good':'warn'},{l:'Admissões',v:int(v.ad)},{l:'Motivo',v:v.mot||'—'}],status:{l:de==0?'Sem desligamentos':de+' desligamento(s)',tone:de==0?'good':'warn'},insight:''};}}
+    fields:[{k:'de',l:'Desligamentos',t:'number'},{k:'tx',l:'Turnover (%)',t:'number'},{k:'mot',l:'Motivo principal',t:'text'},{k:'cr',l:'Custo de rescisão (R$)',t:'number'},{k:'tc',l:'Tempo médio de casa',t:'text'}],
+    card:v=>{const de=num(v.de),tx=num(v.tx);return{kpis:[{l:'Desligamentos',v:int(de),tone:de==0?'good':'warn'},{l:'Turnover',v:tx?tx+'%':'—',tone:tx?(tx<=5?'good':(tx<=10?'warn':'bad')):'neutral'},{l:'Motivo',v:v.mot||'—'},{l:'Custo de rescisão',v:money(v.cr)},{l:'Tempo de casa',v:v.tc||'—'}],status:{l:de==0?'Sem desligamentos':de+' desligamento(s)',tone:de==0?'good':'warn'},insight:''};}}
 ];
   const root=document.getElementById('ag-gen'); if(!root) return;
   const sel=root.querySelector('.ag-select'),fieldsEl=root.querySelector('.ag-fields'),lojaEl=root.querySelector('.ag-loja'),dataEl=root.querySelector('.ag-data'),obsEl=root.querySelector('.ag-obs'),hostEl=root.querySelector('.ag-cardhost'),dlrow=root.querySelector('.ag-dlrow'),copytg=root.querySelector('.ag-copytoggle'),copypre=root.querySelector('.ag-copypre');
@@ -781,7 +844,7 @@ const GROUPS = [
     const obs=obsEl.value.trim();
     const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
     const obsBlock=obs?`<div class="cobs"><b>📝 Observações</b>${esc(obs)}</div>`:'';
-    hostEl.innerHTML=`<div id="card"><div class="ctop" style="background:${accent}">${leaf}<div><div class="cbrand">GESTÃO RAGGA</div><div style="font-size:13px;font-weight:bold">Suporte 13</div></div><div class="cicon">${g.icon}</div></div><div class="chead"><div class="ctitle">${g.nome}</div><div class="cmeta">${loja}${data?' · '+data:''}</div></div>${out.hero?`<div class="chero" style="background:${accent}"><div class="hl">${out.hero.l}</div><div class="hv">${out.hero.v}</div></div>`:''}<div class="ctiles">${tiles}</div>${st.l?`<div class="cstatus ${st.tone}">●&nbsp; ${st.l}</div>`:''}${insight}${obsBlock}<div class="cfoot"><span>Ragga Gestão &amp; Educação</span><span>📲 Gestão Assistida 13º</span></div></div>`;
+    hostEl.innerHTML=`<div id="card"><div class="ctop" style="background:${accent}">${leaf}<div><div class="cbrand">GESTÃO RAGGA</div><div style="font-size:13px;font-weight:bold">Suporte 13</div></div><div class="cicon">${g.icon}</div></div><div class="chead"><div class="ctitle">${g.nome}</div><div class="cmeta">${loja}${data?' · '+data:''}${g.per?' · '+g.per:''}</div></div>${out.hero?`<div class="chero" style="background:${accent}"><div class="hl">${out.hero.l}</div><div class="hv">${out.hero.v}</div></div>`:''}<div class="ctiles">${tiles}</div>${st.l?`<div class="cstatus ${st.tone}">●&nbsp; ${st.l}</div>`:''}${insight}${obsBlock}<div class="cfoot"><span>Ragga Gestão &amp; Educação</span><span>📲 Gestão Assistida 13º</span></div></div>`;
     lastName='gestao_'+g.id; dlrow.style.display='flex';
     let txt=`📊 *${g.nome.toUpperCase()} — ${loja.toUpperCase()}*`+(data?`\n📅 ${data}`:'')+`\n\n`;
     if(out.hero)txt+=`💰 *${out.hero.l}:* ${out.hero.v}\n\n`;
