@@ -208,6 +208,8 @@
   .field textarea{width:100%;font-family:Arial,sans-serif;font-size:14px;font-weight:bold;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;resize:vertical;min-height:62px}
   .field textarea:focus{outline:none;border-color:var(--ragga)}
   .field input:focus,.field select:focus{outline:none;border-color:var(--ragga)}
+  .fsec{font-size:11.5px;font-weight:bold;letter-spacing:.5px;text-transform:uppercase;color:var(--ragga);margin:16px 0 9px;padding-bottom:5px;border-bottom:1.5px solid var(--line)}
+  .fsec:first-child{margin-top:0}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
   .btn{font-family:Arial,sans-serif;font-size:14px;font-weight:bold;border-radius:11px;padding:11px 16px;cursor:pointer;border:none}
   .btn.primary{background:var(--ragga);color:#fff;width:100%;margin-top:4px}
@@ -248,6 +250,7 @@
   #card .chero .hl{font-size:11px;font-weight:bold;letter-spacing:.6px;text-transform:uppercase;opacity:.92}
   #card .chero .hv{font-size:34px;font-weight:bold;line-height:1.05;margin-top:3px}
   #card .ctiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 22px 4px}
+  #card .tsec{grid-column:1/-1;font-size:10.5px;font-weight:bold;letter-spacing:.6px;text-transform:uppercase;color:#5B6478;margin:6px 0 -2px;padding:0 2px}
   #card .tile{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:12px 13px;border-left:5px solid var(--ragga)}
   #card .tile.good{border-left-color:var(--good)} #card .tile.warn{border-left-color:var(--warn)} #card .tile.bad{border-left-color:var(--bad)}
   #card .tile .tl{font-size:11px;font-weight:bold;letter-spacing:.4px;text-transform:uppercase;color:var(--muted)}
@@ -281,7 +284,6 @@
       <a href="#principio">Princípio</a>
       <a href="#grupos">Grupos & Indicadores</a>
       <a href="#donos">Donos</a>
-      <a href="#fim">Próximos passos</a>
       <a href="#construcao">Construção</a>
       <a href="#agente-gerador">Agente</a>
     </div>
@@ -406,7 +408,7 @@
       <div class="c"><div class="ic">📊</div><h3>Gestão é da Ragga</h3><p>A análise e os indicadores são sempre responsabilidade da Ragga Gestão &amp; Educação.</p></div>
       <div class="c b"><div class="ic">🏪</div><h3>A loja só traz a info</h3><p>Número, foto ou checklist KONCLUI. Sem relatório longo — comunicação simples.</p></div>
       <div class="c c"><div class="ic">🎯</div><h3>Estratégico = diretoria</h3><p>O grupo B13 · Estratégico PDCA recebe o consolidado e os planos de ação.</p></div>
-      <div class="c d"><div class="ic">🤖</div><h3>Agente de gestão</h3><p>A loja joga a informação e o agente gera a imagem de gestão para o grupo.</p></div>
+      <div class="c d"><div class="ic">🤖</div><h3>Agente de gestão (Ragga)</h3><p>Ferramenta de uso da <b>Ragga</b> para montar a imagem de fechamento e indicadores. A loja só envia os copia-e-cola padrão no WhatsApp.</p></div>
     </div>
   </div>
 </section>
@@ -432,8 +434,8 @@
   </div>
 </section>
 
-<!-- 05 PRÓXIMOS PASSOS -->
-<section id="fim">
+<!-- 05 PRÓXIMOS PASSOS (oculto) -->
+<section id="fim" style="display:none">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">05</span><span class="sec-kicker">Próximos passos</span></div>
     <h2>Direcionamento e pontos de decisão</h2>
@@ -444,8 +446,8 @@
         <p>No Bigg's 13 (sem Voxel), a entrada das notas fica com o financeiro interno; a Maria Fernanda assume o lançamento até a contratação de 3–4 pessoas. Sugestão: a loja só envia NF/boleto e o financeiro dá entrada por XML, conciliando via DDA Sicredi + Cloudfy.</p>
         <span class="badge b-dec">Levar à reunião</span></div></div>
       <div class="stepcard"><div class="k">2</div><div>
-        <h4>Agente de indicadores pronto</h4>
-        <p>A loja joga a informação e o agente gera a imagem de gestão para o grupo. O texto de copiar/colar fica oculto e padronizado.</p>
+        <h4>Agente de gestão pronto (uso da Ragga)</h4>
+        <p>Ferramenta da <b>Ragga</b> para montar a imagem de fechamento e indicadores. A loja só padroniza a comunicação com os copia-e-cola — o fechamento e os indicadores são responsabilidade da Ragga.</p>
         <span class="badge b-build">Construído</span></div></div>
       <div class="stepcard"><div class="k">3</div><div>
         <h4>Base documental dos colaboradores</h4>
@@ -466,7 +468,7 @@
 <!-- 06 CONSTRUÇÃO EM PARALELO -->
 <section id="construcao">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><span class="sec-kicker">Construção em paralelo</span></div>
+    <div class="sec-head"><span class="sec-num">05</span><span class="sec-kicker">Construção em paralelo</span></div>
     <h2>O que está sendo construído agora</h2>
     <p class="sec-intro">Três frentes em andamento em paralelo à gestão dos grupos, cada uma com seu prazo.</p>
     <div class="steps">
@@ -500,9 +502,9 @@
 <!-- 06 AGENTE GERADOR -->
 <section id="agente-gerador">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">07</span><span class="sec-kicker">Agente · Gerador de imagem</span></div>
-    <h2>Joga a informação → sai a imagem de gestão</h2>
-    <p class="sec-intro">Três formas de gerar a imagem: <b>Indicadores</b> (formulário por grupo), <b>Texto corrido</b> (cola um texto e vira imagem) ou <b>Arquivo</b> (sobe uma imagem ou um .txt). Depois é só baixar o PNG e enviar no WhatsApp.</p>
+    <div class="sec-head"><span class="sec-num">06</span><span class="sec-kicker">Agente · Gerador de imagem</span></div>
+    <h2>Ferramenta da Ragga · da informação à imagem de gestão</h2>
+    <p class="sec-intro"><b>Uso da Ragga:</b> o fechamento e os indicadores são responsabilidade dela — a loja só padroniza a comunicação com os copia-e-cola. Três formas de gerar a imagem: <b>Indicadores</b> (formulário por grupo), <b>Texto corrido</b> (cola um texto e vira imagem) ou <b>Arquivo</b> (sobe uma imagem ou um .txt). Depois é só baixar o PNG.</p>
     <div id="ag-gen" class="genwrap">
       <div class="panel">
         <div class="agtabs">
@@ -553,11 +555,11 @@
 <script>
 const AREAS={comercial:'Comercial · Vendas',marketing:'Marketing',compras:'Compras & Estoque',financeiro:'Financeiro',operacao:'Operação',pessoas:'Pessoas · RH & DP'};
 const G=[
- {nome:'Performance + Vendas',per:'Diário',obj:'Indicadores de venda da unidade, gerados pelo fechamento automático.',envia:'Loja acompanha · sugestões de venda e melhorias',area:'comercial',icon:'📊',av:'AG',dono:'Amanda Galvão',loja:['Acompanha os indicadores do dia','Sugestões de venda e melhorias'],ragga:['Ticket médio','% da meta','Salão × Delivery','Acumulado do mês'],rotina:'Fechamento de vendas automático (sistema) — sai pronto, diário.',mods:[{l:'Diário · Fechamento de vendas (automático)',t:"📊 *BIGG'S 13 — RELATÓRIO DO DIA*\n📅 __/__/____\n💰 Faturamento: R$ ____\n🛒 Pedidos: ____ | 🎯 Ticket médio: R$ ____\n🎯 % da meta: ____%\n🏠 Salão × 🛵 Delivery: ____% / ____%\n📈 Acumulado do mês: R$ ____"},{l:'Loja · Sugestão de venda / melhoria',t:"💡 *SUGESTÃO DE VENDA / MELHORIA — BIGG'S 13*\n📅 __/__\n📝 Sugestão: ____\n🎯 Impacto esperado: ____"}]},
- {nome:'Delivery',per:'Semanal · seg–dom, envio na segunda',obj:'Comunicação do setor de delivery: metas, indicadores e ajustes.',envia:'Encarregado de delivery',area:'comercial',icon:'🛵',av:'LO',dono:'Luiz Otávio (dados)',loja:['Ocorrências de delivery'],ragga:['Meta de delivery','Custo logístico','Avaliação por plataforma','Cancelamento por plataforma','Índice de chamados por plataforma','Chamados não atendidos','Tempo online','Faturamento delivery'],rotina:'Seg: avaliações iFood · Ter: indicadores.',mods:[{l:'Semanal · Indicadores de delivery (envio segunda)',t:"🛵 *DELIVERY — BIGG'S 13*\n📅 Semana: __/__ a __/__\n🎯 Meta de delivery: R$ ____ | Atingido: ____%\n💰 Faturamento delivery: R$ ____\n🚚 Custo logístico: R$ ____ (____%)\n⭐ Avaliação/plataforma: iFood ____ | App ____\n❌ Cancelamento/plataforma: iFood ____% | App ____%\n📞 Índice de chamados/plataforma: ____\n⛔ Chamados não atendidos: ____\n🟢 Tempo online: ____%"},{l:'Loja · Ocorrência de delivery (conforme demanda)',t:"⚠️ *OCORRÊNCIA DE DELIVERY — BIGG'S 13*\n📅 __/__\nPlataforma: ____\nProblema: ____\n📷 Evidência anexada"}]},
+ {nome:'Performance + Vendas',per:'Diário',obj:'Indicadores de venda da unidade, gerados pelo fechamento automático.',envia:'Loja acompanha · sugestões de venda e melhorias',area:'comercial',icon:'📊',av:'AG',dono:'Amanda Galvão',loja:['Acompanha os indicadores do dia','Sugestões de venda e melhorias'],ragga:['Faturamento e nº de vendas','Ticket médio (geral · salão · delivery)','Canais de venda (iFood · WhatsApp · direto · salão)','Vendas por turno','Formas de pagamento','À vista × contas assinadas','Produtos mais vendidos (Top 5)','Vendedores que mais venderam (Top 5)','Cancelamentos, descontos e sangria','% da meta · acumulado do mês'],rotina:'Fechamento de vendas automático (sistema) — sai pronto, diário.',mods:[{l:'Diário · Relatório do dia (automático · sistema)',t:"📊 *BIGGS 13 — ARTHUR THOMAS — Relatório do Dia 25/06/2026*\n💰 Faturamento Total: R$ 14.929,63\n🛒 Total de Vendas: 344 (583 clientes registrados)\n🏠 Comandas Salão: 174 comandas\n🎯 Ticket Médio Geral: R$ 43,40 | Salão: R$ 47,13 | Delivery: R$ 39,58\n💳 Formas de Pagamento:\nCartão de Crédito: 47,73% — R$ 7.126,36\nCartão de Débito: 24,59% — R$ 3.671,25\nDinheiro: 8,51% — R$ 1.270,86\nPIX: 7,94% — R$ 1.184,81\nVoucher: 1,40% — R$ 208,90\n🕐 Vendas por Turno:\nNoturno 1 (18:01–23:00): 161 vend. — R$ 8.130,38 🏆\nVespertino (14:01–18:00): 105 vend. — R$ 3.544,74\nDiurno (08:00–14:00): 44 vend. — R$ 1.681,13\nNoturno 2 (23:01–01:00): 34 vend. — R$ 1.573,38\n🏠 Salão × 🛵 Delivery:\nSalão: R$ 8.200,84 (54,93%) — 174 comandas — Ticket: R$ 47,13\nDelivery/Encomendas: R$ 6.728,79 (45,07%) — Ticket: R$ 39,58\n↳ 170 pedidos · Taxas arrecadadas: R$ 829,11\n↳ iFood: 126 ped. — R$ 3.988,16\n↳ WhatsApp/Cloudfy: 35 ped. — R$ 1.528,53\n↳ Delivery Direto: 6 ped. — R$ 246,97\n👁️ À Vista × Contas Assinadas:\nÀ Vista: 306 vend. — R$ 13.462,18 (90,17%)\nContas Assinadas: 38 vend. — R$ 1.467,45 (9,83%) — Ticket: R$ 38,62\n🍽️ Top 5 Produtos:\nFrango Duplo — Promo Ter/Qui — R$ 1.976,50\nFrango Duplo — R$ 1.515,15\nCombo Família - 4 Dog Duplo + Refri 2L — R$ 459,91\nCheese Burger Salada — R$ 450,90\nPF Grelhado Frango — R$ 239,00\n🏅 Top 5 Vendedores:\nADM Biggs 13 — R$ 4.363,38 (29,23%)\nThais Jose da Silva — R$ 1.869,83 (12,52%)\nKawany Gonçalves Pedroso — R$ 1.367,20 (9,16%)\nAlessandra Fernandes — R$ 1.241,17 (8,31%)\nAntonio Osvaldo Goncalves Neto — R$ 1.238,94 (8,30%)\n⚠️ Ajustes Operacionais:\nCancelamentos: 8 itens — R$ 100,10 | Motivo principal: Troca de Produto\nDescontos: 8 vendas — R$ 326,29\nItens excluídos PDV: 1 — R$ 16,75\nPagamentos de Caixa: R$ 554,90\nSangria: R$ 1.100,00"},{l:'Diário · Fechamento de vendas (automático)',t:"📊 *BIGG'S 13 — RELATÓRIO DO DIA*\n📅 __/__/____\n💰 Faturamento: R$ ____\n🛒 Pedidos: ____ | 🎯 Ticket médio: R$ ____\n🎯 % da meta: ____%\n🏠 Salão × 🛵 Delivery: ____% / ____%\n📈 Acumulado do mês: R$ ____"},{l:'Loja · Sugestão de venda / melhoria',t:"💡 *SUGESTÃO DE VENDA / MELHORIA — BIGG'S 13*\n📅 __/__\n📝 Sugestão: ____\n🎯 Impacto esperado: ____"}]},
+ {nome:'Delivery',per:'Semanal · seg–dom, envio na segunda',obj:'Comunicação do setor de delivery: metas, indicadores e ajustes.',envia:'Gerente adm envia o PDF',area:'comercial',icon:'🛵',av:'LO',dono:'Luiz Otávio (dados)',loja:['PDF do checklist de delivery (encarregado executa · gerente adm envia)','Ocorrências de delivery'],ragga:['Meta de delivery','Custo logístico','Avaliação por plataforma','Cancelamento por plataforma','Índice de chamados por plataforma','Chamados não atendidos','Tempo online','Faturamento delivery'],rotina:'Seg: avaliações iFood · Ter: indicadores.',mods:[{l:'Semanal · Indicadores de delivery (envio segunda)',t:"🛵 *DELIVERY — BIGG'S 13*\n📅 Semana: __/__ a __/__\n🎯 Meta de delivery: R$ ____ | Atingido: ____%\n💰 Faturamento delivery: R$ ____\n🚚 Custo logístico: R$ ____ (____%)\n⭐ Avaliação/plataforma: iFood ____ | App ____\n❌ Cancelamento/plataforma: iFood ____% | App ____%\n📞 Índice de chamados/plataforma: ____\n⛔ Chamados não atendidos: ____\n🟢 Tempo online: ____%"},{l:'Loja · Ocorrência de delivery (conforme demanda)',t:"⚠️ *OCORRÊNCIA DE DELIVERY — BIGG'S 13*\n📅 __/__\nPlataforma: ____\nProblema: ____\n📷 Evidência anexada"}]},
  {nome:'Marketing + Vendas',per:'Semanal · avaliações seg–dom, envio na segunda',obj:'Campanhas, conteúdo e promoções da unidade.',envia:'Demandas conforme necessidade · foto quando solicitado',area:'marketing',icon:'📣',av:'MF',dono:'Maria Fernanda · Mkt',loja:['Demandas conforme necessidade','Foto quando solicitado'],ragga:['Alcance / engajamento','Campanhas ativas','Conversão de promoções','Calendário de conteúdo','NPS','Avaliação Google','Reclamações no Instagram','Cancelamentos','Problemas com cliente'],rotina:'Campanhas, conteúdo e promoções.',mods:[{l:'Semanal · Indicadores de marketing (envio segunda)',t:"📣 *MARKETING — BIGG'S 13*\n📅 Semana: __/__ a __/__\n📢 Campanhas ativas: ____\n📈 Alcance / engajamento: ____\n🎯 Conversão de promoções: ____\n⭐ NPS: ____ | Avaliação Google: ____\n💬 Reclamações no Instagram: ____\n❌ Cancelamentos: ____ | 🙋 Problemas com cliente: ____"},{l:'Loja · Demanda de marketing (conforme necessidade)',t:"🖌️ *DEMANDA DE MARKETING — BIGG'S 13*\n📅 __/__\nO que precisa: ____\n📷 Foto (quando solicitado): anexada\nPrazo desejado: ____"}]},
  {nome:'Compras & Estoque',per:'Diário · envio pela manhã',obj:'Comunicação entre a loja e o centro de compras.',envia:'Gerente',area:'compras',icon:'🛒',av:'ME',dono:'Maria Eduarda Alves',loja:['Rupturas / faltas do dia','Contagem de estoque (listagem diária — gerente adm)'],ragga:['Valor comprado','CMV %','Nº de rupturas','Comparativo de preço','Contagem entregue no horário','Valor de estoque (período)'],rotina:'Diário: cotação, compras e fechamento · listagem de contagem de estoque para o gerente adm fazer a contagem.',mods:[{l:'Diário · Fechamento de compras (manhã)',t:"🛒 *COMPRAS & ESTOQUE — BIGG'S 13*\n📅 __/__\n💰 Comprado no dia: R$ ____\n📉 CMV: ____%\n⚠️ Rupturas / faltas: ____\n🔁 Comparativo de preço: ____"},{l:'Loja · Ruptura de insumo (conforme demanda)',t:"⚠️ *RUPTURA DE INSUMO — BIGG'S 13*\n📅 __/__\nItem: ____\nQtd pedida × recebida: ____ / ____\nFornecedor: ____"},{l:'Diário · Contagem de estoque (gerente adm)',t:"📦 *CONTAGEM DE ESTOQUE — BIGG'S 13*\n📅 __/__\n📋 Listagem de contagem enviada (gerente adm)\n⏰ Contagem entregue no horário? (Sim/Não)\n🔢 Itens contados: ____\n💰 Valor de estoque (período): R$ ____\n⚠️ Divergências (sistema × físico): ____\n📝 Observações: ____"}]},
- {nome:'Adm/Financeiro · Entrada de Notas',per:'Diário · lançamento D-1 no sistema',obj:'Envio diário de NF e boletos para entrada de estoque.',envia:'Gerente',area:'financeiro',icon:'🧾',av:'RT',dono:'Rafaela Torres',loja:['Foto NF + boleto'],ragga:['Notas recebidas × lançadas','% de entrada','Prazo de lançamento'],rotina:'Gerente envia NF + boleto · fechamento ao final.',mods:[{l:'Diário · Fechamento de notas (D-1)',t:"🧾 *ENTRADA DE NOTAS — BIGG'S 13*\n📅 Referência (D-1): __/__\n📄 Notas recebidas: ____\n✅ Notas lançadas (XML): ____\n📊 % lançado: ____%\n⏱️ Prazo de lançamento: ____"},{l:'Loja · Envio de nota (conforme demanda)',t:"🧾 *NOTA / BOLETO — BIGG'S 13*\n📅 __/__\n📷 Foto LEGÍVEL da NF anexada\n📷 Foto LEGÍVEL do boleto anexada\nFornecedor: ____ | Valor: R$ ____"}]},
+ {nome:'Adm/Financeiro · Entrada de Notas',per:'Diário · lançamento D-1 no sistema',obj:'Envio diário de NF e boletos para entrada de estoque.',envia:'Gerente',area:'financeiro',icon:'🧾',av:'RT',dono:'Rafaela Torres',loja:['Foto NF + boleto','Solicitação de pagamento urgente (NF esquecida / lançamento não programado)'],ragga:['Notas recebidas × lançadas','% de entrada','Prazo de lançamento','Solicitações de pagamento urgente (nº · valor)'],rotina:'Gerente envia NF + boleto · fechamento ao final.',mods:[{l:'Diário · Fechamento de notas (D-1)',t:"🧾 *ENTRADA DE NOTAS — BIGG'S 13*\n📅 Referência (D-1): __/__\n📄 Notas recebidas: ____\n✅ Notas lançadas (XML): ____\n📊 % lançado: ____%\n⏱️ Prazo de lançamento: ____"},{l:'Loja · Envio de nota (conforme demanda)',t:"🧾 *NOTA / BOLETO — BIGG'S 13*\n📅 __/__\n📷 Foto LEGÍVEL da NF anexada\n📷 Foto LEGÍVEL do boleto anexada\nFornecedor: ____ | Valor: R$ ____"},{l:'Loja · Solicitação de pagamento urgente',t:"🚨 *PAGAMENTO URGENTE — BIGG'S 13*\n📅 __/__\nFornecedor: ____\nValor: R$ ____\nVencimento: __/__\nMotivo: (NF esquecida / lançamento não programado / outro)\n📷 NF / boleto anexado"}]},
  {nome:'Adm/Financeiro · Pagamento',per:'Diário',obj:'Gestão e evidência dos pagamentos do dia.',envia:'Financeiro (conduz)',area:'financeiro',icon:'💳',av:'FN',dono:'Financeiro Ragga · Rafaela',loja:['—  (financeiro conduz)'],ragga:['Saldo inicial','Nº de pagamentos / valor pago','Pagamentos urgentes','Contas a pagar da semana (CMV · OPEX · CMO · CF)','Saldo final consolidado da semana','% conciliado'],rotina:'Financeiro envia o resumo conciliado do dia.',mods:[{l:'Diário · Pagamentos conciliados',t:"💳 *PAGAMENTOS — BIGG'S 13*\n📅 __/__\n🏦 Saldo inicial: R$ ____\n🔢 Pagamentos: ____ | 💰 Total pago: R$ ____\n🚨 Urgentes: R$ ____\n🏦 Saldo final do dia: R$ ____\n📎 Conciliado no Cloudfy: (Sim/Não)"},{l:'Semanal · Contas a pagar (CMV·OPEX·CMO·CF)',t:"📅 *CONTAS A PAGAR DA SEMANA — BIGG'S 13*\nPeríodo: __/__ a __/__\n🥩 CMV: R$ ____\n🏢 OPEX: R$ ____\n👥 CMO: R$ ____\n📌 CF: R$ ____\n✅ Saldo final consolidado (semana): R$ ____"}]},
  {nome:'Adm/Financeiro · Caixas',per:'Loja: diário · Monalisa: conciliação 2x/semana (ter e sex)',obj:'Troco, quebra de caixa e maquininhas.',envia:'Gerente / operadores de caixa',area:'financeiro',icon:'💵',av:'MO',dono:'Monalisa',loja:['Troco dos caixas','Situação das maquininhas','Intercorrências e situações de caixa','PDF do fechamento de caixa','Contagem do troco (diária)'],ragga:['Faturamento total do dia','Quebra de caixa','Crédito / Débito / Pix / Online / Voucher','Vendas a prazo (assinada / B2B)','Sangrias e retiradas (por categoria)','Cancelamentos e brindes','Divergências'],rotina:'Loja: troco e PDF de fechamento (diário) · Monalisa: conciliação 2x/semana (ter e sex).',mods:[{l:'Diário · Loja (troco + fechamento)',t:"💵 *CAIXAS — BIGG'S 13*\n📅 __/__\n💰 Troco dos caixas: R$ ____\n🖨️ Maquininhas (nº / situação): ____\n📎 PDF do fechamento de caixa anexado\n🧮 Contagem do troco: ____\n⚠️ Intercorrências: ____"},{l:'2x/semana · Conciliação Monalisa (ter e sex)',t:"💵 *CONCILIAÇÃO DE CAIXA — BIGG'S 13*\n📅 Período: __/__ a __/__\n💰 Faturamento total: R$ ____\n💳 Crédito: R$ ____ | Débito: R$ ____\n📲 Pix: R$ ____ | Online: R$ ____ | Voucher: R$ ____\n📝 A prazo (assinada/B2B): R$ ____\n💸 Sangrias/retiradas: R$ ____\n❌ Cancelamentos / 🎁 Brindes: ____ / ____\n⚠️ Quebra / divergências: R$ ____"}]},
  {nome:'Operação · Gestão Diária',per:'Diário',obj:'Escalas e fechamento diário da operação.',envia:'Gerente (diurno e noturno)',area:'operacao',icon:'🗓️',av:'LO',dono:'Luiz Otávio',loja:['Escala de turno','Áudio de fechamento','SOS — problemas fora do padrão da loja'],ragga:['Desconformidades com a loja','Aderência da escala','Incidentes','Freelancer (orçado × realizado)'],rotina:'Escala até 16h · áudio de fechamento por turno.',mods:[{l:'Diário · Loja (escala + fechamento)',t:"🗓️ *OPERAÇÃO — BIGG'S 13*\n📅 __/__ | Turno: (Diurno/Noturno)\n👥 Escala do turno anexada\n🎙️ Áudio de fechamento do gerente\n📝 Pontos do dia: ____"},{l:'Loja · SOS (fora do padrão)',t:"🆘 *SOS — BIGG'S 13*\n📅 __/__ | Turno: ____\nProblema fora do padrão: ____\n📷 Evidência anexada\nO que precisa: ____"},{l:'Ragga · Indicadores de operação',t:"📊 *INDICADORES DE OPERAÇÃO — BIGG'S 13*\n📅 __/__\n⚠️ Desconformidades com a loja: ____\n📋 Aderência da escala: ____%\n🚨 Incidentes: ____\n🧑‍🍳 Freelancer (orçado × realizado): R$ ____ / R$ ____"}]},
@@ -658,25 +660,25 @@ const LIDERES={
    ],
    passos:['Acompanha a operação durante a noite','Preenche o checklist de fechamento no KONCLUI (portas, gás, luzes, caixa, cozinha)','O KONCLUI gera o relatório em PDF','O gerente administrativo envia o PDF no grupo certo','A Ragga consolida o noturno no fechamento do dia']},
  nutricionista:{nome:'Nutricionista',sub:'Cozinha · via KONCLUI',canal:'kon',icon:'🥗',
-   funcao:'Responsável pela qualidade e pela ficha técnica da cozinha. Preenche o checklist no KONCLUI.',
+   funcao:'Garante a execução do checklist de qualidade e da ficha técnica no KONCLUI. A obrigação é executar bem — quem envia o PDF no grupo é o gerente administrativo.',
    entregas:['Checklist de qualidade preenchido (KONCLUI)','Conformidade com a ficha técnica'],
    ragga:[{grupo:'Cozinha (KONCLUI)',area:'operacao',setor:'Qualidade / Gestão de cozinha',resp:'Amanda Vespa',indicador:'% de aderência + conformidade de qualidade'}],
-   passos:['Abre o checklist no KONCLUI (botão acima)','Confere qualidade e ficha técnica e preenche','O KONCLUI gera o relatório em PDF','O PDF cai no grupo de Cozinha','A Ragga acompanha a aderência e a qualidade']},
+   passos:['Abre o checklist no KONCLUI (botão acima)','Confere qualidade e ficha técnica e preenche','O KONCLUI gera o relatório em PDF','O gerente administrativo envia o PDF no grupo de Cozinha','A Ragga acompanha a aderência e a qualidade']},
  gerente_cozinha:{nome:'Gerente de cozinha',sub:'Cozinha · via KONCLUI',canal:'kon',icon:'🍳',
-   funcao:'Conduz a produção da cozinha e controla o desperdício. Registra tudo no KONCLUI.',
+   funcao:'Garante a execução do checklist da cozinha no KONCLUI (produção, desperdício, itens em falta). Não envia no grupo — quem envia é o gerente administrativo.',
    entregas:['Foto do caderno de produção','Foto do desperdício','Itens em falta'],
    ragga:[{grupo:'Cozinha (KONCLUI)',area:'operacao',setor:'Gestão de cozinha',resp:'Amanda Vespa + nutricionista',indicador:'Índice de desperdício (R$/%) + itens em falta'}],
-   passos:['Abre o checklist no KONCLUI (botão acima)','Registra produção, desperdício e itens em falta','O KONCLUI gera o PDF','O PDF cai no grupo de Cozinha','A Ragga calcula o desperdício e acompanha']},
+   passos:['Abre o checklist no KONCLUI (botão acima)','Registra produção, desperdício e itens em falta','O KONCLUI gera o PDF','O gerente administrativo envia o PDF no grupo de Cozinha','A Ragga calcula o desperdício e acompanha']},
  enc_delivery:{nome:'Encarregado de delivery',sub:'Delivery · via KONCLUI',canal:'kon',icon:'🛵',
-   funcao:'Cuida da operação de delivery e registra o desempenho no KONCLUI.',
+   funcao:'Garante a execução do checklist de delivery no KONCLUI. Não envia no grupo — quem envia é o gerente administrativo.',
    entregas:['Checklist de delivery','Ocorrências e problemas de entrega'],
    ragga:[{grupo:'Delivery',area:'comercial',setor:'Comercial',resp:'Luiz Otávio',indicador:'Tempo de entrega + % cancelamentos + iFood'}],
-   passos:['Abre o checklist no KONCLUI (botão acima)','Registra tempos, ocorrências e problemas','O KONCLUI gera o PDF','O PDF cai no grupo de Delivery','A Ragga acompanha avaliação e cancelamentos']},
+   passos:['Abre o checklist no KONCLUI (botão acima)','Registra tempos, ocorrências e problemas','O KONCLUI gera o PDF','O gerente administrativo envia o PDF no grupo de Delivery','A Ragga acompanha avaliação e cancelamentos']},
  operadores_caixa:{nome:'Operadores de caixa',sub:'Caixa · via KONCLUI',canal:'kon',icon:'💵',
-   funcao:'Conferem e fecham o caixa. Registram a contagem no KONCLUI.',
+   funcao:'Garantem a execução do fechamento de caixa no KONCLUI (contagem e conferência). Não enviam no grupo — quem envia é o gerente administrativo.',
    entregas:['Contagem e conferência do troco','Fechamento de caixa'],
    ragga:[{grupo:'Caixas (KONCLUI)',area:'financeiro',setor:'Financeiro',resp:'Monalisa',indicador:'Quebra de caixa + débito / crédito / Pix'}],
-   passos:['Abre o checklist no KONCLUI (botão acima)','Conta e confere o troco; registra o fechamento','O KONCLUI gera o PDF','O PDF cai no grupo de Caixas','A Ragga concilia e apura a quebra']}
+   passos:['Abre o checklist no KONCLUI (botão acima)','Conta e confere o troco; registra o fechamento','O KONCLUI gera o PDF','O gerente administrativo envia o PDF no grupo de Caixas','A Ragga concilia e apura a quebra']}
 };
 const LIDER_ORDER=['gerente_adm','gerente_noturno','nutricionista','gerente_cozinha','enc_delivery','operadores_caixa'];
 
@@ -727,11 +729,11 @@ const GROUPS = [
       status:{l:!meta?'Sem meta lançada':pct>=100?'Meta batida 🎉':pct>=85?'Perto da meta':'Abaixo da meta',tone},
       insight:meta?(pct>=100?'Meta do dia atingida.':'Faltam '+money(Math.max(0,meta-fat))+' para a meta.'):''};}},
   { id:'delivery', nome:'Delivery', area:'comercial', icon:'🛵', per:'Semanal (envio segunda)',
-    loja:['Ocorrências de delivery'], ragga:['Meta de delivery','Custo logístico','Avaliação por plataforma','Cancelamento por plataforma','Índice de chamados por plataforma','Chamados não atendidos','Tempo online','Faturamento delivery'],
-    fields:[{k:'meta',l:'Meta de delivery (R$)',t:'number'},{k:'fd',l:'Faturamento delivery (R$)',t:'number'},{k:'log',l:'Custo logístico (R$)',t:'number'},{k:'av',l:'Avaliação iFood (★)',t:'number',step:'0.01'},{k:'canc',l:'Cancelamentos (%)',t:'number'},{k:'cham',l:'Índice de chamados',t:'number'},{k:'chnao',l:'Chamados não atendidos',t:'number'},{k:'online',l:'Tempo online (%)',t:'number'}],
-    card:v=>{const meta=num(v.meta),fd=num(v.fd),log=num(v.log),av=num(v.av),c=num(v.canc),ch=num(v.cham),cn=num(v.chnao),on=num(v.online);const pct=meta?fd/meta*100:0;const lp=fd?log/fd*100:0;const tone=av>=4.7?'good':av>=4.3?'warn':'bad';const ct=c<=3?'good':c<=6?'warn':'bad';
-      return{hero:{l:'Faturamento delivery',v:money(fd)},kpis:[{l:'Meta de delivery',v:meta?money(meta)+' ('+pct.toFixed(0)+'%)':'—',tone:!meta?'neutral':pct>=100?'good':'warn'},{l:'Custo logístico',v:log?money(log)+(fd?' ('+lp.toFixed(0)+'%)':''):'—'},{l:'Avaliação iFood',v:av?av.toFixed(2)+'★':'—',tone},{l:'Cancelamentos',v:c?c+'%':'—',tone:ct},{l:'Índice de chamados',v:int(ch)},{l:'Chamados não atendidos',v:int(cn),tone:cn==0?'good':'warn'},{l:'Tempo online',v:on?on+'%':'—',tone:on>=95?'good':on>=90?'warn':'bad'}],
-      status:{l:(av>=4.7&&cn==0)?'Delivery saudável':'Atenção no delivery',tone:(av>=4.7&&cn==0)?'good':'warn'},insight:cn>0?(cn+' chamado(s) não atendido(s) — revisar.'):(c>5?'Cancelamentos acima do ideal.':'')};}},
+    loja:['Ocorrências de delivery'], ragga:['Meta de delivery','Custo logístico','Faturamento por plataforma (iFood · App · Direto)','Avaliação por plataforma','Cancelamento por plataforma','Chamados por plataforma','Chamados não atendidos','Tempo online'],
+    fields:[{sec:'📊 Geral'},{k:'meta',l:'Meta de delivery (R$)',t:'number'},{k:'log',l:'Custo logístico (R$)',t:'number'},{sec:'🍔 iFood'},{k:'fi',l:'Faturamento (R$)',t:'number'},{k:'ai',l:'Avaliação (★)',t:'number',step:'0.01'},{k:'ci',l:'Cancelamento (%)',t:'number'},{k:'hi',l:'Chamados',t:'number'},{sec:'📱 App próprio (WhatsApp/Cloudfy)'},{k:'fa',l:'Faturamento (R$)',t:'number'},{k:'aa',l:'Avaliação (★)',t:'number',step:'0.01'},{k:'ca',l:'Cancelamento (%)',t:'number'},{k:'ha',l:'Chamados',t:'number'},{sec:'🛵 Delivery direto'},{k:'fdir',l:'Faturamento (R$)',t:'number'},{k:'cdir',l:'Cancelamento (%)',t:'number'},{sec:'📞 Operação (geral)'},{k:'chnao',l:'Chamados não atendidos',t:'number'},{k:'online',l:'Tempo online (%)',t:'number'}],
+    card:v=>{const meta=num(v.meta),log=num(v.log),fi=num(v.fi),ai=num(v.ai),ci=num(v.ci),hi=num(v.hi),fa=num(v.fa),aa=num(v.aa),ca=num(v.ca),ha=num(v.ha),fdir=num(v.fdir),cdir=num(v.cdir),cn=num(v.chnao),on=num(v.online);const fd=fi+fa+fdir;const pct=meta?fd/meta*100:0;const lp=fd?log/fd*100:0;const tA=x=>x>=4.7?'good':(x>=4.3?'warn':(x?'bad':'neutral'));const tC=x=>x?(x<=3?'good':(x<=6?'warn':'bad')):'neutral';
+      return{hero:{l:'Faturamento delivery (total)',v:money(fd)},kpis:[{l:'Meta de delivery',v:meta?money(meta)+' ('+pct.toFixed(0)+'%)':'—',tone:!meta?'neutral':(pct>=100?'good':'warn')},{l:'Custo logístico',v:log?money(log)+(fd?' ('+lp.toFixed(0)+'%)':''):'—'},{sec:'🍔 iFood'},{l:'Faturamento',v:money(fi)},{l:'Avaliação',v:ai?ai.toFixed(2)+'★':'—',tone:tA(ai)},{l:'Cancelamento',v:ci?ci+'%':'—',tone:tC(ci)},{l:'Chamados',v:int(hi)},{sec:'📱 App próprio (WhatsApp/Cloudfy)'},{l:'Faturamento',v:money(fa)},{l:'Avaliação',v:aa?aa.toFixed(2)+'★':'—',tone:tA(aa)},{l:'Cancelamento',v:ca?ca+'%':'—',tone:tC(ca)},{l:'Chamados',v:int(ha)},{sec:'🛵 Delivery direto'},{l:'Faturamento',v:money(fdir)},{l:'Cancelamento',v:cdir?cdir+'%':'—',tone:tC(cdir)},{sec:'📊 Geral'},{l:'Chamados não atendidos',v:int(cn),tone:cn==0?'good':'warn'},{l:'Tempo online',v:on?on+'%':'—',tone:on>=95?'good':(on>=90?'warn':'bad')}],
+      status:{l:cn==0?'Delivery saudável':'Atenção no delivery',tone:cn==0?'good':'warn'},insight:cn>0?(cn+' chamado(s) não atendido(s) — revisar.'):''};}},
   // MARKETING
   { id:'marketing', nome:'Marketing + Vendas', area:'marketing', icon:'📣', per:'Semanal (envio segunda)',
     loja:['Demandas conforme necessidade','Foto quando solicitado'], ragga:['Alcance / engajamento','Campanhas ativas','Conversão de promoções','NPS','Avaliação Google','Reclamações no Instagram','Cancelamentos','Problemas com cliente'],
@@ -747,10 +749,10 @@ const GROUPS = [
   // FINANCEIRO
   { id:'fin_entrada', nome:'Adm/Financeiro · Entrada de Notas', area:'financeiro', icon:'🧾', per:'Diário (D-1)',
     loja:['Foto NF + boleto'], ragga:['Notas recebidas × lançadas','% de entrada','Prazo de lançamento'],
-    fields:[{k:'nr',l:'Notas recebidas',t:'number'},{k:'nl',l:'Notas lançadas (XML)',t:'number'},{k:'prazo',l:'Lançamento no prazo (D-1)?',t:'select',o:['Sim','Não']}],
-    card:v=>{const nr=num(v.nr),nl=num(v.nl);const p=nr?nl/nr*100:0;
-      return{kpis:[{l:'Notas recebidas',v:int(nr)},{l:'Notas lançadas',v:int(nl),tone:'good'},{l:'% lançado',v:nr?p.toFixed(0)+'%':'—',tone:p>=100?'good':'warn'},{l:'Prazo (D-1)',v:v.prazo||'—',tone:v.prazo==='Sim'?'good':'warn'}],
-      status:{l:p>=100?'Tudo lançado':'Pendência de lançamento',tone:p>=100?'good':'warn'},insight:''};}},
+    fields:[{k:'nr',l:'Notas recebidas',t:'number'},{k:'nl',l:'Notas lançadas (XML)',t:'number'},{k:'prazo',l:'Lançamento no prazo (D-1)?',t:'select',o:['Sim','Não']},{k:'urg',l:'Pagamentos urgentes (nº)',t:'number'},{k:'urgv',l:'Valor em urgência (R$)',t:'number'}],
+    card:v=>{const nr=num(v.nr),nl=num(v.nl),urg=num(v.urg),urgv=num(v.urgv);const p=nr?nl/nr*100:0;
+      return{kpis:[{l:'Notas recebidas',v:int(nr)},{l:'Notas lançadas',v:int(nl),tone:'good'},{l:'% lançado',v:nr?p.toFixed(0)+'%':'—',tone:p>=100?'good':'warn'},{l:'Prazo (D-1)',v:v.prazo||'—',tone:v.prazo==='Sim'?'good':'warn'},{l:'Pagamentos urgentes',v:int(urg),tone:urg==0?'good':'warn'},{l:'Valor em urgência',v:money(urgv)}],
+      status:{l:p>=100?'Tudo lançado':'Pendência de lançamento',tone:p>=100?'good':'warn'},insight:urg>0?(urg+' pagamento(s) urgente(s) — '+money(urgv)+'.'):''};}},
   { id:'fin_pagamento', nome:'Adm/Financeiro · Pagamento', area:'financeiro', icon:'💳', per:'Diário · semanal',
     loja:['—  (financeiro Ragga conduz)'], ragga:['Saldo inicial','Nº de pagamentos / valor pago','Pagamentos urgentes','Contas a pagar da semana','Saldo final consolidado da semana','% conciliado'],
     fields:[{k:'si',l:'Saldo inicial (R$)',t:'number'},{k:'qt',l:'Nº de pagamentos',t:'number'},{k:'vp',l:'Valor total pago (R$)',t:'number'},{k:'urg',l:'Pagamentos urgentes (R$)',t:'number'},{k:'sd',l:'Saldo final do dia (R$)',t:'number'},{k:'cmv',l:'Contas a pagar — CMV (R$)',t:'number'},{k:'opex',l:'Contas a pagar — OPEX (R$)',t:'number'},{k:'cmo',l:'Contas a pagar — CMO (R$)',t:'number'},{k:'cf',l:'Contas a pagar — CF (R$)',t:'number'},{k:'sfc',l:'Saldo final consolidado da semana (R$)',t:'number'},{k:'conc',l:'Conciliado no Cloudfy?',t:'select',o:['Sim','Não']}],
@@ -821,7 +823,7 @@ const GROUPS = [
   Object.keys(AAREAS).forEach(a=>{const gs=GROUPS.filter(g=>g.area===a);if(!gs.length)return;const og=document.createElement('optgroup');og.label=AAREAS[a];gs.forEach(g=>{const o=document.createElement('option');o.value=g.id;o.textContent=g.nome;og.appendChild(o);});sel.appendChild(og);});
   dataEl.value=new Date().toISOString().slice(0,10);
   const cur=()=>GROUPS.find(g=>g.id===sel.value);
-  function renderFields(){const g=cur();fieldsEl.innerHTML='';if(!g)return;g.fields.forEach(f=>{const w=document.createElement('div');w.className='field';let inner=`<label>${f.l}</label>`;if(f.t==='select'){inner+=`<select data-k="${f.k}"><option value="">—</option>${f.o.map(o=>`<option>${o}</option>`).join('')}</select>`;}else{inner+=`<input data-k="${f.k}" type="${f.t}" ${f.step?`step="${f.step}"`:''} placeholder="0">`;}w.innerHTML=inner;fieldsEl.appendChild(w);});}
+  function renderFields(){const g=cur();fieldsEl.innerHTML='';if(!g)return;g.fields.forEach(f=>{if(f.sec){const h=document.createElement('div');h.className='fsec';h.textContent=f.sec;fieldsEl.appendChild(h);return;}const w=document.createElement('div');w.className='field';let inner=`<label>${f.l}</label>`;if(f.t==='select'){inner+=`<select data-k="${f.k}"><option value="">—</option>${f.o.map(o=>`<option>${o}</option>`).join('')}</select>`;}else{inner+=`<input data-k="${f.k}" type="${f.t}" ${f.step?`step="${f.step}"`:''} placeholder="0">`;}w.innerHTML=inner;fieldsEl.appendChild(w);});}
   const areaVar=a=>getComputedStyle(document.documentElement).getPropertyValue('--'+a).trim();
   const leaf='<svg class="cleaf" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M38 4C18 6 2 16 2 30c0 8 6 14 14 14 14 0 22-18 22-40Z" fill="#fff" opacity="0.95"/><path d="M6 40 30 12" stroke="#2B4899" stroke-width="2" stroke-linecap="round"/></svg>';
   const fmtDate=s=>{if(!s)return'';const x=s.split('-');return x[2]+'/'+x[1]+'/'+x[0];};
@@ -830,7 +832,7 @@ const GROUPS = [
     const v={}; fieldsEl.querySelectorAll('[data-k]').forEach(el=>v[el.dataset.k]=el.value);
     const out=g.card(v);
     const loja=lojaEl.value||"Bigg's 13"; const data=fmtDate(dataEl.value); const accent=areaVar(g.area);
-    const tiles=out.kpis.map(k=>`<div class="tile ${k.tone||''}"><div class="tl">${k.l}</div><div class="tv">${k.v}</div></div>`).join('');
+    const tiles=out.kpis.map(k=>k.sec?`<div class="tsec">${k.sec}</div>`:`<div class="tile ${k.tone||''}"><div class="tl">${k.l}</div><div class="tv">${k.v}</div></div>`).join('');
     const st=out.status||{l:'',tone:'neutral'};
     const insight=out.insight?`<div class="cinsight">💡 ${out.insight}</div>`:'';
     const obs=obsEl.value.trim();
@@ -840,7 +842,7 @@ const GROUPS = [
     lastName='gestao_'+g.id; dlrow.style.display='flex';
     let txt=`📊 *${g.nome.toUpperCase()} — ${loja.toUpperCase()}*`+(data?`\n📅 ${data}`:'')+`\n\n`;
     if(out.hero)txt+=`💰 *${out.hero.l}:* ${out.hero.v}\n\n`;
-    out.kpis.forEach(k=>{txt+=`• ${k.l}: ${k.v}\n`;});
+    out.kpis.forEach(k=>{txt+=k.sec?`\n${k.sec}\n`:`• ${k.l}: ${k.v}\n`;});
     if(st.l)txt+=`\n*${st.l}*`; if(out.insight)txt+=`\n💡 ${out.insight}`; if(obs)txt+=`\n📝 Obs: ${obs}`;
     txt+=`\n\n— Gestão Ragga · Suporte 13`;
     copypre.textContent=txt; copytg.style.display='block';
