@@ -307,7 +307,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">01</span><span class="sec-kicker">Roadmap visual · O caminho da informação</span></div>
     <h2>Do operador à diretoria</h2>
-    <p class="sec-intro">A informação nasce com os líderes da unidade. Cozinha, caixa e delivery registram o checklist no KONCLUI, que vira relatório em PDF (com texto-padrão) no grupo. Os gerentes administrativo e noturno reportam direto no grupo de WhatsApp — e têm no KONCLUI um checklist de rotina, só de conferência interna do fechamento. Tudo converge no WhatsApp, passa pelas áreas da Ragga Gestão &amp; Educação e chega consolidada à diretoria.</p>
+    <p class="sec-intro">A informação nasce com os líderes da unidade: nutricionista, gerente de cozinha, encarregada de delivery, operadores de caixa e o gerente noturno preenchem seus checklists no KONCLUI, que gera o relatório em PDF. O gerente administrativo é quem envia esses PDFs nos grupos de WhatsApp certos e faz as comunicações diretas. Tudo converge no WhatsApp, passa pelas áreas da Ragga Gestão &amp; Educação e chega consolidada à diretoria.</p>
     <div class="flowbox">
       <svg viewBox="0 0 960 690" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxograma do roadmap da operação">
         <defs>
@@ -320,50 +320,42 @@
         <text x="20" y="408" transform="rotate(-90 20 408)" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" letter-spacing="2" fill="#9aa2b4">RAGGA</text>
         <text x="20" y="598" transform="rotate(-90 20 598)" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" letter-spacing="2" fill="#9aa2b4">DIRETORIA</text>
         <g font-family="Arial" text-anchor="middle">
-          <rect x="50"  y="46" width="200" height="86" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
-          <text x="150" y="74"  class="lk" onclick="openLider('nutricionista')" font-size="13.5" font-weight="bold" fill="#22397A">Nutricionista</text>
-          <text x="150" y="92"  class="lk" onclick="openLider('gerente_cozinha')" font-size="13.5" font-weight="bold" fill="#22397A">Gerente de cozinha</text>
-          <text x="150" y="116" font-size="11.5" font-weight="bold" fill="#9A5A12">→ checklist KONCLUI</text>
-          <rect x="270" y="46" width="200" height="86" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
-          <text x="370" y="74"  class="lk" onclick="openLider('enc_delivery')" font-size="13.5" font-weight="bold" fill="#22397A">Enc. de delivery</text>
-          <text x="370" y="92"  class="lk" onclick="openLider('operadores_caixa')" font-size="13.5" font-weight="bold" fill="#22397A">Operadores de caixa</text>
-          <text x="370" y="116" font-size="11.5" font-weight="bold" fill="#9A5A12">→ checklist KONCLUI</text>
-          <g class="lk" onclick="openLider('gerente_adm')">
-            <rect x="490" y="46" width="200" height="86" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
-            <text x="590" y="72"  font-size="13" font-weight="bold" fill="#22397A">Gerente administrativo</text>
-            <text x="590" y="96"  font-size="11.5" font-weight="bold" fill="#0E6B45">→ grupo de WhatsApp</text>
-            <text x="590" y="118" font-size="10" font-weight="bold" fill="#8A93A6">+ checklist de rotina</text>
-          </g>
+          <rect x="64"  y="46" width="246" height="72" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
+          <text x="187" y="70"  class="lk" onclick="openLider('nutricionista')" font-size="13" font-weight="bold" fill="#22397A">Nutricionista</text>
+          <text x="187" y="88"  class="lk" onclick="openLider('gerente_cozinha')" font-size="13" font-weight="bold" fill="#22397A">Gerente de cozinha</text>
+          <text x="187" y="109" font-size="11" font-weight="bold" fill="#9A5A12">→ checklist KONCLUI</text>
+          <rect x="356" y="46" width="246" height="72" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
+          <text x="479" y="70"  class="lk" onclick="openLider('enc_delivery')" font-size="13" font-weight="bold" fill="#22397A">Enc. de delivery</text>
+          <text x="479" y="88"  class="lk" onclick="openLider('operadores_caixa')" font-size="13" font-weight="bold" fill="#22397A">Operadores de caixa</text>
+          <text x="479" y="109" font-size="11" font-weight="bold" fill="#9A5A12">→ checklist KONCLUI</text>
           <g class="lk" onclick="openLider('gerente_noturno')">
-            <rect x="710" y="46" width="200" height="86" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
-            <text x="810" y="72"  font-size="13" font-weight="bold" fill="#22397A">Gerente noturno</text>
-            <text x="810" y="96"  font-size="11.5" font-weight="bold" fill="#0E6B45">→ grupo de WhatsApp</text>
-            <text x="810" y="118" font-size="10" font-weight="bold" fill="#8A93A6">+ checklist de rotina</text>
+            <rect x="648" y="46" width="246" height="72" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
+            <text x="771" y="80"  font-size="13" font-weight="bold" fill="#22397A">Gerente noturno</text>
+            <text x="771" y="101" font-size="11" font-weight="bold" fill="#9A5A12">→ checklist KONCLUI (fechamento)</text>
           </g>
         </g>
         <g stroke="#2B4899" stroke-width="2" fill="none">
-          <line x1="150" y1="132" x2="150" y2="156"/>
-          <line x1="370" y1="132" x2="370" y2="156"/>
-          <line x1="150" y1="156" x2="370" y2="156"/>
-          <line x1="260" y1="156" x2="260" y2="184" marker-end="url(#ah)"/>
-          <line x1="590" y1="132" x2="590" y2="156"/>
-          <line x1="810" y1="132" x2="810" y2="156"/>
-          <line x1="590" y1="156" x2="810" y2="156"/>
-          <line x1="700" y1="156" x2="700" y2="184" marker-end="url(#ah)"/>
+          <line x1="187" y1="118" x2="187" y2="134"/>
+          <line x1="479" y1="118" x2="479" y2="134"/>
+          <line x1="771" y1="118" x2="771" y2="134"/>
+          <line x1="187" y1="134" x2="771" y2="134"/>
+          <line x1="480" y1="134" x2="480" y2="146" marker-end="url(#ah)"/>
         </g>
-        <rect x="120" y="186" width="280" height="80" rx="14" fill="#FBEFDB" stroke="#C9781A" stroke-width="1.8"/>
-        <text x="260" y="214" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#9A5A12">⚙️ KONCLUI</text>
-        <text x="260" y="235" text-anchor="middle" font-family="Arial" font-size="12" fill="#9A5A12">Checklist-relatório → PDF</text>
-        <rect x="560" y="186" width="280" height="80" rx="14" fill="#E4F4EC" stroke="#14915E" stroke-width="1.8"/>
-        <text x="700" y="214" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#0E6B45">💬 Grupos de WhatsApp</text>
-        <text x="700" y="235" text-anchor="middle" font-family="Arial" font-size="12" fill="#0E6B45">Canal único · comunicação por setor</text>
-        <line x1="400" y1="226" x2="558" y2="226" stroke="#C9781A" stroke-width="2.2" fill="none" marker-end="url(#ah)"/>
-        <text x="479" y="216" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#9A5A12">PDF + texto-padrão</text>
-        <g stroke="#2B4899" stroke-width="2" fill="none">
-          <line x1="700" y1="266" x2="700" y2="300"/>
-          <line x1="700" y1="300" x2="480" y2="300"/>
-          <line x1="480" y1="300" x2="480" y2="338" marker-end="url(#ah)"/>
+        <rect x="320" y="146" width="320" height="48" rx="13" fill="#FBEFDB" stroke="#C9781A" stroke-width="1.8"/>
+        <text x="480" y="167" text-anchor="middle" font-family="Arial" font-size="14.5" font-weight="bold" fill="#9A5A12">⚙️ KONCLUI</text>
+        <text x="480" y="184" text-anchor="middle" font-family="Arial" font-size="11.5" fill="#9A5A12">Checklist → relatório em PDF</text>
+        <line x1="480" y1="194" x2="480" y2="210" stroke="#C9781A" stroke-width="2.2" fill="none" marker-end="url(#ah)"/>
+        <text x="498" y="206" text-anchor="start" font-family="Arial" font-size="10" font-weight="bold" fill="#9A5A12">PDF</text>
+        <g class="lk" onclick="openLider('gerente_adm')">
+          <rect x="270" y="210" width="420" height="52" rx="13" fill="#E8ECF7" stroke="#2B4899" stroke-width="2"/>
+          <text x="480" y="232" text-anchor="middle" font-family="Arial" font-size="14.5" font-weight="bold" fill="#22397A">🧑‍💼 Gerente administrativo</text>
+          <text x="480" y="251" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#3A4A78">Envia os PDFs nos grupos + comunicações diretas</text>
         </g>
+        <line x1="480" y1="262" x2="480" y2="278" stroke="#2B4899" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+        <rect x="300" y="278" width="360" height="48" rx="13" fill="#E4F4EC" stroke="#14915E" stroke-width="1.8"/>
+        <text x="480" y="299" text-anchor="middle" font-family="Arial" font-size="14.5" font-weight="bold" fill="#0E6B45">💬 Grupos de WhatsApp</text>
+        <text x="480" y="316" text-anchor="middle" font-family="Arial" font-size="11.5" fill="#0E6B45">Canal único · comunicação por setor</text>
+        <line x1="480" y1="326" x2="480" y2="338" stroke="#2B4899" stroke-width="2" fill="none" marker-end="url(#ah)"/>
         <rect x="60" y="340" width="840" height="152" rx="18" fill="#EAEEF8" stroke="#2B4899" stroke-width="2"/>
         <text x="480" y="372" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#22397A">RAGGA · GESTÃO &amp; EDUCAÇÃO</text>
         <text x="480" y="393" text-anchor="middle" font-family="Arial" font-size="12.5" fill="#5B6478">As áreas recebem, conferem e fazem o fechamento</text>
@@ -383,12 +375,12 @@
       </svg>
     </div>
     <div class="konuse">
-      <div class="kh">⚙️ O KONCLUI tem dois usos diferentes</div>
+      <div class="kh">⚙️ Como funciona o envio</div>
       <div class="kgrid">
-        <div class="kc"><b>📄 Checklist-relatório</b><span>Cozinha, caixa e delivery. O checklist vira PDF e vai pro grupo de WhatsApp com o texto-padrão. É a forma de reportar.</span></div>
-        <div class="kc"><b>✅ Checklist de rotina (fechamento)</b><span>Gerente administrativo e noturno. Conferência interna pra não esquecer nada — fechar portas, desligar gás, luzes, equipamentos. Não vira relatório, não vai pro grupo.</span></div>
+        <div class="kc"><b>📋 Checklist no KONCLUI</b><span>Nutricionista, gerente de cozinha, encarregada de delivery, operadores de caixa e gerente noturno preenchem seus checklists — vira relatório em PDF. O do noturno inclui o fechamento: portas, gás, luzes e equipamentos.</span></div>
+        <div class="kc"><b>🧑‍💼 Gerente administrativo envia</b><span>Ele consolida e envia os PDFs nos grupos de WhatsApp certos, com o texto-padrão, e faz as comunicações diretas. É o responsável único pelo envio.</span></div>
       </div>
-      <div class="kfoot">A comunicação do adm e do noturno (áudio de fechamento, ocorrências, números) vai <b>direto no grupo de WhatsApp</b> — é outra demanda.</div>
+      <div class="kfoot">Assim a loja concentra o envio em uma só pessoa: o <b>gerente administrativo</b>.</div>
     </div>
     <div class="pdfpad">
       <div class="ph">📎 Padrão de envio do relatório (PDF) no grupo</div>
@@ -564,7 +556,7 @@ const G=[
  {nome:'Performance + Vendas',per:'Diário',obj:'Indicadores de venda da unidade, gerados pelo fechamento automático.',envia:'Loja acompanha · sugestões de venda e melhorias',area:'comercial',icon:'📊',av:'AG',dono:'Amanda Galvão',loja:['Acompanha os indicadores do dia','Sugestões de venda e melhorias'],ragga:['Ticket médio','% da meta','Salão × Delivery','Acumulado do mês'],rotina:'Fechamento de vendas automático (sistema) — sai pronto, diário.',mods:[{l:'Diário · Fechamento de vendas (automático)',t:"📊 *BIGG'S 13 — RELATÓRIO DO DIA*\n📅 __/__/____\n💰 Faturamento: R$ ____\n🛒 Pedidos: ____ | 🎯 Ticket médio: R$ ____\n🎯 % da meta: ____%\n🏠 Salão × 🛵 Delivery: ____% / ____%\n📈 Acumulado do mês: R$ ____"},{l:'Loja · Sugestão de venda / melhoria',t:"💡 *SUGESTÃO DE VENDA / MELHORIA — BIGG'S 13*\n📅 __/__\n📝 Sugestão: ____\n🎯 Impacto esperado: ____"}]},
  {nome:'Delivery',per:'Semanal · seg–dom, envio na segunda',obj:'Comunicação do setor de delivery: metas, indicadores e ajustes.',envia:'Encarregado de delivery',area:'comercial',icon:'🛵',av:'LO',dono:'Luiz Otávio (dados)',loja:['Ocorrências de delivery'],ragga:['Meta de delivery','Custo logístico','Avaliação por plataforma','Cancelamento por plataforma','Índice de chamados por plataforma','Chamados não atendidos','Tempo online','Faturamento delivery'],rotina:'Seg: avaliações iFood · Ter: indicadores.',mods:[{l:'Semanal · Indicadores de delivery (envio segunda)',t:"🛵 *DELIVERY — BIGG'S 13*\n📅 Semana: __/__ a __/__\n🎯 Meta de delivery: R$ ____ | Atingido: ____%\n💰 Faturamento delivery: R$ ____\n🚚 Custo logístico: R$ ____ (____%)\n⭐ Avaliação/plataforma: iFood ____ | App ____\n❌ Cancelamento/plataforma: iFood ____% | App ____%\n📞 Índice de chamados/plataforma: ____\n⛔ Chamados não atendidos: ____\n🟢 Tempo online: ____%"},{l:'Loja · Ocorrência de delivery (conforme demanda)',t:"⚠️ *OCORRÊNCIA DE DELIVERY — BIGG'S 13*\n📅 __/__\nPlataforma: ____\nProblema: ____\n📷 Evidência anexada"}]},
  {nome:'Marketing + Vendas',per:'Semanal · avaliações seg–dom, envio na segunda',obj:'Campanhas, conteúdo e promoções da unidade.',envia:'Demandas conforme necessidade · foto quando solicitado',area:'marketing',icon:'📣',av:'MF',dono:'Maria Fernanda · Mkt',loja:['Demandas conforme necessidade','Foto quando solicitado'],ragga:['Alcance / engajamento','Campanhas ativas','Conversão de promoções','Calendário de conteúdo','NPS','Avaliação Google','Reclamações no Instagram','Cancelamentos','Problemas com cliente'],rotina:'Campanhas, conteúdo e promoções.',mods:[{l:'Semanal · Indicadores de marketing (envio segunda)',t:"📣 *MARKETING — BIGG'S 13*\n📅 Semana: __/__ a __/__\n📢 Campanhas ativas: ____\n📈 Alcance / engajamento: ____\n🎯 Conversão de promoções: ____\n⭐ NPS: ____ | Avaliação Google: ____\n💬 Reclamações no Instagram: ____\n❌ Cancelamentos: ____ | 🙋 Problemas com cliente: ____"},{l:'Loja · Demanda de marketing (conforme necessidade)',t:"🖌️ *DEMANDA DE MARKETING — BIGG'S 13*\n📅 __/__\nO que precisa: ____\n📷 Foto (quando solicitado): anexada\nPrazo desejado: ____"}]},
- {nome:'Compras & Estoque',per:'Diário · envio pela manhã',obj:'Comunicação entre a loja e o centro de compras.',envia:'Gerente',area:'compras',icon:'🛒',av:'ME',dono:'Maria Eduarda Alves',loja:['Rupturas / faltas do dia'],ragga:['Valor comprado','CMV %','Nº de rupturas','Comparativo de preço'],rotina:'Diário: cotação, compras e fechamento.',mods:[{l:'Diário · Fechamento de compras (manhã)',t:"🛒 *COMPRAS & ESTOQUE — BIGG'S 13*\n📅 __/__\n💰 Comprado no dia: R$ ____\n📉 CMV: ____%\n⚠️ Rupturas / faltas: ____\n🔁 Comparativo de preço: ____"},{l:'Loja · Ruptura de insumo (conforme demanda)',t:"⚠️ *RUPTURA DE INSUMO — BIGG'S 13*\n📅 __/__\nItem: ____\nQtd pedida × recebida: ____ / ____\nFornecedor: ____"}]},
+ {nome:'Compras & Estoque',per:'Diário · envio pela manhã',obj:'Comunicação entre a loja e o centro de compras.',envia:'Gerente',area:'compras',icon:'🛒',av:'ME',dono:'Maria Eduarda Alves',loja:['Rupturas / faltas do dia','Contagem de estoque (listagem diária — gerente adm)'],ragga:['Valor comprado','CMV %','Nº de rupturas','Comparativo de preço','Contagem entregue no horário','Valor de estoque (período)'],rotina:'Diário: cotação, compras e fechamento · listagem de contagem de estoque para o gerente adm fazer a contagem.',mods:[{l:'Diário · Fechamento de compras (manhã)',t:"🛒 *COMPRAS & ESTOQUE — BIGG'S 13*\n📅 __/__\n💰 Comprado no dia: R$ ____\n📉 CMV: ____%\n⚠️ Rupturas / faltas: ____\n🔁 Comparativo de preço: ____"},{l:'Loja · Ruptura de insumo (conforme demanda)',t:"⚠️ *RUPTURA DE INSUMO — BIGG'S 13*\n📅 __/__\nItem: ____\nQtd pedida × recebida: ____ / ____\nFornecedor: ____"},{l:'Diário · Contagem de estoque (gerente adm)',t:"📦 *CONTAGEM DE ESTOQUE — BIGG'S 13*\n📅 __/__\n📋 Listagem de contagem enviada (gerente adm)\n⏰ Contagem entregue no horário? (Sim/Não)\n🔢 Itens contados: ____\n💰 Valor de estoque (período): R$ ____\n⚠️ Divergências (sistema × físico): ____\n📝 Observações: ____"}]},
  {nome:'Adm/Financeiro · Entrada de Notas',per:'Diário · lançamento D-1 no sistema',obj:'Envio diário de NF e boletos para entrada de estoque.',envia:'Gerente',area:'financeiro',icon:'🧾',av:'RT',dono:'Rafaela Torres',loja:['Foto NF + boleto'],ragga:['Notas recebidas × lançadas','% de entrada','Prazo de lançamento'],rotina:'Gerente envia NF + boleto · fechamento ao final.',mods:[{l:'Diário · Fechamento de notas (D-1)',t:"🧾 *ENTRADA DE NOTAS — BIGG'S 13*\n📅 Referência (D-1): __/__\n📄 Notas recebidas: ____\n✅ Notas lançadas (XML): ____\n📊 % lançado: ____%\n⏱️ Prazo de lançamento: ____"},{l:'Loja · Envio de nota (conforme demanda)',t:"🧾 *NOTA / BOLETO — BIGG'S 13*\n📅 __/__\n📷 Foto LEGÍVEL da NF anexada\n📷 Foto LEGÍVEL do boleto anexada\nFornecedor: ____ | Valor: R$ ____"}]},
  {nome:'Adm/Financeiro · Pagamento',per:'Diário',obj:'Gestão e evidência dos pagamentos do dia.',envia:'Financeiro (conduz)',area:'financeiro',icon:'💳',av:'FN',dono:'Financeiro Ragga · Rafaela',loja:['—  (financeiro conduz)'],ragga:['Saldo inicial','Nº de pagamentos / valor pago','Pagamentos urgentes','Contas a pagar da semana (CMV · OPEX · CMO · CF)','Saldo final consolidado da semana','% conciliado'],rotina:'Financeiro envia o resumo conciliado do dia.',mods:[{l:'Diário · Pagamentos conciliados',t:"💳 *PAGAMENTOS — BIGG'S 13*\n📅 __/__\n🏦 Saldo inicial: R$ ____\n🔢 Pagamentos: ____ | 💰 Total pago: R$ ____\n🚨 Urgentes: R$ ____\n🏦 Saldo final do dia: R$ ____\n📎 Conciliado no Cloudfy: (Sim/Não)"},{l:'Semanal · Contas a pagar (CMV·OPEX·CMO·CF)',t:"📅 *CONTAS A PAGAR DA SEMANA — BIGG'S 13*\nPeríodo: __/__ a __/__\n🥩 CMV: R$ ____\n🏢 OPEX: R$ ____\n👥 CMO: R$ ____\n📌 CF: R$ ____\n✅ Saldo final consolidado (semana): R$ ____"}]},
  {nome:'Adm/Financeiro · Caixas',per:'Loja: diário · Monalisa: conciliação 2x/semana (ter e sex)',obj:'Troco, quebra de caixa e maquininhas.',envia:'Gerente / operadores de caixa',area:'financeiro',icon:'💵',av:'MO',dono:'Monalisa',loja:['Troco dos caixas','Situação das maquininhas','Intercorrências e situações de caixa','PDF do fechamento de caixa','Contagem do troco (diária)'],ragga:['Faturamento total do dia','Quebra de caixa','Crédito / Débito / Pix / Online / Voucher','Vendas a prazo (assinada / B2B)','Sangrias e retiradas (por categoria)','Cancelamentos e brindes','Divergências'],rotina:'Loja: troco e PDF de fechamento (diário) · Monalisa: conciliação 2x/semana (ter e sex).',mods:[{l:'Diário · Loja (troco + fechamento)',t:"💵 *CAIXAS — BIGG'S 13*\n📅 __/__\n💰 Troco dos caixas: R$ ____\n🖨️ Maquininhas (nº / situação): ____\n📎 PDF do fechamento de caixa anexado\n🧮 Contagem do troco: ____\n⚠️ Intercorrências: ____"},{l:'2x/semana · Conciliação Monalisa (ter e sex)',t:"💵 *CONCILIAÇÃO DE CAIXA — BIGG'S 13*\n📅 Período: __/__ a __/__\n💰 Faturamento total: R$ ____\n💳 Crédito: R$ ____ | Débito: R$ ____\n📲 Pix: R$ ____ | Online: R$ ____ | Voucher: R$ ____\n📝 A prazo (assinada/B2B): R$ ____\n💸 Sangrias/retiradas: R$ ____\n❌ Cancelamentos / 🎁 Brindes: ____ / ____\n⚠️ Quebra / divergências: R$ ____"}]},
@@ -641,9 +633,9 @@ const so=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links
 // ===== LÍDERES DA UNIDADE — passo a passo (aba mastigada) =====
 const KONCLUI_URL='https://app.konclui.com/checklists';
 const LIDERES={
- gerente_adm:{nome:'Gerente administrativo',sub:'Turno diurno · grupo + checklist de rotina',canal:'wa',icon:'🧑‍💼',
-   funcao:'Coordena a loja no diurno e centraliza a comunicação com a Ragga. É o ponto único que joga as informações da unidade nos grupos.',
-   entregas:['Notas fiscais e boletos (foto)','Troco e situação das maquininhas','Rupturas de estoque do dia','Escala dos turnos + áudio de fechamento do diurno','Ocorrências e atestados','Solicitações de manutenção e chamados de TI','Solicitações de DP (VT, empréstimo, férias, desligamento)'],
+ gerente_adm:{nome:'Gerente administrativo',sub:'Diurno · envia os PDFs e comunica nos grupos',canal:'wa',icon:'🧑‍💼',
+   funcao:'Coordena a loja no diurno e é o ponto único de envio: recebe os checklists já em PDF pelo KONCLUI (cozinha, caixa, delivery e o fechamento do noturno) e posta nos grupos certos, além das comunicações diretas com a Ragga.',
+   entregas:['PDFs dos checklists (cozinha, caixa, delivery, noturno) enviados nos grupos','Notas fiscais e boletos (foto)','Troco e situação das maquininhas','Rupturas de estoque do dia','Escala dos turnos + áudio de fechamento do diurno','Ocorrências e atestados','Solicitações de manutenção e chamados de TI','Solicitações de DP (VT, empréstimo, férias, desligamento)'],
    ragga:[
      {grupo:'Entrada de Notas',area:'financeiro',setor:'Financeiro',resp:'Rafaela Torres',indicador:'% de entrada conciliada'},
      {grupo:'Caixas',area:'financeiro',setor:'Financeiro',resp:'Monalisa',indicador:'Quebra de caixa (R$)'},
@@ -654,9 +646,9 @@ const LIDERES={
      {grupo:'TI · Sistemas',area:'operacao',setor:'Suporte',resp:'Johanatan (interno) / fornecedores',indicador:'Chamados resolvidos'},
      {grupo:'DP',area:'pessoas',setor:'DP',resp:'Giovanna Modesta',indicador:'Turnover + programação de férias'}
    ],
-   passos:['Recebe a demanda na loja (nota, troco, ruptura, ocorrência…)','Registra no padrão (foto / áudio / texto)','Envia no grupo de WhatsApp certo','A área da Ragga recebe, confere e trata','A Ragga calcula o indicador e fecha o dia','O consolidado sobe para a diretoria (Estratégico PDCA)']},
- gerente_noturno:{nome:'Gerente noturno',sub:'Turno noturno · grupo + checklist de rotina',canal:'wa',icon:'🌙',
-   funcao:'Comanda o turno noturno e reporta o fechamento da noite. Concentra o que acontece depois que o gerente diurno sai.',
+   passos:['Recebe os checklists em PDF pelo KONCLUI (cozinha, caixa, delivery, noturno)','Recebe também as demandas diretas da loja (nota, troco, ocorrência…)','Envia o PDF / a mensagem no grupo de WhatsApp certo, com o texto-padrão','A área da Ragga recebe, confere e trata','A Ragga calcula o indicador e fecha o dia','O consolidado sobe para a diretoria (Estratégico PDCA)']},
+ gerente_noturno:{nome:'Gerente noturno',sub:'Noturno · checklist de fechamento no KONCLUI',canal:'kon',icon:'🌙',
+   funcao:'Comanda o turno noturno e faz o checklist de fechamento no KONCLUI (portas, gás, luzes, equipamentos, caixa e cozinha noturna). O relatório em PDF é enviado pelo gerente administrativo.',
    entregas:['Áudio de fechamento da loja (noturno) + escala da noite','Ocorrências do turno noturno','Fechamento do caixa noturno','Reporte da cozinha noturna (caderno + desperdício)'],
    ragga:[
      {grupo:'Operação · Gestão Diária',area:'operacao',setor:'Operação',resp:'Luiz Otávio',indicador:'Fechamento por turno + incidentes'},
@@ -664,7 +656,7 @@ const LIDERES={
      {grupo:'Caixas',area:'financeiro',setor:'Financeiro',resp:'Monalisa',indicador:'Quebra de caixa noturna'},
      {grupo:'Cozinha (noturno)',area:'operacao',setor:'Qualidade',resp:'Nutricionista',indicador:'Desperdício + checklist'}
    ],
-   passos:['Acompanha a operação durante a noite','Registra ocorrências e o caixa do turno','Garante o checklist / foto da cozinha noturna','Manda o áudio de fechamento no grupo de Operação','A Ragga consolida o noturno no fechamento do dia']},
+   passos:['Acompanha a operação durante a noite','Preenche o checklist de fechamento no KONCLUI (portas, gás, luzes, caixa, cozinha)','O KONCLUI gera o relatório em PDF','O gerente administrativo envia o PDF no grupo certo','A Ragga consolida o noturno no fechamento do dia']},
  nutricionista:{nome:'Nutricionista',sub:'Cozinha · via KONCLUI',canal:'kon',icon:'🥗',
    funcao:'Responsável pela qualidade e pela ficha técnica da cozinha. Preenche o checklist no KONCLUI.',
    entregas:['Checklist de qualidade preenchido (KONCLUI)','Conformidade com a ficha técnica'],
@@ -748,9 +740,9 @@ const GROUPS = [
   // COMPRAS
   { id:'compras', nome:'Compras & Estoque', area:'compras', icon:'🛒', per:'Diário (manhã)',
     loja:['Rupturas / faltas do dia'], ragga:['Valor comprado','CMV %','Nº de rupturas','Comparativo de preço'],
-    fields:[{k:'vc',l:'Comprado no dia (R$)',t:'number'},{k:'cmv',l:'CMV (%)',t:'number'},{k:'rup',l:'Nº de rupturas',t:'number'},{k:'comp',l:'Comparativo de preço',t:'text'}],
+    fields:[{k:'vc',l:'Comprado no dia (R$)',t:'number'},{k:'cmv',l:'CMV (%)',t:'number'},{k:'rup',l:'Nº de rupturas',t:'number'},{k:'comp',l:'Comparativo de preço',t:'text'},{k:'ch',l:'Contagem no horário?',t:'select',o:['Sim','Não']},{k:'est',l:'Valor de estoque — período (R$)',t:'number'}],
     card:v=>{const vc=num(v.vc),cmv=num(v.cmv),r=num(v.rup);const tone=r==0?'good':r<=2?'warn':'bad';
-      return{kpis:[{l:'Comprado no dia',v:money(vc)},{l:'CMV',v:cmv?cmv+'%':'—',tone:cmv?(cmv<=32?'good':(cmv<=38?'warn':'bad')):'neutral'},{l:'Rupturas',v:int(r),tone},{l:'Comparativo de preço',v:v.comp||'—'}],
+      return{kpis:[{l:'Comprado no dia',v:money(vc)},{l:'CMV',v:cmv?cmv+'%':'—',tone:cmv?(cmv<=32?'good':(cmv<=38?'warn':'bad')):'neutral'},{l:'Rupturas',v:int(r),tone},{l:'Comparativo de preço',v:v.comp||'—'},{l:'Contagem no horário',v:v.ch||'—',tone:v.ch==='Sim'?'good':'warn'},{l:'Valor de estoque',v:money(v.est)}],
       status:{l:r==0?'Sem ruptura hoje':'Rupturas: '+r,tone},insight:r>0?'Registrar faltas e replanejar a compra.':''};}},
   // FINANCEIRO
   { id:'fin_entrada', nome:'Adm/Financeiro · Entrada de Notas', area:'financeiro', icon:'🧾', per:'Diário (D-1)',
