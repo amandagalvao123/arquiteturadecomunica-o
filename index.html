@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apresentação à Diretoria · Comunicação & Indicadores · Ragga</title>
+<style>
+  :root{
+    --ink:#16203A; --muted:#5B6478; --line:#E4E7EF; --paper:#F7F8FB; --card:#FFFFFF;
+    --ragga:#2B4899; --ragga-soft:#EAEEF8;
+    --comercial:#D23B30; --comercial-bg:#FBE7E4; --comercial-ink:#A52D24;
+    --marketing:#C0398F; --marketing-bg:#FAE7F3; --marketing-ink:#8E2A6B;
+    --compras:#14915E; --compras-bg:#E4F4EC; --compras-ink:#0E6B45;
+    --financeiro:#2B4899; --financeiro-bg:#E8ECF7; --financeiro-ink:#22397A;
+    --operacao:#C9781A; --operacao-bg:#FBEFDB; --operacao-ink:#9A5A12;
+    --pessoas:#7A3CB0; --pessoas-bg:#F2E9F8; --pessoas-ink:#5E2D8A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  nav.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav.top .wrap{display:flex;align-items:center;gap:16px;height:58px}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:bold;color:var(--ragga);font-size:15px;white-space:nowrap}
+  .leaf{width:22px;height:26px;flex:none}
+  nav.top .links{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+  nav.top a{font-size:13px;color:var(--muted);text-decoration:none;padding:7px 11px;border-radius:20px;font-weight:bold;white-space:nowrap}
+  nav.top a:hover{background:var(--ragga-soft);color:var(--ragga)}
+  nav.top a.active{background:var(--ragga);color:#fff}
+
+  header.hero{padding:48px 0 34px;background:#fff;border-bottom:1px solid var(--line)}
+  .eyebrow{display:inline-flex;gap:8px;background:var(--ragga-soft);color:var(--ragga);font-weight:bold;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;padding:7px 13px;border-radius:30px}
+  h1{font-size:clamp(28px,5vw,52px);line-height:1.05;font-weight:bold;margin:16px 0 8px;letter-spacing:-.5px}
+  h1 b{color:var(--ragga)}
+  .lede{font-size:clamp(15px,2vw,19px);color:var(--muted);max-width:760px;font-weight:bold}
+  .stat-row{display:flex;gap:13px;flex-wrap:wrap;margin-top:26px}
+  .stat{flex:1 1 140px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .stat .n{font-size:clamp(26px,4vw,38px);font-weight:bold;color:var(--ragga);line-height:1}
+  .stat .l{font-size:12px;color:var(--muted);font-weight:bold;margin-top:5px;text-transform:uppercase;letter-spacing:.5px}
+
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+  .sec-num{font-size:clamp(28px,4.8vw,48px);font-weight:bold;color:var(--ragga);line-height:.9;letter-spacing:-1px}
+  .sec-kicker{font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+  h2{font-size:clamp(22px,3.3vw,34px);font-weight:bold;letter-spacing:-.3px;margin:2px 0 12px}
+  .sec-intro{font-size:16px;color:var(--muted);max-width:800px;font-weight:bold}
+
+  .flowbox{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;margin-top:24px;overflow-x:auto}
+  .flowbox svg{display:block;width:100%;height:auto;min-width:680px;margin:0 auto;max-width:960px}
+
+  .prin{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:28px}
+  .prin .c{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:20px;border-top:5px solid var(--ragga)}
+  .prin .c.b{border-top-color:var(--compras)} .prin .c.c{border-top-color:var(--pessoas)} .prin .c.d{border-top-color:var(--comercial)}
+  .prin .ic{font-size:22px;margin-bottom:8px} .prin .c h3{font-size:16px;margin-bottom:6px} .prin .c p{font-size:14px;color:var(--muted)}
+
+  .legend{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 0}
+  .legend span{font-size:12px;font-weight:bold;padding:5px 11px;border-radius:20px}
+
+  .area-blk{margin-top:30px}
+  .area-head{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+  .area-dot{width:14px;height:14px;border-radius:5px;flex:none}
+  .area-head h3{font-size:19px}
+  .area-head .ct{margin-left:auto;font-size:12px;font-weight:bold;color:var(--muted);background:#fff;border:1px solid var(--line);padding:4px 11px;border-radius:20px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:15px}
+  .gcard{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .gcard .bar{height:6px}
+  .gcard .gh{padding:15px 17px 4px}
+  .gname{font-size:16.5px;font-weight:bold;display:flex;align-items:center;gap:8px;letter-spacing:-.2px}
+  .gkick{font-size:9.5px;font-weight:bold;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .dono{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:bold;padding:5px 11px;border-radius:18px;margin-top:9px;width:max-content}
+  .dono .av{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:bold;flex:none}
+  .gobj{font-size:12.5px;font-weight:bold;color:var(--muted);margin-top:7px;line-height:1.35}
+  .gresp{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 17px 2px}
+  .rblk{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:8px 10px}
+  .rblk .rk{display:block;font-size:9.5px;font-weight:bold;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .rblk .rv{font-size:12px;font-weight:bold;color:var(--ink);display:flex;align-items:center;gap:6px;line-height:1.2}
+  .rblk .av2{width:18px;height:18px;border-radius:50%;color:#fff;font-size:9px;font-weight:bold;display:flex;align-items:center;justify-content:center;flex:none}
+  @media (max-width:420px){ .gresp{grid-template-columns:1fr} }
+  .gcols{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:10px 17px 4px}
+  .gcol{padding:4px 0}
+  .gcol .lbl{font-size:10.5px;font-weight:bold;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px}
+  .gcol.loja .lbl{color:var(--muted)} .gcol.ragga .lbl{color:var(--ragga)}
+  .gcol ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+  .gcol li{font-size:12.5px;font-weight:bold;padding-left:13px;position:relative;color:var(--ink)}
+  .gcol.loja li::before{content:"•";position:absolute;left:2px;color:#9aa2b4}
+  .gcol.ragga li::before{content:"•";position:absolute;left:2px;color:var(--ragga)}
+  .gcol.ragga{border-left:1px solid var(--line);padding-left:14px;margin-left:2px}
+
+  details.tg{margin:12px 17px 16px;border:1px solid var(--line);border-radius:11px;overflow:hidden}
+  details.tg summary{cursor:pointer;list-style:none;font-size:12.5px;font-weight:bold;color:var(--ragga);padding:9px 12px;background:var(--paper);display:flex;align-items:center;gap:7px}
+  details.tg summary::-webkit-details-marker{display:none}
+  details.tg summary .chev{margin-left:auto;transition:transform .2s}
+  details.tg[open] summary .chev{transform:rotate(90deg)}
+  details.tg .rt{font-size:12.5px;font-weight:bold;color:var(--muted);padding:11px 13px 4px}
+  details.tg pre{margin:0;padding:11px 13px;font-family:"DejaVu Sans Mono",Consolas,monospace;font-size:12px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word;background:#fff;border-top:1px dashed var(--line)}
+  details.tg .copy{width:100%;border:none;border-top:1px solid var(--line);background:#fff;color:var(--ragga);font-weight:bold;font-size:12.5px;padding:9px;cursor:pointer}
+  details.tg .copy:hover{background:var(--ragga-soft)}
+
+  .donos{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:13px;margin-top:28px}
+  .pcard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:18px;display:flex;gap:13px;align-items:flex-start}
+  .pcard .pav{width:44px;height:44px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:bold;font-size:15px}
+  .pcard h4{font-size:15.5px;margin-bottom:2px} .pcard .role{font-size:11.5px;font-weight:bold;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+  .pcard .tags{display:flex;flex-wrap:wrap;gap:5px}
+  .pcard .tags span{font-size:11px;font-weight:bold;background:var(--paper);border:1px solid var(--line);padding:3px 9px;border-radius:18px}
+
+  .steps{display:flex;flex-direction:column;gap:13px;margin-top:28px}
+  .stepcard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start;border-left:6px solid var(--ragga)}
+  .stepcard .k{font-size:24px;font-weight:bold;color:var(--ragga);line-height:1;flex:none;min-width:34px}
+  .stepcard h4{font-size:16.5px;margin-bottom:5px} .stepcard p{font-size:14px;color:var(--muted)}
+  .stepcard .badge{display:inline-block;font-size:10.5px;font-weight:bold;letter-spacing:.7px;text-transform:uppercase;padding:3px 10px;border-radius:18px;margin-top:8px}
+  .b-dec{background:#FBE7E4;color:var(--comercial-ink)} .b-build{background:var(--ragga-soft);color:var(--ragga)} .b-go{background:var(--compras-bg);color:var(--compras-ink)}
+
+  footer{padding:36px 0 56px;background:#fff}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+  footer .meta{font-size:13px;color:var(--muted);font-weight:bold}
+
+  /* clickable roadmap roles */
+  svg text.lk{cursor:pointer} svg g.lk{cursor:pointer}
+  svg text.lk:hover{text-decoration:underline;fill:#2B4899}
+  svg g.lk:hover rect{fill:#DCE4F8}
+
+  /* líder cards */
+  .hint{display:inline-flex;align-items:center;gap:8px;background:var(--ragga-soft);color:var(--ragga);font-weight:bold;font-size:13px;padding:8px 14px;border-radius:24px;margin-top:18px}
+  .lidergrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:13px;margin-top:18px}
+  .lcard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:16px;cursor:pointer;display:flex;align-items:center;gap:13px;text-align:left;transition:transform .15s,box-shadow .15s,border-color .15s}
+  .lcard:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(22,32,58,.10);border-color:#C9D4F2}
+  .lcard .lav{width:42px;height:42px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center;font-size:20px}
+  .lcard .ltxt{flex:1;min-width:0}
+  .lcard h4{font-size:14.5px;margin-bottom:3px;letter-spacing:-.2px}
+  .lcard .lcanal{font-size:11px;font-weight:bold;padding:2px 8px;border-radius:14px;display:inline-block}
+  .lcard .larrow{color:var(--ragga);font-weight:bold;font-size:18px;flex:none}
+  .canal-wa{background:var(--compras-bg);color:var(--compras-ink)}
+  .canal-kon{background:var(--operacao-bg);color:var(--operacao-ink)}
+
+  /* drawer */
+  .scrim{position:fixed;inset:0;background:rgba(16,24,46,.45);opacity:0;visibility:hidden;transition:opacity .25s;z-index:90}
+  .scrim.on{opacity:1;visibility:visible}
+  .drawer{position:fixed;top:0;right:0;height:100%;width:min(480px,92vw);background:#fff;z-index:91;box-shadow:-12px 0 40px rgba(16,24,46,.18);transform:translateX(100%);transition:transform .28s ease;display:flex;flex-direction:column}
+  .drawer.on{transform:none}
+  .dhead{padding:20px 22px;color:#fff;flex:none}
+  .dhead .dclose{float:right;background:rgba(255,255,255,.22);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;font-weight:bold;line-height:1}
+  .dhead .dcanal{font-size:11px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;background:rgba(255,255,255,.22);padding:4px 11px;border-radius:16px;display:inline-block}
+  .dhead h3{font-size:23px;font-weight:bold;margin:10px 0 2px;letter-spacing:-.3px}
+  .dhead .dsub{font-size:13px;font-weight:bold;opacity:.92}
+  .dbody{padding:18px 22px 30px;overflow-y:auto;flex:1}
+  .dintro{font-size:13.5px;font-weight:bold;color:var(--muted);margin-bottom:16px}
+  .bloco{border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden}
+  .bloco .btop{padding:11px 14px;font-weight:bold;font-size:14.5px;display:flex;align-items:center;gap:8px}
+  .bloco .bdot{width:11px;height:11px;border-radius:4px;flex:none}
+  .bloco .brow{padding:9px 14px;border-top:1px solid var(--line)}
+  .bloco .brow .rl{font-size:10.5px;font-weight:bold;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:6px;margin-bottom:4px}
+  .bloco .brow ul{list-style:none;display:flex;flex-direction:column;gap:3px}
+  .bloco .brow li{font-size:13px;font-weight:bold;padding-left:13px;position:relative}
+  .bloco .brow li::before{content:"•";position:absolute;left:2px;color:var(--ragga)}
+  .bloco .brow p{font-size:13px;font-weight:bold;color:var(--ink)}
+  .bloco .brow.ind{background:var(--ragga-soft)}
+  .bloco .brow.ind .rl{color:var(--ragga)}
+  .bloco .brow.ind p{color:var(--financeiro-ink)}
+
+  .konbtn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:#C9781A;color:#fff;font-weight:bold;font-size:14px;padding:12px;border-radius:12px;text-decoration:none;border:none;cursor:pointer;margin-bottom:16px}
+  .konbtn:hover{background:#9A5A12}
+  .funcao{font-size:13.5px;font-weight:bold;color:var(--ink);background:var(--ragga-soft);border-radius:12px;padding:12px 14px;margin-bottom:16px}
+  .dsec{margin-bottom:18px}
+  .dsec-h{font-size:12.5px;font-weight:bold;letter-spacing:.6px;text-transform:uppercase;padding:0 0 9px;display:flex;align-items:center;gap:8px}
+  .dsec.loja .dsec-h{color:var(--financeiro-ink)} .dsec.ragga .dsec-h{color:var(--ragga)} .dsec.passo .dsec-h{color:var(--ink)}
+  .entregas{list-style:none;display:flex;flex-direction:column;gap:7px}
+  .entregas li{font-size:13.5px;font-weight:bold;padding:9px 12px;background:#fff;border:1px solid var(--line);border-radius:10px;display:flex;gap:8px;align-items:flex-start}
+  .entregas li::before{content:"✔";color:var(--compras)}
+  .rgrow{border:1px solid var(--line);border-radius:11px;padding:10px 12px;margin-bottom:8px}
+  .rgrow .rgg{font-size:13.5px;font-weight:bold;display:flex;align-items:center;gap:7px;margin-bottom:4px}
+  .rgrow .rgg .bdot{width:10px;height:10px;border-radius:3px;flex:none}
+  .rgrow .rgs{font-size:12.5px;font-weight:bold;color:var(--muted)}
+  .rgrow .rgi{font-size:12.5px;font-weight:bold;color:var(--ragga);margin-top:6px;background:var(--ragga-soft);padding:5px 9px;border-radius:8px;display:inline-block}
+  .passos{list-style:none;counter-reset:p;display:flex;flex-direction:column}
+  .passos li{position:relative;padding:0 0 16px 38px;font-size:13.5px;font-weight:bold}
+  .passos li::before{counter-increment:p;content:counter(p);position:absolute;left:0;top:-2px;width:26px;height:26px;border-radius:50%;background:var(--ragga);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .passos li::after{content:"";position:absolute;left:13px;top:26px;bottom:2px;width:2px;background:var(--line)}
+  .passos li:last-child{padding-bottom:0}
+  .passos li:last-child::after{display:none}
+
+  /* GENERATOR */
+  .genwrap{display:grid;grid-template-columns:minmax(300px,1fr) minmax(320px,1.05fr);gap:24px;margin-top:26px;align-items:start}
+  @media (max-width:820px){ .genwrap{grid-template-columns:1fr} }
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+  .panel h3{font-size:16px;margin-bottom:14px}
+  .field{margin-bottom:13px}
+  .field label{display:block;font-size:12.5px;font-weight:bold;color:var(--muted);margin-bottom:5px}
+  .field input,.field select{width:100%;font-family:Arial,sans-serif;font-size:14px;font-weight:bold;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px}
+  .field textarea{width:100%;font-family:Arial,sans-serif;font-size:14px;font-weight:bold;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;resize:vertical;min-height:62px}
+  .field textarea:focus{outline:none;border-color:var(--ragga)}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--ragga)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  .btn{font-family:Arial,sans-serif;font-size:14px;font-weight:bold;border-radius:11px;padding:11px 16px;cursor:pointer;border:none}
+  .btn.primary{background:var(--ragga);color:#fff;width:100%;margin-top:4px}
+  .btn.primary:hover{background:#22397A}
+  .btn.ghost{background:#fff;color:var(--ragga);border:1.5px solid #C9D4F2}
+  .btn.ghost:hover{background:var(--ragga-soft)}
+  .btnrow{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+  .toggle{margin-top:14px}
+  .toggle summary{cursor:pointer;font-size:13px;font-weight:bold;color:var(--ragga);list-style:none;padding:9px 12px;background:var(--ragga-soft);border:1px solid #D8E0F7;border-radius:10px;display:flex;align-items:center;gap:8px}
+  .toggle summary::-webkit-details-marker{display:none}
+  .toggle[open] summary{border-bottom-left-radius:0;border-bottom-right-radius:0}
+  .toggle .tbody{border:1px solid #D8E0F7;border-top:none;border-radius:0 0 10px 10px;padding:0}
+  .toggle pre{margin:0;padding:13px 14px;font-family:"DejaVu Sans Mono",Consolas,monospace;font-size:12.4px;line-height:1.55;white-space:pre-wrap;word-wrap:break-word;background:#fff}
+  .toggle .copy{width:100%;border:none;border-top:1px solid #D8E0F7;background:#fff;color:var(--ragga);font-weight:bold;font-size:13px;padding:10px;cursor:pointer;border-radius:0 0 10px 10px}
+  .toggle .copy:hover{background:var(--ragga-soft)}
+
+  .previewbox{position:sticky;top:74px}
+  .preview-label{font-size:11px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .agtabs{display:flex;gap:6px;background:var(--paper);padding:5px;border-radius:13px;margin-bottom:16px}
+  .agtab{flex:1;border:0;background:transparent;font-family:inherit;font-weight:bold;font-size:12px;color:var(--muted);padding:9px 4px;border-radius:9px;cursor:pointer}
+  .agtab.on{background:var(--ragga);color:#fff}
+  #card .ctext{padding:16px 22px;font-size:13.5px;line-height:1.5;color:var(--ink);white-space:pre-wrap;word-break:break-word}
+  #card .ctext b{color:var(--ragga)}
+  #card .cimgwrap{padding:14px 18px}
+  #card .cimgwrap img{width:100%;display:block;border-radius:12px;border:1px solid var(--line)}
+
+  /* THE CARD (shareable image) */
+  #card{width:100%;max-width:520px;background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(22,32,58,.10)}
+  #card .ctop{padding:18px 22px;color:#fff;display:flex;align-items:center;gap:11px}
+  #card .ctop .cleaf{width:26px;height:30px;flex:none}
+  #card .ctop .cbrand{font-size:12px;font-weight:bold;letter-spacing:1.5px;opacity:.92}
+  #card .ctop .cicon{margin-left:auto;font-size:24px}
+  #card .chead{padding:16px 22px 4px}
+  #card .ctitle{font-size:21px;font-weight:bold;letter-spacing:-.3px;color:var(--ink)}
+  #card .cmeta{font-size:12.5px;font-weight:bold;color:var(--muted);margin-top:3px}
+  #card .chero{margin:14px 22px 0;border-radius:14px;padding:14px 18px;color:#fff}
+  #card .chero .hl{font-size:11px;font-weight:bold;letter-spacing:.6px;text-transform:uppercase;opacity:.92}
+  #card .chero .hv{font-size:34px;font-weight:bold;line-height:1.05;margin-top:3px}
+  #card .ctiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 22px 4px}
+  #card .tile{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:12px 13px;border-left:5px solid var(--ragga)}
+  #card .tile.good{border-left-color:var(--good)} #card .tile.warn{border-left-color:var(--warn)} #card .tile.bad{border-left-color:var(--bad)}
+  #card .tile .tl{font-size:11px;font-weight:bold;letter-spacing:.4px;text-transform:uppercase;color:var(--muted)}
+  #card .tile .tv{font-size:19px;font-weight:bold;color:var(--ink);margin-top:3px;line-height:1.15}
+  #card .tile.good .tv{color:var(--good)} #card .tile.warn .tv{color:var(--warn)} #card .tile.bad .tv{color:var(--bad)}
+  #card .cstatus{margin:14px 22px 0;border-radius:13px;padding:12px 15px;display:flex;align-items:center;gap:10px;font-weight:bold;font-size:15px}
+  #card .cstatus.good{background:var(--compras-bg);color:var(--compras-ink)}
+  #card .cstatus.warn{background:var(--operacao-bg);color:var(--operacao-ink)}
+  #card .cstatus.bad{background:var(--comercial-bg);color:var(--comercial-ink)}
+  #card .cstatus.neutral{background:var(--ragga-soft);color:var(--financeiro-ink)}
+  #card .cinsight{padding:10px 22px 2px;font-size:13px;font-weight:bold;color:var(--muted)}
+  #card .cobs{margin:12px 22px 0;background:var(--paper);border:1px dashed var(--line);border-radius:11px;padding:10px 13px;font-size:12.8px;font-weight:bold;color:var(--ink)}
+  #card .cobs b{color:var(--muted);font-size:11px;letter-spacing:.4px;text-transform:uppercase;display:block;margin-bottom:3px}
+  #card .cfoot{margin-top:14px;padding:12px 22px;background:var(--paper);border-top:1px solid var(--line);font-size:11.5px;font-weight:bold;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .empty{padding:50px 20px;text-align:center;color:var(--muted);font-weight:bold;font-size:14px;border:2px dashed var(--line);border-radius:18px}
+  @media (max-width:680px){ nav.top .links{display:none} }
+  @media print{ nav.top{display:none} details.tg .copy{display:none} body{background:#fff} .gcard,.pcard,.stepcard{break-inside:avoid} }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <div class="brand">
+      <svg class="leaf" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M38 4C18 6 2 16 2 30c0 8 6 14 14 14 14 0 22-18 22-40Z" fill="#2B4899"/><path d="M6 40 30 12" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      RAGGA · GESTÃO
+    </div>
+    <div class="links">
+      <a href="#roadmap">Roadmap</a>
+      <a href="#principio">Princípio</a>
+      <a href="#grupos">Grupos & Indicadores</a>
+      <a href="#donos">Donos</a>
+      <a href="#fim">Próximos passos</a>
+      <a href="#agente-gerador">Agente</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Comunidade Biggs · 13º · Gestão Assistida</span>
+    <h1>Comunicação &amp; Indicadores <b>da Operação</b></h1>
+    <p class="lede">Estrutura de grupos por setor, alimentada pelo KONCLUI e pelo WhatsApp, com indicadores de gestão da Ragga e fechamento consolidado para a diretoria.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">17</div><div class="l">Grupos de WhatsApp</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">Áreas de gestão</div></div>
+      <div class="stat"><div class="n">10</div><div class="l">Donos responsáveis</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">Unidade-piloto</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- 01 ROADMAP (TOPO) -->
+<section id="roadmap">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-kicker">Roadmap visual · O caminho da informação</span></div>
+    <h2>Do operador à diretoria</h2>
+    <p class="sec-intro">A informação nasce com os líderes da unidade: parte vai direto nos grupos de WhatsApp, parte é registrada no KONCLUI e cai no grupo como relatório em PDF. Tudo converge no WhatsApp, passa pelas áreas da Ragga Gestão &amp; Educação e chega consolidada à diretoria.</p>
+    <div class="flowbox">
+      <svg viewBox="0 0 960 690" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxograma do roadmap da operação">
+        <defs>
+          <marker id="ah" markerWidth="11" markerHeight="11" refX="7.5" refY="5" orient="auto">
+            <path d="M0,0 L9,5 L0,10 Z" fill="#2B4899"/>
+          </marker>
+        </defs>
+        <text x="20" y="89"  transform="rotate(-90 20 89)"  text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" letter-spacing="1.2" fill="#9aa2b4">LÍDERES DA UNIDADE</text>
+        <text x="20" y="225" transform="rotate(-90 20 225)" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" letter-spacing="2" fill="#9aa2b4">COLETA</text>
+        <text x="20" y="408" transform="rotate(-90 20 408)" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" letter-spacing="2" fill="#9aa2b4">RAGGA</text>
+        <text x="20" y="598" transform="rotate(-90 20 598)" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" letter-spacing="2" fill="#9aa2b4">DIRETORIA</text>
+        <g font-family="Arial" text-anchor="middle">
+          <rect x="50"  y="46" width="200" height="86" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
+          <text x="150" y="74"  class="lk" onclick="openLider('nutricionista')" font-size="13.5" font-weight="bold" fill="#22397A">Nutricionista</text>
+          <text x="150" y="92"  class="lk" onclick="openLider('gerente_cozinha')" font-size="13.5" font-weight="bold" fill="#22397A">Gerente de cozinha</text>
+          <text x="150" y="116" font-size="11.5" font-weight="bold" fill="#9A5A12">→ checklist KONCLUI</text>
+          <rect x="270" y="46" width="200" height="86" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
+          <text x="370" y="74"  class="lk" onclick="openLider('enc_delivery')" font-size="13.5" font-weight="bold" fill="#22397A">Enc. de delivery</text>
+          <text x="370" y="92"  class="lk" onclick="openLider('operadores_caixa')" font-size="13.5" font-weight="bold" fill="#22397A">Operadores de caixa</text>
+          <text x="370" y="116" font-size="11.5" font-weight="bold" fill="#9A5A12">→ checklist KONCLUI</text>
+          <g class="lk" onclick="openLider('gerente_adm')">
+            <rect x="490" y="46" width="200" height="86" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
+            <text x="590" y="74"  font-size="13.5" font-weight="bold" fill="#22397A">Gerente</text>
+            <text x="590" y="92"  font-size="13.5" font-weight="bold" fill="#22397A">administrativo</text>
+            <text x="590" y="116" font-size="11.5" font-weight="bold" fill="#0E6B45">→ grupos de WhatsApp</text>
+          </g>
+          <g class="lk" onclick="openLider('gerente_noturno')">
+            <rect x="710" y="46" width="200" height="86" rx="13" fill="#EAEEF8" stroke="#2B4899" stroke-width="1.5"/>
+            <text x="810" y="74"  font-size="13.5" font-weight="bold" fill="#22397A">Gerente</text>
+            <text x="810" y="92"  font-size="13.5" font-weight="bold" fill="#22397A">noturno</text>
+            <text x="810" y="116" font-size="11.5" font-weight="bold" fill="#0E6B45">→ grupos de WhatsApp</text>
+          </g>
+        </g>
+        <g stroke="#2B4899" stroke-width="2" fill="none">
+          <line x1="150" y1="132" x2="150" y2="156"/>
+          <line x1="370" y1="132" x2="370" y2="156"/>
+          <line x1="150" y1="156" x2="370" y2="156"/>
+          <line x1="260" y1="156" x2="260" y2="184" marker-end="url(#ah)"/>
+          <line x1="590" y1="132" x2="590" y2="156"/>
+          <line x1="810" y1="132" x2="810" y2="156"/>
+          <line x1="590" y1="156" x2="810" y2="156"/>
+          <line x1="700" y1="156" x2="700" y2="184" marker-end="url(#ah)"/>
+        </g>
+        <rect x="120" y="186" width="280" height="80" rx="14" fill="#FBEFDB" stroke="#C9781A" stroke-width="1.8"/>
+        <text x="260" y="218" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#9A5A12">⚙️ KONCLUI</text>
+        <text x="260" y="240" text-anchor="middle" font-family="Arial" font-size="12.5" fill="#9A5A12">Checklist diário → relatório PDF</text>
+        <rect x="560" y="186" width="280" height="80" rx="14" fill="#E4F4EC" stroke="#14915E" stroke-width="1.8"/>
+        <text x="700" y="218" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#0E6B45">💬 Grupos de WhatsApp</text>
+        <text x="700" y="240" text-anchor="middle" font-family="Arial" font-size="12.5" fill="#0E6B45">Canal único · comunicação por setor</text>
+        <line x1="400" y1="226" x2="558" y2="226" stroke="#C9781A" stroke-width="2.2" fill="none" marker-end="url(#ah)"/>
+        <text x="479" y="216" text-anchor="middle" font-family="Arial" font-size="11.5" font-weight="bold" fill="#9A5A12">PDF no grupo</text>
+        <g stroke="#2B4899" stroke-width="2" fill="none">
+          <line x1="700" y1="266" x2="700" y2="300"/>
+          <line x1="700" y1="300" x2="480" y2="300"/>
+          <line x1="480" y1="300" x2="480" y2="338" marker-end="url(#ah)"/>
+        </g>
+        <rect x="60" y="340" width="840" height="152" rx="18" fill="#EAEEF8" stroke="#2B4899" stroke-width="2"/>
+        <text x="480" y="372" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#22397A">RAGGA · GESTÃO &amp; EDUCAÇÃO</text>
+        <text x="480" y="393" text-anchor="middle" font-family="Arial" font-size="12.5" fill="#5B6478">As áreas recebem, conferem e fazem o fechamento</text>
+        <g font-family="Arial" font-size="12.5" font-weight="bold" text-anchor="middle">
+          <rect x="92"  y="412" width="120" height="48" rx="11" fill="#E4F4EC" stroke="#14915E" stroke-width="1.4"/><text x="152" y="441" fill="#0E6B45">Compras</text>
+          <rect x="220" y="412" width="120" height="48" rx="11" fill="#E8ECF7" stroke="#2B4899" stroke-width="1.4"/><text x="280" y="441" fill="#22397A">Financeiro</text>
+          <rect x="348" y="412" width="120" height="48" rx="11" fill="#F2E9F8" stroke="#7A3CB0" stroke-width="1.4"/><text x="408" y="441" fill="#5E2D8A">Pessoas</text>
+          <rect x="476" y="412" width="120" height="48" rx="11" fill="#FBEFDB" stroke="#C9781A" stroke-width="1.4"/><text x="536" y="441" fill="#9A5A12">Operação</text>
+          <rect x="604" y="412" width="120" height="48" rx="11" fill="#FBE7E4" stroke="#D23B30" stroke-width="1.4"/><text x="664" y="441" fill="#A52D24">Delivery</text>
+          <rect x="732" y="412" width="120" height="48" rx="11" fill="#FAE7F3" stroke="#C0398F" stroke-width="1.4"/><text x="792" y="441" fill="#8E2A6B">Marketing</text>
+        </g>
+        <line x1="480" y1="492" x2="480" y2="566" stroke="#2B4899" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+        <rect x="340" y="568" width="280" height="76" rx="14" fill="#F2E9F8" stroke="#7A3CB0" stroke-width="2"/>
+        <text x="480" y="600" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#5E2D8A">🏆 DIRETORIA</text>
+        <text x="480" y="622" text-anchor="middle" font-family="Arial" font-size="12.5" fill="#5E2D8A">Recebe os fechamentos prontos → decisão</text>
+      </svg>
+    </div>
+    <div class="hint">👆 Clique em um líder (no diagrama ou nos cartões abaixo) para abrir o passo a passo</div>
+    <div class="lidergrid" id="lider-cards"></div>
+  </div>
+</section>
+
+<!-- 02 PRINCÍPIO -->
+<section id="principio">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-kicker">Como funciona</span></div>
+    <h2>A loja traz a info, a Ragga cuida da gestão</h2>
+    <p class="sec-intro">Cada grupo tem um dono, uma rotina e um indicador. A loja envia o básico; a Ragga calcula e fecha. O grupo Estratégico PDCA é a camada da diretoria.</p>
+    <div class="prin">
+      <div class="c"><div class="ic">📊</div><h3>Gestão é da Ragga</h3><p>A análise e os indicadores são sempre responsabilidade da Ragga Gestão &amp; Educação.</p></div>
+      <div class="c b"><div class="ic">🏪</div><h3>A loja só traz a info</h3><p>Número, foto ou checklist KONCLUI. Sem relatório longo — comunicação simples.</p></div>
+      <div class="c c"><div class="ic">🎯</div><h3>Estratégico = diretoria</h3><p>O grupo B13 · Estratégico PDCA recebe o consolidado e os planos de ação.</p></div>
+      <div class="c d"><div class="ic">🤖</div><h3>Agente de gestão</h3><p>A loja joga a informação e o agente gera a imagem de gestão para o grupo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 GRUPOS & INDICADORES -->
+<section id="grupos">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-kicker">Grupos &amp; indicadores</span></div>
+    <h2>Cada grupo: dono, indicador e mensagem-padrão</h2>
+    <p class="sec-intro">À esquerda, o que a loja envia (simples); à direita, o que a Ragga acompanha. A mensagem-padrão de cada grupo fica oculta — abra só quando precisar.</p>
+    <div class="legend" id="legend"></div>
+    <div id="grupos-host"></div>
+  </div>
+</section>
+
+<!-- 04 DONOS -->
+<section id="donos">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-kicker">Donos dos grupos</span></div>
+    <h2>Quem cuida de quê</h2>
+    <p class="sec-intro">Cada dono garante o fechamento dos seus grupos dentro da Ragga.</p>
+    <div class="donos" id="donos-host"></div>
+  </div>
+</section>
+
+<!-- 05 PRÓXIMOS PASSOS -->
+<section id="fim">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><span class="sec-kicker">Próximos passos</span></div>
+    <h2>Direcionamento e pontos de decisão</h2>
+    <p class="sec-intro">O que já está pronto para rodar e o que precisa de decisão da diretoria.</p>
+    <div class="steps">
+      <div class="stepcard" style="border-left-color:var(--comercial)"><div class="k">!</div><div>
+        <h4>Entrada de notas no sistema — decisão da diretoria</h4>
+        <p>No Bigg's 13 (sem Voxel), a entrada das notas fica com o financeiro interno; a Maria Fernanda assume o lançamento até a contratação de 3–4 pessoas. Sugestão: a loja só envia NF/boleto e o financeiro dá entrada por XML, conciliando via DDA Sicredi + Cloudfy.</p>
+        <span class="badge b-dec">Levar à reunião</span></div></div>
+      <div class="stepcard"><div class="k">2</div><div>
+        <h4>Agente de indicadores pronto</h4>
+        <p>A loja joga a informação e o agente gera a imagem de gestão para o grupo. O texto de copiar/colar fica oculto e padronizado.</p>
+        <span class="badge b-build">Construído</span></div></div>
+      <div class="stepcard"><div class="k">3</div><div>
+        <h4>Base documental dos colaboradores</h4>
+        <p>Registrar ocorrências (faltas, advertências, suspensões) em sistema para ter histórico nas audiências.</p>
+        <span class="badge b-dec">Definir sistema</span></div></div>
+      <div class="stepcard" style="border-left-color:var(--operacao)"><div class="k">4</div><div>
+        <h4>Cozinha pelo KONCLUI</h4>
+        <p>Padronizações técnicas via checklist no KONCLUI. O gerente noturno concentra o reporte e o administrativo distribui nos grupos.</p>
+        <span class="badge b-build">A estruturar</span></div></div>
+      <div class="stepcard" style="border-left-color:var(--compras)"><div class="k">✓</div><div>
+        <h4>Rodar o piloto e replicar</h4>
+        <p>O gerente administrativo participa de todos os grupos. Validada a estrutura, roda no Bigg's 13 e replica nas 17 lojas.</p>
+        <span class="badge b-go">Pronto para iniciar</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="scrim" id="scrim" onclick="closeLider()"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true">
+  <div class="dhead" id="dhead">
+    <button class="dclose" onclick="closeLider()" aria-label="Fechar">×</button>
+    <span class="dcanal" id="dcanal"></span>
+    <h3 id="dtitle"></h3>
+    <div class="dsub" id="dsub"></div>
+  </div>
+  <div class="dbody" id="dbody"></div>
+</aside>
+
+<!-- 06 AGENTE GERADOR -->
+<section id="agente-gerador">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><span class="sec-kicker">Agente · Gerador de imagem</span></div>
+    <h2>Joga a informação → sai a imagem de gestão</h2>
+    <p class="sec-intro">Três formas de gerar a imagem: <b>Indicadores</b> (formulário por grupo), <b>Texto corrido</b> (cola um texto e vira imagem) ou <b>Arquivo</b> (sobe uma imagem ou um .txt). Depois é só baixar o PNG e enviar no WhatsApp.</p>
+    <div id="ag-gen" class="genwrap">
+      <div class="panel">
+        <div class="agtabs">
+          <button class="agtab on" data-mode="form">📊 Indicadores</button>
+          <button class="agtab" data-mode="text">📝 Texto corrido</button>
+          <button class="agtab" data-mode="file">📎 Arquivo</button>
+        </div>
+        <div class="row2">
+          <div class="field"><label>Loja</label><input class="ag-loja" type="text" value="Bigg's 13"></div>
+          <div class="field"><label>Data</label><input class="ag-data" type="date"></div>
+        </div>
+        <div class="ag-mode" data-mode="form">
+          <div class="field"><label>Grupo</label><select class="ag-select"><option value="">Selecione…</option></select></div>
+          <div class="ag-fields"></div>
+          <div class="field"><label>📝 Observações (campo aberto, opcional)</label><textarea class="ag-obs" rows="3" placeholder="Anote aqui qualquer observação do dia…"></textarea></div>
+        </div>
+        <div class="ag-mode" data-mode="text" style="display:none">
+          <div class="field"><label>Título</label><input class="ag-ttitle" type="text" placeholder="Ex.: Relatório do dia"></div>
+          <div class="field"><label>Texto corrido</label><textarea class="ag-ttext" rows="9" placeholder="Cole aqui o texto (ex.: o relatório do sistema). Use *texto* para deixar em negrito."></textarea></div>
+        </div>
+        <div class="ag-mode" data-mode="file" style="display:none">
+          <div class="field"><label>Título</label><input class="ag-ftitle" type="text" placeholder="Ex.: Relatório do dia"></div>
+          <div class="field"><label>Arquivo — imagem (.png/.jpg) ou texto (.txt/.csv)</label><input class="ag-file" type="file" accept="image/*,.txt,.csv,.md,text/plain"></div>
+          <div class="ag-fname" style="font-size:12px;font-weight:bold;color:var(--muted);margin-top:-6px"></div>
+        </div>
+        <button class="btn primary ag-gen">Gerar imagem de gestão</button>
+        <details class="toggle ag-copytoggle" style="display:none"><summary>📋 Ver texto para copiar (oculto)</summary><div class="tbody"><pre class="ag-copypre"></pre><button class="copy ag-copybtn">Copiar texto</button></div></details>
+      </div>
+      <div class="previewbox">
+        <div class="preview-label">2 · Pré-visualização da imagem</div>
+        <div class="ag-cardhost"><div class="empty">Selecione um grupo e clique em <b>Gerar imagem de gestão</b>.</div></div>
+        <div class="btnrow ag-dlrow" style="display:none"><button class="btn ghost ag-dlbtn">⬇️ Baixar imagem (PNG)</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="leaf" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M38 4C18 6 2 16 2 30c0 8 6 14 14 14 14 0 22-18 22-40Z" fill="#2B4899"/><path d="M6 40 30 12" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      RAGGA · GESTÃO &amp; EDUCAÇÃO
+    </div>
+    <div class="meta">Comunicação &amp; Indicadores · Unidade-piloto Bigg's 13 · Apresentação à Diretoria</div>
+  </div>
+</footer>
+
+<script>
+const AREAS={comercial:'Comercial · Vendas',marketing:'Marketing',compras:'Compras & Estoque',financeiro:'Financeiro',operacao:'Operação',pessoas:'Pessoas · RH & DP'};
+const G=[
+ {nome:'Performance + Vendas',obj:'Indicadores de venda da unidade, gerados pelo fechamento automático.',envia:'Sistema (fechamento)',area:'comercial',icon:'📊',av:'AG',dono:'Amanda Galvão',loja:['Faturamento do dia','Nº de pedidos'],ragga:['Ticket médio','% da meta','Salão × Delivery','Acumulado do mês'],rotina:'Fechamento de vendas automático (sistema) — sai pronto, diário.',modelo:"📊 *BIGGS 13 — ARTHUR THOMAS — Relatório do Dia 24/06/2026*\n💰 Faturamento Total: R$ 5.281,72\n🛒 Total de Vendas: 134 (134 clientes registrados)\n🏠 Comandas Salão: 68 comandas\n🎯 Ticket Médio Geral: R$ 39,42 | Salão: R$ 42,09 | Delivery: R$ 36,66\n\n💳 *Formas de Pagamento:*\nCartão de Crédito: 45,6% — R$ 2.409,99\nCartão de Débito: 16,1% — R$ 849,70\nDinheiro: 8,3% — R$ 439,59\nPIX: 7,3% — R$ 385,80\nVoucher: 1,7% — R$ 87,79\n↳ Bandeiras: Alelo Refeição / Alelo Alimentação / Pluxee Alimentação / Ticket Refeição / Ticket Alimentação\n\n🕐 *Vendas por Turno:*\n🌤️ Vespertino (14:01–18:00): 75 vend. — R$ 2.734,90 🏆\n☀️ Diurno (08:00–14:00): 42 vend. — R$ 1.581,80\n🌙 Noturno 1 (18:01–23:00): 17 vend. — R$ 965,02\n\n🏠 *Salão × 🛵 Delivery:*\nSalão: R$ 2.862,22 (54,2%) — 68 comandas — Ticket: R$ 42,09\nDelivery/Encomendas: R$ 2.419,50 (45,8%) — Ticket: R$ 36,66\n↳ 66 pedidos · Taxas arrecadadas: R$ 362,65\n↳ iFood: 57 ped. — R$ 1.570,00\n↳ App Próprio: 8 ped. — R$ 525,55\n↳ Telefone: 1 ped. — R$ 13,75\n\n👁️ *À Vista × Contas Assinadas:*\nÀ Vista: 104 vend. — R$ 4.172,87 (79,0%)\nContas Assinadas: 30 vend. — R$ 1.108,85 (21,0%) — Ticket: R$ 36,96\n\n🍽️ *Top 5 Produtos:*\nFrango Duplo — R$ 530,20\nCheese Burger Salada — R$ 275,70\nPf A Cavalo Alcatra — R$ 164,50\nPf Grelhado Frango — R$ 148,93\nDog Duplo - Promo Qua/Sex — R$ 123,75\n\n🏅 *Top 5 Vendedores:*\nAdm Biggs 13 — R$ 1.662,84 (31,48%)\nThais Jose da Silva — R$ 1.186,34 (22,46%)\nThayla Regina Luppi — R$ 587,83 (11,13%)\nGiovani Edurado de Lima — R$ 532,68 (10,09%)\nNayara Sayuri Souza Suzuki — R$ 487,57 (9,23%)\n\n⚠️ *Ajustes Operacionais:*\nCancelamentos: 1 — R$ 7,90 | Motivo principal: Troca de produto\nDescontos: 2 vendas — R$ 89,70\nItens excluídos PDV: 0 — R$ 0,00\nItens excluídos Comandas: 1 — R$ 7,90\nPagamentos de Caixa: R$ 483,00"},
+ {nome:'Delivery',obj:'Comunicação do setor de delivery: metas, indicadores e ajustes.',envia:'Encarregado de delivery',area:'comercial',icon:'🛵',av:'LO',dono:'Luiz Otávio (dados)',loja:['Ocorrências de delivery'],ragga:['Avaliação iFood','Tempo de entrega','% cancelamentos','Faturamento delivery'],rotina:'Seg: avaliações iFood · Ter: indicadores.',modelo:"🛵 *INDICADORES DE DELIVERY — BIGG'S 13*\n📅 Semana: __/__\n⭐ Avaliação iFood: ____\n⏱️ Tempo médio: ____ | ❌ Cancelamentos: ____%\n💰 Fat. delivery: R$ ____"},
+ {nome:'Marketing + Vendas',obj:'Campanhas, conteúdo e promoções da unidade.',envia:'Loja (demandas locais)',area:'marketing',icon:'📣',av:'MF',dono:'Maria Fernanda · Mkt',loja:['Demandas e fotos locais'],ragga:['Alcance / engajamento','Campanhas ativas','Conversão de promoções','Calendário de conteúdo'],rotina:'Campanhas, conteúdo e promoções.',modelo:"📣 *MARKETING — BIGG'S 13*\n📅 ____\nCampanhas ativas: ____\nAlcance: ____\nPromoção em destaque: ____"},
+ {nome:'Compras & Estoque',obj:'Comunicação entre a loja e o centro de compras.',envia:'Gerente',area:'compras',icon:'🛒',av:'ME',dono:'Maria Eduarda Alves',loja:['Rupturas / faltas do dia'],ragga:['Valor comprado','CMV %','Nº de rupturas','Comparativo de preço'],rotina:'Diário: cotação, compras e fechamento.',modelo:"📦 *FECHAMENTO DE COMPRAS — BIGG'S 13*\n📅 Data: __/__\n🛒 Comprado no dia: R$ ____\n⚠️ Rupturas: ____\n✅ Fechado por: ____"},
+ {nome:'Adm/Financeiro · Entrada de Notas',obj:'Envio diário de NF e boletos para entrada de estoque.',envia:'Gerente',area:'financeiro',icon:'🧾',av:'RT',dono:'Rafaela Torres',loja:['Foto NF + boleto'],ragga:['Notas recebidas × lançadas','% de entrada','Prazo de lançamento'],rotina:'Gerente envia NF + boleto · fechamento ao final.',modelo:"🧾 *FECHAMENTO DE NOTAS — BIGG'S 13*\n📅 Data: __/__\n📄 Notas recebidas: ____\n✅ Todas com NF + boleto: (Sim/Não)\nGerente: ____"},
+ {nome:'Adm/Financeiro · Pagamento',obj:'Gestão e evidência dos pagamentos do dia.',envia:'Financeiro (conduz)',area:'financeiro',icon:'💳',av:'FN',dono:'Financeiro Ragga',loja:['—  (financeiro conduz)'],ragga:['Saldo inicial','Nº de pagamentos / valor pago','Pagamentos urgentes','Contas a pagar da semana','Saldo final consolidado da semana','% conciliado'],rotina:'Financeiro envia o resumo conciliado do dia.',modelo:"💳 *PAGAMENTOS — BIGG'S 13*\n📅 Data: __/__\n🏦 Saldo inicial: R$ ____\n🔢 Pagamentos: ____ | 💰 Total pago: R$ ____\n🚨 Urgentes: R$ ____\n🏦 Saldo final do dia: R$ ____\n📅 Contas a pagar (semana): R$ ____\n✅ Saldo final consolidado (semana): R$ ____\n📎 Conciliado no Cloudfy: (Sim/Não)"},
+ {nome:'Adm/Financeiro · Caixas',obj:'Troco, quebra de caixa e maquininhas.',envia:'Gerente / operadores de caixa',area:'financeiro',icon:'💵',av:'MO',dono:'Monalisa',loja:['Troco dos caixas','Situação das maquininhas'],ragga:['Faturamento total do dia','Quebra de caixa','Crédito / Débito / Pix / Online / Voucher','Vendas a prazo (assinada / B2B)','Sangrias e retiradas (por categoria)','Cancelamentos e brindes','Divergências'],rotina:'Loja: troco diário · Financeiro: conciliação 1x/semana.',modelo:"💵 *CONCILIAÇÃO DE CAIXA — BIGG'S 13*\n📅 ____\n💳 Crédito: R$ ____ | Débito: R$ ____\n📲 Pix: R$ ____\n⚠️ Quebra: R$ ____"},
+ {nome:'Operação · Gestão Diária',obj:'Escalas e fechamento diário da operação.',envia:'Gerente (diurno e noturno)',area:'operacao',icon:'🗓️',av:'LO',dono:'Luiz Otávio',loja:['Escala dos turnos','Áudio de fechamento'],ragga:['Aderência de escala','Headcount por turno','Horas extras','Incidentes'],rotina:'Escala até 16h · áudio de fechamento por turno.',modelo:"🗓️ *FECHAMENTO DE TURNO — BIGG'S 13*\n📅 Data: __/__ | Turno: (Diurno/Noturno)\n🎙️ Áudio do gerente com o andamento\n📝 Pontos do dia: ____"},
+ {nome:'Cozinha (KONCLUI)',obj:'Gestão diária da cozinha, produção e qualidade.',envia:'Gerente de cozinha + nutricionista',area:'operacao',icon:'🍳',av:'CZ',dono:'Cozinha + Nutricionista',loja:['Checklist KONCLUI','Foto do desperdício','Itens em falta'],ragga:['% aderência ao checklist','Índice de desperdício','Conformidade de qualidade','Ficha técnica'],rotina:'Checklist KONCLUI diário + fotos.',modelo:"🍳 *FECHAMENTO DE COZINHA — BIGG'S 13*\n📅 ____ | Turno: ____\n✅ Checklist KONCLUI: [link]\n📷 Caderno | produção | desperdício\n⚠️ Qualidade: ____"},
+ {nome:'Manutenção',obj:'Solicitações de manutenção da unidade.',envia:'Gerente',area:'operacao',icon:'🔧',av:'LO',dono:'Luiz Otávio',loja:['Solicitação + foto'],ragga:['Abertas / Concluídas','Tempo de atendimento','Gasto do mês','Recorrência'],rotina:'Solicitação por demanda · indicador até dia 3.',modelo:"🔧 *SOLICITAÇÃO DE MANUTENÇÃO — BIGG'S 13*\nO que precisa: ____\nLocal/equipamento: ____\nUrgência: (Alta/Média/Baixa) · 📷 foto"},
+ {nome:'TI · Sistemas (Louro)',obj:'Suporte de sistema: integrações, impressões e cardápio.',envia:'Gerente',area:'operacao',icon:'🖥️',av:'TI',dono:'Suporte / Fornecedores',loja:['Chamado + foto'],ragga:['Chamados abertos / resolvidos','Tempo de resolução','Recorrência'],rotina:'Consultar Cloudfy / Help Desk / IP Solution.',modelo:"🖥️ *CHAMADO DE SISTEMA — BIGG'S 13*\nProblema: ____\nOnde (PDV/iFood/impressora): ____\n📷 Foto do erro · Consultou fornecedor? (Sim/Não)"},
+ {nome:'RS/RH · Recrutamento & Seleção',obj:'Comunicação do RH: contratações e integração.',envia:'RH (Vitória)',area:'pessoas',icon:'👋',av:'VI',dono:'Vitória',loja:['Contratações','Status da integração'],ragga:['Vagas em aberto','Tempo de preenchimento','% integração','Avaliações 35/70 dias'],rotina:'Seg: avaliação · Ter: contratações · Qua: vagas · Sex: pendências.',modelo:"📅 *RH DA SEMANA — BIGG'S 13*\nSeg: avaliação de experiência\nTer: contratações da semana\nQua: vagas em aberto\nSex: movimentações e pendências"},
+ {nome:'DP · Vale Transporte',obj:'Conferência semanal do vale-transporte.',envia:'DP (lista) · gerência valida',area:'pessoas',icon:'🚌',av:'GM',dono:'Giovanna Modesta',loja:['Validação da listagem'],ragga:['% com VT conferido','Divergências','Custo de VT'],rotina:'Seg: DP envia listagem · gerência valida.',modelo:"🚌 *CONFERÊNCIA DE VT — BIGG'S 13*\n📅 Semana: __/__\n✅ Listagem conferida: (Sim)\nAjustes: ____"},
+ {nome:'DP · Solicitação de Empréstimo',obj:'Solicitação de empréstimo dos colaboradores.',envia:'Gerente',area:'pessoas',icon:'🤝',av:'GM',dono:'Giovanna Modesta',loja:['Pedido (nome, CPF, valor)'],ragga:['Nº de solicitações','Valor total','% aprovado','Prazo de retorno'],rotina:'Empréstimo 1 até dia 5 · Empréstimo 2 até dia 14.',modelo:"🤝 *PEDIDO DE EMPRÉSTIMO — BIGG'S 13*\nColaborador: ____ | CPF: ____\nValor: R$ ____\nTipo: (1ª até dia 5 / 2ª até dia 14)"},
+ {nome:'DP · Férias',obj:'Solicitação e programação de férias.',envia:'Gerente',area:'pessoas',icon:'🏖️',av:'GM',dono:'Giovanna Modesta',loja:['Solicitação de férias'],ragga:['% programado até dia 20','Férias vencidas / a vencer','Saldo de férias'],rotina:'Solicitar até dia 10 · DP responde até dia 20.',modelo:"🏖️ *SOLICITAÇÃO DE FÉRIAS — BIGG'S 13*\nColaborador: ____ | Cargo: ____\nPeríodo: __/__ a __/__"},
+ {nome:'Ocorrências',obj:'Faltas, atestados e ocorrências de colaboradores.',envia:'Gerente',area:'pessoas',icon:'⚠️',av:'LO',dono:'Luiz Otávio',loja:['Ocorrência (nome, cargo, decisão)','Atestado'],ragga:['Absenteísmo','Faltas','Atestados','Advertências / Suspensões'],rotina:'Enviar até 13h · resposta até 15h.',modelo:"⚠️ *OCORRÊNCIA — BIGG'S 13*\nNome: ____ | Cargo: ____ | Turno: ____\nDescrição: ____\nDecisão: (Advertência/Suspensão/Outro)"},
+ {nome:'Demissão',obj:'Pedidos de desligamento e documentação imediata.',envia:'Gerente',area:'pessoas',icon:'📤',av:'GM',dono:'Giovanna Modesta',loja:['Comunicação de desligamento'],ragga:['Turnover %','Motivo','Custo de rescisão','Tempo de casa'],rotina:'Comunicar na hora · Sex: turnover.',modelo:"📤 *DESLIGAMENTO — BIGG'S 13*\nColaborador: ____ | Cargo: ____\nTipo: (Pedido/Sem justa causa/Justa causa)\nData: __/__ | Motivo: ____"}
+];
+const DONOS=[
+ {av:'ME',c:'compras',nome:'Maria Eduarda Alves',role:'Gestora de Compras',tags:['Compras & Estoque']},
+ {av:'RT',c:'financeiro',nome:'Rafaela Torres',role:'Financeiro',tags:['Entrada de Notas']},
+ {av:'MO',c:'financeiro',nome:'Monalisa',role:'Financeiro · Caixa',tags:['Caixas']},
+ {av:'MF',c:'marketing',nome:'Maria Fernanda',role:'Marketing · Ragga',tags:['Marketing + Vendas']},
+ {av:'VI',c:'pessoas',nome:'Vitória',role:'RH',tags:['Recrutamento & Seleção']},
+ {av:'GM',c:'pessoas',nome:'Giovanna Modesta',role:'DP',tags:['Vale Transporte','Empréstimo','Férias','Demissão']},
+ {av:'LO',c:'operacao',nome:'Luiz Otávio',role:'Operação',tags:['Ocorrências','Gestão Diária','Manutenção','Delivery (dados)']},
+ {av:'AG',c:'comercial',nome:'Amanda Galvão',role:'Comercial',tags:['Performance · Vendas']},
+ {av:'CZ',c:'operacao',nome:'Cozinha',role:'Gerente de Cozinha + Nutricionista',tags:['Cozinha · KONCLUI']},
+ {av:'TI',c:'operacao',nome:'Suporte TI (Louro)',role:'Fornecedores',tags:['Cloudfy','Help Desk','IP Solution']}
+];
+
+document.getElementById('legend').innerHTML=Object.keys(AREAS).map(a=>`<span style="background:var(--${a}-bg);color:var(--${a}-ink)">● ${AREAS[a]}</span>`).join('');
+
+let gh='';
+Object.keys(AREAS).forEach(a=>{
+  const gs=G.filter(g=>g.area===a); if(!gs.length) return;
+  gh+=`<div class="area-blk"><div class="area-head"><span class="area-dot" style="background:var(--${a})"></span><h3>${AREAS[a]}</h3><span class="ct">${gs.length} grupo${gs.length>1?'s':''}</span></div><div class="grid">`;
+  gs.forEach((g,i)=>{
+    gh+=`<div class="gcard"><div class="bar" style="background:var(--${a})"></div>
+      <div class="gh"><div class="gkick">📲 Nome do grupo no WhatsApp</div><div class="gname">${g.icon} ${g.nome}</div>
+        <div class="gobj">${g.obj||''}</div></div>
+      <div class="gresp">
+        <div class="rblk"><span class="rk">📤 Envia · loja</span><span class="rv"><span class="av2" style="background:#94a0b8">L</span>${g.envia||'—'}</span></div>
+        <div class="rblk" style="background:var(--${a}-bg);border-color:transparent"><span class="rk" style="color:var(--${a}-ink)">🏢 Resolve · Ragga</span><span class="rv" style="color:var(--${a}-ink)"><span class="av2" style="background:var(--${a})">${g.av}</span>${g.dono}</span></div>
+      </div>
+      <div class="gcols">
+        <div class="gcol loja"><div class="lbl">🏪 Loja traz</div><ul>${g.loja.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+        <div class="gcol ragga"><div class="lbl">📊 Ragga analisa</div><ul>${g.ragga.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      </div>
+      <details class="tg"><summary>📋 Rotina e mensagem-padrão (oculto)<span class="chev">›</span></summary>
+        <div class="rt">${g.rotina}</div>
+        <pre id="m_${a}_${i}">${g.modelo.replace(/</g,'&lt;')}</pre>
+        <button class="copy" data-t="m_${a}_${i}">Copiar mensagem-padrão</button>
+      </details></div>`;
+  });
+  gh+=`</div></div>`;
+});
+document.getElementById('grupos-host').innerHTML=gh;
+
+document.getElementById('donos-host').innerHTML=DONOS.map(d=>`
+  <div class="pcard"><div class="pav" style="background:var(--${d.c})">${d.av}</div>
+    <div><h4>${d.nome}</h4><div class="role">${d.role}</div>
+      <div class="tags">${d.tags.map(t=>`<span>${t}</span>`).join('')}</div></div></div>`).join('');
+
+document.querySelectorAll('details.tg .copy').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const txt=document.getElementById(b.dataset.t).innerText;
+    const done=()=>{b.textContent='✓ Copiado';setTimeout(()=>b.textContent='Copiar mensagem-padrão',1500);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done).catch(()=>fb(txt,done));}else fb(txt,done);
+    function fb(t,cb){const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.top='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);cb();}
+  });
+});
+
+// active nav
+const links=[...document.querySelectorAll('nav.top a')];const map={};links.forEach(a=>map[a.getAttribute('href').slice(1)]=a);
+const so=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const a=map[e.target.id];if(a)a.classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
+['roadmap','principio','grupos','donos','fim'].forEach(id=>{const el=document.getElementById(id);if(el)so.observe(el);});
+// ===== LÍDERES DA UNIDADE — passo a passo (aba mastigada) =====
+const KONCLUI_URL='https://app.konclui.com/checklists';
+const LIDERES={
+ gerente_adm:{nome:'Gerente administrativo',sub:'Turno diurno · canal principal',canal:'wa',icon:'🧑‍💼',
+   funcao:'Coordena a loja no diurno e centraliza a comunicação com a Ragga. É o ponto único que joga as informações da unidade nos grupos.',
+   entregas:['Notas fiscais e boletos (foto)','Troco e situação das maquininhas','Rupturas de estoque do dia','Escala dos turnos + áudio de fechamento do diurno','Ocorrências e atestados','Solicitações de manutenção e chamados de TI','Solicitações de DP (VT, empréstimo, férias, desligamento)'],
+   ragga:[
+     {grupo:'Entrada de Notas',area:'financeiro',setor:'Financeiro',resp:'Rafaela Torres',indicador:'% de entrada conciliada'},
+     {grupo:'Caixas',area:'financeiro',setor:'Financeiro',resp:'Monalisa',indicador:'Quebra de caixa (R$)'},
+     {grupo:'Compras & Estoque',area:'compras',setor:'Compras',resp:'Maria Eduarda',indicador:'Nº de rupturas + CMV %'},
+     {grupo:'Operação · Gestão Diária',area:'operacao',setor:'Operação',resp:'Luiz Otávio',indicador:'Aderência de escala + incidentes'},
+     {grupo:'Ocorrências',area:'pessoas',setor:'Operação / DP',resp:'Luiz Otávio',indicador:'Absenteísmo + advertências'},
+     {grupo:'Manutenção',area:'operacao',setor:'Operação',resp:'Luiz Otávio',indicador:'Tempo de atendimento + gasto'},
+     {grupo:'TI · Sistemas',area:'operacao',setor:'Suporte',resp:'Louro / fornecedores',indicador:'Chamados resolvidos'},
+     {grupo:'DP',area:'pessoas',setor:'DP',resp:'Giovanna Modesta',indicador:'Turnover + programação de férias'}
+   ],
+   passos:['Recebe a demanda na loja (nota, troco, ruptura, ocorrência…)','Registra no padrão (foto / áudio / texto)','Envia no grupo de WhatsApp certo','A área da Ragga recebe, confere e trata','A Ragga calcula o indicador e fecha o dia','O consolidado sobe para a diretoria (Estratégico PDCA)']},
+ gerente_noturno:{nome:'Gerente noturno',sub:'Turno noturno · canal principal',canal:'wa',icon:'🌙',
+   funcao:'Comanda o turno noturno e reporta o fechamento da noite. Concentra o que acontece depois que o gerente diurno sai.',
+   entregas:['Áudio de fechamento da loja (noturno) + escala da noite','Ocorrências do turno noturno','Fechamento do caixa noturno','Reporte da cozinha noturna (caderno + desperdício)'],
+   ragga:[
+     {grupo:'Operação · Gestão Diária',area:'operacao',setor:'Operação',resp:'Luiz Otávio',indicador:'Fechamento por turno + incidentes'},
+     {grupo:'Ocorrências',area:'pessoas',setor:'Operação / DP',resp:'Luiz Otávio',indicador:'Absenteísmo noturno'},
+     {grupo:'Caixas',area:'financeiro',setor:'Financeiro',resp:'Monalisa',indicador:'Quebra de caixa noturna'},
+     {grupo:'Cozinha (noturno)',area:'operacao',setor:'Qualidade',resp:'Nutricionista',indicador:'Desperdício + checklist'}
+   ],
+   passos:['Acompanha a operação durante a noite','Registra ocorrências e o caixa do turno','Garante o checklist / foto da cozinha noturna','Manda o áudio de fechamento no grupo de Operação','A Ragga consolida o noturno no fechamento do dia']},
+ nutricionista:{nome:'Nutricionista',sub:'Cozinha · via KONCLUI',canal:'kon',icon:'🥗',
+   funcao:'Responsável pela qualidade e pela ficha técnica da cozinha. Preenche o checklist no KONCLUI.',
+   entregas:['Checklist de qualidade preenchido (KONCLUI)','Conformidade com a ficha técnica'],
+   ragga:[{grupo:'Cozinha (KONCLUI)',area:'operacao',setor:'Qualidade / Gestão de cozinha',resp:'Amanda + gestão',indicador:'% de aderência + conformidade de qualidade'}],
+   passos:['Abre o checklist no KONCLUI (botão acima)','Confere qualidade e ficha técnica e preenche','O KONCLUI gera o relatório em PDF','O PDF cai no grupo de Cozinha','A Ragga acompanha a aderência e a qualidade']},
+ gerente_cozinha:{nome:'Gerente de cozinha',sub:'Cozinha · via KONCLUI',canal:'kon',icon:'🍳',
+   funcao:'Conduz a produção da cozinha e controla o desperdício. Registra tudo no KONCLUI.',
+   entregas:['Foto do caderno de produção','Foto do desperdício','Itens em falta'],
+   ragga:[{grupo:'Cozinha (KONCLUI)',area:'operacao',setor:'Gestão de cozinha',resp:'Nutricionista + gestão',indicador:'Índice de desperdício (R$/%) + itens em falta'}],
+   passos:['Abre o checklist no KONCLUI (botão acima)','Registra produção, desperdício e itens em falta','O KONCLUI gera o PDF','O PDF cai no grupo de Cozinha','A Ragga calcula o desperdício e acompanha']},
+ enc_delivery:{nome:'Encarregado de delivery',sub:'Delivery · via KONCLUI',canal:'kon',icon:'🛵',
+   funcao:'Cuida da operação de delivery e registra o desempenho no KONCLUI.',
+   entregas:['Checklist de delivery','Ocorrências e problemas de entrega'],
+   ragga:[{grupo:'Delivery',area:'comercial',setor:'Comercial',resp:'Luiz Otávio',indicador:'Tempo de entrega + % cancelamentos + iFood'}],
+   passos:['Abre o checklist no KONCLUI (botão acima)','Registra tempos, ocorrências e problemas','O KONCLUI gera o PDF','O PDF cai no grupo de Delivery','A Ragga acompanha avaliação e cancelamentos']},
+ operadores_caixa:{nome:'Operadores de caixa',sub:'Caixa · via KONCLUI',canal:'kon',icon:'💵',
+   funcao:'Conferem e fecham o caixa. Registram a contagem no KONCLUI.',
+   entregas:['Contagem e conferência do troco','Fechamento de caixa'],
+   ragga:[{grupo:'Caixas (KONCLUI)',area:'financeiro',setor:'Financeiro',resp:'Monalisa',indicador:'Quebra de caixa + débito / crédito / Pix'}],
+   passos:['Abre o checklist no KONCLUI (botão acima)','Conta e confere o troco; registra o fechamento','O KONCLUI gera o PDF','O PDF cai no grupo de Caixas','A Ragga concilia e apura a quebra']}
+};
+const LIDER_ORDER=['gerente_adm','gerente_noturno','nutricionista','gerente_cozinha','enc_delivery','operadores_caixa'];
+
+document.getElementById('lider-cards').innerHTML=LIDER_ORDER.map(id=>{
+  const L=LIDERES[id];const cc=L.canal==='wa'?'canal-wa':'canal-kon';const ct=L.canal==='wa'?'WhatsApp':'KONCLUI';
+  return `<button class="lcard" onclick="openLider('${id}')">
+    <span class="lav" style="background:var(--ragga-soft)">${L.icon}</span>
+    <span class="ltxt"><h4>${L.nome}</h4><span class="lcanal ${cc}">${ct}</span></span>
+    <span class="larrow">→</span></button>`;
+}).join('');
+
+const _d={scrim:document.getElementById('scrim'),drawer:document.getElementById('drawer'),head:document.getElementById('dhead'),canal:document.getElementById('dcanal'),title:document.getElementById('dtitle'),sub:document.getElementById('dsub'),body:document.getElementById('dbody')};
+function openLider(id){
+  const L=LIDERES[id];if(!L)return;
+  const color=L.canal==='wa'?'#14915E':'#C9781A';
+  _d.head.style.background=color;
+  _d.canal.textContent=L.canal==='wa'?'💬 Grupos de WhatsApp':'⚙️ KONCLUI → PDF no grupo';
+  _d.title.textContent=L.nome;_d.sub.textContent=L.sub;
+  let b='';
+  if(L.canal==='kon'){
+    b+=KONCLUI_URL
+      ? `<a class="konbtn" href="${KONCLUI_URL}" target="_blank" rel="noopener">🔗 Abrir checklist no KONCLUI</a>`
+      : `<button class="konbtn" onclick="alert('Cole o link do KONCLUI na variável KONCLUI_URL, no topo do script.')">🔗 Configurar link do KONCLUI</button>`;
+  }
+  b+=`<div class="funcao">🎯 <b>Função:</b> ${L.funcao}</div>`;
+  b+=`<div class="dsec loja"><div class="dsec-h">🏪 Líder da loja · entregas finais</div><ul class="entregas">${L.entregas.map(e=>`<li>${e}</li>`).join('')}</ul></div>`;
+  b+=`<div class="dsec ragga"><div class="dsec-h">📊 Ragga · responsável e setor</div>${L.ragga.map(r=>`<div class="rgrow"><div class="rgg"><span class="bdot" style="background:var(--${r.area})"></span>${r.grupo}</div><div class="rgs">Setor: <b>${r.setor}</b> · Resolve: <b>${r.resp}</b></div><div class="rgi">📈 ${r.indicador}</div></div>`).join('')}</div>`;
+  b+=`<div class="dsec passo"><div class="dsec-h">🪜 Passo a passo · do começo ao fim</div><ul class="passos">${L.passos.map(p=>`<li>${p}</li>`).join('')}</ul></div>`;
+  _d.body.innerHTML=b;_d.body.scrollTop=0;
+  _d.scrim.classList.add('on');_d.drawer.classList.add('on');
+}
+function closeLider(){_d.scrim.classList.remove('on');_d.drawer.classList.remove('on');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLider();});
+</script>
+<script>
+(function(){
+  const money=n=>'R$ '+(Number(n)||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+  const int=n=>(Number(n)||0).toLocaleString('pt-BR');
+  const num=x=>Number(x)||0;
+  const AAREAS={comercial:'Comercial · Vendas',marketing:'Marketing',compras:'Compras & Estoque',financeiro:'Financeiro',operacao:'Operação',pessoas:'Pessoas · RH & DP'};
+const GROUPS = [
+  // COMERCIAL
+  { id:'performance', nome:'Performance + Vendas', area:'comercial', icon:'📊',
+    loja:['Faturamento do dia','Nº de pedidos'], ragga:['Ticket médio','% da meta','Salão × Delivery','Acumulado do mês'],
+    fields:[{k:'fat',l:'Faturamento do dia (R$)',t:'number'},{k:'ped',l:'Nº de pedidos',t:'number'},{k:'meta',l:'Meta do dia (R$)',t:'number'},{k:'sal',l:'Vendas salão (R$)',t:'number'},{k:'del',l:'Vendas delivery (R$)',t:'number'}],
+    card:v=>{const fat=num(v.fat),ped=num(v.ped),meta=num(v.meta),sal=num(v.sal),del=num(v.del);const tm=ped?fat/ped:0;const pct=meta?fat/meta*100:0;const tot=(sal+del)||fat;const dp=tot?del/tot*100:0;const tone=!meta?'neutral':pct>=100?'good':pct>=85?'warn':'bad';
+      return{kpis:[{l:'Faturamento',v:money(fat),tone:'good'},{l:'Pedidos',v:int(ped)},{l:'Ticket médio',v:money(tm)},{l:'% da meta',v:meta?pct.toFixed(0)+'%':'—',tone},{l:'Salão × Delivery',v:tot?(100-dp).toFixed(0)+'% / '+dp.toFixed(0)+'%':'—'}],
+      status:{l:!meta?'Sem meta lançada':pct>=100?'Meta batida 🎉':pct>=85?'Perto da meta':'Abaixo da meta',tone},
+      insight:meta?(pct>=100?'Meta do dia atingida.':'Faltam '+money(Math.max(0,meta-fat))+' para a meta.'):''};}},
+  { id:'delivery', nome:'Delivery', area:'comercial', icon:'🛵',
+    loja:['Ocorrências de delivery'], ragga:['Avaliação iFood','Tempo de entrega','% cancelamentos','Faturamento delivery'],
+    fields:[{k:'av',l:'Avaliação iFood (★)',t:'number',step:'0.01'},{k:'tmin',l:'Tempo médio (min)',t:'number'},{k:'canc',l:'Cancelamentos (%)',t:'number'},{k:'fd',l:'Faturamento delivery (R$)',t:'number'}],
+    card:v=>{const av=num(v.av),tm=num(v.tmin),c=num(v.canc),fd=num(v.fd);const tone=av>=4.7?'good':av>=4.3?'warn':'bad';const ct=c<=3?'good':c<=6?'warn':'bad';
+      return{kpis:[{l:'Avaliação iFood',v:av?av.toFixed(2)+'★':'—',tone},{l:'Tempo médio',v:tm?tm+' min':'—'},{l:'Cancelamentos',v:c?c+'%':'—',tone:ct},{l:'Fat. delivery',v:money(fd),tone:'good'}],
+      status:{l:av>=4.7?'Delivery saudável':'Atenção no delivery',tone},insight:c>5?'Cancelamentos acima do ideal — revisar operação.':''};}},
+  // MARKETING
+  { id:'marketing', nome:'Marketing + Vendas', area:'marketing', icon:'📣',
+    loja:['Demandas e fotos locais'], ragga:['Alcance / engajamento','Campanhas ativas','Conversão de promoções','Calendário de conteúdo'],
+    fields:[{k:'ca',l:'Campanhas ativas',t:'number'},{k:'al',l:'Alcance (pessoas)',t:'number'},{k:'promo',l:'Promoção em destaque',t:'text'}],
+    card:v=>({kpis:[{l:'Campanhas ativas',v:int(v.ca),tone:'good'},{l:'Alcance',v:int(v.al)},{l:'Promoção',v:v.promo||'—'}],status:{l:'Marketing em andamento',tone:'neutral'},insight:''})},
+  // COMPRAS
+  { id:'compras', nome:'Compras & Estoque', area:'compras', icon:'🛒',
+    loja:['Rupturas / faltas do dia'], ragga:['Valor comprado','CMV %','Nº de rupturas','Comparativo de preço'],
+    fields:[{k:'vc',l:'Comprado no dia (R$)',t:'number'},{k:'rup',l:'Nº de rupturas',t:'number'},{k:'prazo',l:'Pedidos no prazo?',t:'select',o:['Sim','Não']}],
+    card:v=>{const vc=num(v.vc),r=num(v.rup);const tone=r==0?'good':r<=2?'warn':'bad';
+      return{kpis:[{l:'Comprado no dia',v:money(vc)},{l:'Rupturas',v:int(r),tone},{l:'Pedidos no prazo',v:v.prazo||'—',tone:v.prazo==='Sim'?'good':'warn'}],
+      status:{l:r==0?'Sem ruptura hoje':'Rupturas: '+r,tone},insight:r>0?'Registrar faltas e replanejar a compra.':''};}},
+  // FINANCEIRO
+  { id:'fin_entrada', nome:'Adm/Financeiro · Entrada de Notas', area:'financeiro', icon:'🧾',
+    loja:['Foto NF + boleto'], ragga:['Notas recebidas × lançadas','% de entrada','Prazo de lançamento'],
+    fields:[{k:'nr',l:'Notas recebidas',t:'number'},{k:'nl',l:'Notas lançadas (XML)',t:'number'}],
+    card:v=>{const nr=num(v.nr),nl=num(v.nl);const p=nr?nl/nr*100:0;
+      return{kpis:[{l:'Notas recebidas',v:int(nr)},{l:'Notas lançadas',v:int(nl),tone:'good'},{l:'% lançado',v:nr?p.toFixed(0)+'%':'—',tone:p>=100?'good':'warn'}],
+      status:{l:p>=100?'Tudo lançado':'Pendência de lançamento',tone:p>=100?'good':'warn'},insight:''};}},
+  { id:'fin_pagamento', nome:'Adm/Financeiro · Pagamento', area:'financeiro', icon:'💳',
+    loja:['—  (financeiro Ragga conduz)'], ragga:['Saldo inicial','Nº de pagamentos / valor pago','Pagamentos urgentes','Contas a pagar da semana','Saldo final consolidado da semana','% conciliado'],
+    fields:[{k:'si',l:'Saldo inicial (R$)',t:'number'},{k:'qt',l:'Nº de pagamentos',t:'number'},{k:'vp',l:'Valor total pago (R$)',t:'number'},{k:'urg',l:'Pagamentos urgentes (R$)',t:'number'},{k:'sd',l:'Saldo final do dia (R$)',t:'number'},{k:'cap',l:'Contas a pagar da semana (R$)',t:'number'},{k:'sfc',l:'Saldo final consolidado da semana (R$)',t:'number'},{k:'conc',l:'Conciliado no Cloudfy?',t:'select',o:['Sim','Não']}],
+    card:v=>{const si=num(v.si),qt=num(v.qt),vp=num(v.vp),urg=num(v.urg),sd=num(v.sd),cap=num(v.cap),sfc=num(v.sfc);return{hero:{l:'Saldo final consolidado da semana',v:money(sfc)},kpis:[{l:'Saldo inicial',v:money(si)},{l:'Nº de pagamentos',v:int(qt)},{l:'Total pago',v:money(vp)},{l:'Pagamentos urgentes',v:money(urg),tone:urg>0?'warn':'good'},{l:'Saldo final do dia',v:money(sd),tone:'good'},{l:'Contas a pagar (semana)',v:money(cap)},{l:'Conciliado',v:v.conc||'—',tone:v.conc==='Sim'?'good':'warn'}],status:{l:v.conc==='Sim'?'Pagamentos conciliados':'Conferir conciliação',tone:v.conc==='Sim'?'good':'warn'},insight:urg>0?('Atenção: '+money(urg)+' em pagamentos urgentes.'):(cap>0?('Contas a pagar na semana: '+money(cap)+'.'):'')};}},
+  { id:'caixas', nome:'Adm/Financeiro · Caixas', area:'financeiro', icon:'💵',
+    loja:['Troco dos caixas','Situação das maquininhas'], ragga:['Faturamento total do dia','Quebra de caixa','Crédito / Débito / Pix / Online / Voucher','Vendas a prazo (assinada / B2B)','Sangrias e retiradas (por categoria)','Cancelamentos e brindes','Divergências'],
+    fields:[{k:'cred',l:'Crédito (R$)',t:'number'},{k:'deb',l:'Débito (R$)',t:'number'},{k:'pix',l:'Pix (R$)',t:'number'},{k:'online',l:'Pagamento online (R$)',t:'number'},{k:'voucher',l:'Voucher (R$)',t:'number'},{k:'assinada',l:'Conta assinada — a prazo (R$)',t:'number'},{k:'b2b',l:'B2B — a prazo (R$)',t:'number'},{k:'sangrias',l:'Sangrias (R$)',t:'number'},{k:'retiradas',l:'Retiradas de caixa (R$)',t:'number'},{k:'retiradas_cat',l:'Categorias das retiradas',t:'text'},{k:'cancelamentos',l:'Cancelamentos (R$)',t:'number'},{k:'brindes',l:'Brindes (R$)',t:'number'},{k:'quebra',l:'Quebra de caixa (R$)',t:'number'}],
+    card:v=>{const c=num(v.cred),d=num(v.deb),p=num(v.pix),o=num(v.online),vo=num(v.voucher),a=num(v.assinada),bb=num(v.b2b),sg=num(v.sangrias),re=num(v.retiradas),cn=num(v.cancelamentos),br=num(v.brindes),q=num(v.quebra);const rec=c+d+p+o+vo;const prazo=a+bb;const fat=rec+prazo;const cat=(v.retiradas_cat||'').trim();const tone=q==0?'good':q<=20?'warn':'bad';let ins=q>0?'Conferir diferença de caixa do dia.':(prazo>0?'A prazo (assinada + B2B): '+money(prazo)+' a receber.':'Sem quebra de caixa hoje.');if(cat)ins+=' Retiradas: '+cat+'.';
+      return{hero:{l:'Faturamento total do dia',v:money(fat)},kpis:[{l:'Crédito',v:money(c)},{l:'Débito',v:money(d)},{l:'Pix',v:money(p)},{l:'Online',v:money(o)},{l:'Voucher',v:money(vo)},{l:'A prazo (assinada+B2B)',v:money(prazo)},{l:'Recebido no caixa',v:money(rec),tone:'good'},{l:'Sangrias',v:money(sg)},{l:'Retiradas de caixa',v:money(re)},{l:'Cancelamentos',v:money(cn),tone:cn==0?'good':'warn'},{l:'Brindes',v:money(br)},{l:'Quebra de caixa',v:money(q),tone}],
+      status:{l:q==0?'Caixa fechado certo':'Quebra de '+money(q),tone},insight:ins};}},
+  // OPERAÇÃO
+  { id:'operacao', nome:'Operação · Gestão Diária', area:'operacao', icon:'🗓️',
+    loja:['Escala dos turnos','Áudio de fechamento'], ragga:['Aderência de escala','Headcount por turno','Horas extras','Incidentes'],
+    fields:[{k:'hd',l:'Headcount diurno',t:'number'},{k:'hn',l:'Headcount noturno',t:'number'},{k:'fech',l:'Fechamento da loja',t:'select',o:['OK','Pendência']},{k:'inc',l:'Incidentes do dia',t:'number'}],
+    card:v=>{const inc=num(v.inc);return{kpis:[{l:'Headcount diurno',v:int(v.hd)},{l:'Headcount noturno',v:int(v.hn)},{l:'Fechamento',v:v.fech||'—',tone:v.fech==='OK'?'good':'warn'},{l:'Incidentes',v:int(inc),tone:inc==0?'good':'warn'}],status:{l:(v.fech==='OK'&&inc==0)?'Operação tranquila':'Atenção na operação',tone:(v.fech==='OK'&&inc==0)?'good':'warn'},insight:''};}},
+  { id:'cozinha', nome:'Cozinha (KONCLUI)', area:'operacao', icon:'🍳',
+    loja:['Checklist KONCLUI','Foto do desperdício','Itens em falta'], ragga:['% aderência ao checklist','Índice de desperdício','Conformidade de qualidade','Aderência à ficha técnica'],
+    fields:[{k:'ck',l:'Checklist KONCLUI preenchido?',t:'select',o:['Sim','Não']},{k:'desp',l:'Desperdício (R$)',t:'number'},{k:'falta',l:'Itens em falta',t:'number'},{k:'qual',l:'Qualidade',t:'select',o:['OK','Atenção']}],
+    card:v=>{const d=num(v.desp),f=num(v.falta);const ok=v.ck==='Sim'&&v.qual==='OK';
+      return{kpis:[{l:'Checklist KONCLUI',v:v.ck||'—',tone:v.ck==='Sim'?'good':'bad'},{l:'Desperdício',v:money(d),tone:d==0?'good':'warn'},{l:'Itens em falta',v:int(f),tone:f==0?'good':'warn'},{l:'Qualidade',v:v.qual||'—',tone:v.qual==='OK'?'good':'warn'}],
+      status:{l:ok?'Cozinha em ordem':'Atenção na cozinha',tone:ok?'good':'warn'},insight:v.ck!=='Sim'?'Checklist do KONCLUI não preenchido.':''};}},
+  { id:'manutencao', nome:'Manutenção', area:'operacao', icon:'🔧',
+    loja:['Solicitação + foto'], ragga:['Abertas / Concluídas','Tempo de atendimento','Gasto do mês','Recorrência'],
+    fields:[{k:'ab',l:'Solicitações abertas',t:'number'},{k:'co',l:'Concluídas',t:'number'},{k:'g',l:'Gasto no mês (R$)',t:'number'}],
+    card:v=>{const ab=num(v.ab);return{kpis:[{l:'Abertas',v:int(ab),tone:ab==0?'good':'warn'},{l:'Concluídas',v:int(v.co),tone:'good'},{l:'Gasto no mês',v:money(v.g)}],status:{l:ab==0?'Sem pendências':ab+' em aberto',tone:ab==0?'good':'warn'},insight:''};}},
+  { id:'ti', nome:'TI · Sistemas (Louro)', area:'operacao', icon:'🖥️',
+    loja:['Chamado + foto'], ragga:['Chamados abertos / resolvidos','Tempo de resolução','Recorrência'],
+    fields:[{k:'ab',l:'Chamados abertos',t:'number'},{k:'re',l:'Chamados resolvidos',t:'number'}],
+    card:v=>{const a=num(v.ab),r=num(v.re);const p=(a+r)?r/(a+r)*100:0;return{kpis:[{l:'Abertos',v:int(a)},{l:'Resolvidos',v:int(r),tone:'good'},{l:'% resolvido',v:(a+r)?p.toFixed(0)+'%':'—',tone:p>=80?'good':'warn'}],status:{l:a==0?'Sistemas OK':a+' chamado(s) aberto(s)',tone:a==0?'good':'warn'},insight:''};}},
+  // PESSOAS
+  { id:'recrutamento', nome:'RS/RH · Recrutamento & Seleção', area:'pessoas', icon:'👋',
+    loja:['Contratações','Status da integração'], ragga:['Vagas em aberto','Tempo de preenchimento','% integração concluída','Avaliações 35/70 dias'],
+    fields:[{k:'ct',l:'Contratações da semana',t:'number'},{k:'va',l:'Vagas em aberto',t:'number'},{k:'integ',l:'Integração do 1º dia OK?',t:'select',o:['Sim','Não']}],
+    card:v=>{const va=num(v.va);return{kpis:[{l:'Contratações',v:int(v.ct),tone:'good'},{l:'Vagas abertas',v:int(va),tone:va==0?'good':'warn'},{l:'Integração 1º dia',v:v.integ||'—',tone:v.integ==='Sim'?'good':'warn'}],status:{l:va==0?'Quadro completo':va+' vaga(s) aberta(s)',tone:va==0?'good':'warn'},insight:''};}},
+  { id:'vale_transporte', nome:'DP · Vale Transporte', area:'pessoas', icon:'🚌',
+    loja:['Validação da listagem'], ragga:['% com VT conferido','Divergências','Custo de VT'],
+    fields:[{k:'tc',l:'Total de colaboradores',t:'number'},{k:'vt',l:'Com vale-transporte',t:'number'},{k:'dv',l:'Divergências',t:'number'}],
+    card:v=>{const tc=num(v.tc),vt=num(v.vt),dv=num(v.dv);const p=tc?vt/tc*100:0;return{kpis:[{l:'Colaboradores',v:int(tc)},{l:'Com VT',v:int(vt)},{l:'% com VT',v:tc?p.toFixed(0)+'%':'—'},{l:'Divergências',v:int(dv),tone:dv==0?'good':'warn'}],status:{l:dv==0?'Listagem conferida':dv+' divergência(s)',tone:dv==0?'good':'warn'},insight:''};}},
+  { id:'emprestimo', nome:'DP · Solicitação de Empréstimo', area:'pessoas', icon:'🤝',
+    loja:['Pedido (nome, CPF, valor)'], ragga:['Nº de solicitações','Valor total','% aprovado','Prazo de retorno'],
+    fields:[{k:'so',l:'Nº de solicitações',t:'number'},{k:'vt',l:'Valor total (R$)',t:'number'}],
+    card:v=>({kpis:[{l:'Solicitações',v:int(v.so)},{l:'Valor total',v:money(v.vt)}],status:{l:'Solicitações registradas',tone:'neutral'},insight:''})},
+  { id:'ferias', nome:'DP · Férias', area:'pessoas', icon:'🏖️',
+    loja:['Solicitação de férias'], ragga:['% programado até dia 20','Férias vencidas / a vencer','Saldo de férias'],
+    fields:[{k:'so',l:'Solicitações',t:'number'},{k:'pr',l:'Programadas',t:'number'}],
+    card:v=>{const so=num(v.so),pr=num(v.pr);const p=so?pr/so*100:0;return{kpis:[{l:'Solicitações',v:int(so)},{l:'Programadas',v:int(pr)},{l:'% programado',v:so?p.toFixed(0)+'%':'—',tone:p>=100?'good':'warn'}],status:{l:p>=100?'Tudo programado':'Programação pendente',tone:p>=100?'good':'warn'},insight:''};}},
+  { id:'ocorrencias', nome:'Ocorrências', area:'pessoas', icon:'⚠️',
+    loja:['Ocorrência (nome, cargo, decisão)','Atestado'], ragga:['Absenteísmo','Faltas','Atestados','Advertências / Suspensões'],
+    fields:[{k:'oc',l:'Ocorrências do dia',t:'number'},{k:'fa',l:'Faltas',t:'number'},{k:'at',l:'Atestados',t:'number'},{k:'ad',l:'Advertências',t:'number'}],
+    card:v=>{const oc=num(v.oc),fa=num(v.fa);return{kpis:[{l:'Ocorrências',v:int(oc),tone:oc==0?'good':'warn'},{l:'Faltas',v:int(fa),tone:fa==0?'good':'warn'},{l:'Atestados',v:int(v.at)},{l:'Advertências',v:int(v.ad)}],status:{l:oc==0?'Sem ocorrências':oc+' ocorrência(s)',tone:oc==0?'good':'warn'},insight:''};}},
+  { id:'demissao', nome:'Demissão', area:'pessoas', icon:'📤',
+    loja:['Comunicação de desligamento'], ragga:['Turnover %','Motivo','Custo de rescisão','Tempo de casa'],
+    fields:[{k:'de',l:'Desligamentos',t:'number'},{k:'ad',l:'Admissões',t:'number'},{k:'mot',l:'Motivo principal',t:'text'}],
+    card:v=>{const de=num(v.de);return{kpis:[{l:'Desligamentos',v:int(de),tone:de==0?'good':'warn'},{l:'Admissões',v:int(v.ad)},{l:'Motivo',v:v.mot||'—'}],status:{l:de==0?'Sem desligamentos':de+' desligamento(s)',tone:de==0?'good':'warn'},insight:''};}}
+];
+  const root=document.getElementById('ag-gen'); if(!root) return;
+  const sel=root.querySelector('.ag-select'),fieldsEl=root.querySelector('.ag-fields'),lojaEl=root.querySelector('.ag-loja'),dataEl=root.querySelector('.ag-data'),obsEl=root.querySelector('.ag-obs'),hostEl=root.querySelector('.ag-cardhost'),dlrow=root.querySelector('.ag-dlrow'),copytg=root.querySelector('.ag-copytoggle'),copypre=root.querySelector('.ag-copypre');
+  const ttitle=root.querySelector('.ag-ttitle'),ttext=root.querySelector('.ag-ttext'),ftitle=root.querySelector('.ag-ftitle'),fileEl=root.querySelector('.ag-file'),fnameEl=root.querySelector('.ag-fname');
+  const state={mode:'form',imgData:null,txtData:null}; let lastName='gestao';
+  const escH=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const fmtText=s=>escH(s).replace(/\*([^*\n]+)\*/g,'<b>$1</b>').replace(/\n/g,'<br>');
+  const cardTop=(accent,icon)=>`<div class="ctop" style="background:${accent}">${leaf}<div><div class="cbrand">GESTÃO RAGGA</div><div style="font-size:13px;font-weight:bold">Suporte 13</div></div><div class="cicon">${icon}</div></div>`;
+  const cardFoot=`<div class="cfoot"><span>Ragga Gestão &amp; Educação</span><span>📲 Gestão Assistida 13º</span></div>`;
+  Object.keys(AAREAS).forEach(a=>{const gs=GROUPS.filter(g=>g.area===a);if(!gs.length)return;const og=document.createElement('optgroup');og.label=AAREAS[a];gs.forEach(g=>{const o=document.createElement('option');o.value=g.id;o.textContent=g.nome;og.appendChild(o);});sel.appendChild(og);});
+  dataEl.value=new Date().toISOString().slice(0,10);
+  const cur=()=>GROUPS.find(g=>g.id===sel.value);
+  function renderFields(){const g=cur();fieldsEl.innerHTML='';if(!g)return;g.fields.forEach(f=>{const w=document.createElement('div');w.className='field';let inner=`<label>${f.l}</label>`;if(f.t==='select'){inner+=`<select data-k="${f.k}"><option value="">—</option>${f.o.map(o=>`<option>${o}</option>`).join('')}</select>`;}else{inner+=`<input data-k="${f.k}" type="${f.t}" ${f.step?`step="${f.step}"`:''} placeholder="0">`;}w.innerHTML=inner;fieldsEl.appendChild(w);});}
+  const areaVar=a=>getComputedStyle(document.documentElement).getPropertyValue('--'+a).trim();
+  const leaf='<svg class="cleaf" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M38 4C18 6 2 16 2 30c0 8 6 14 14 14 14 0 22-18 22-40Z" fill="#fff" opacity="0.95"/><path d="M6 40 30 12" stroke="#2B4899" stroke-width="2" stroke-linecap="round"/></svg>';
+  const fmtDate=s=>{if(!s)return'';const x=s.split('-');return x[2]+'/'+x[1]+'/'+x[0];};
+  function genForm(){
+    const g=cur(); if(!g){alert('Escolha um grupo primeiro.');return;}
+    const v={}; fieldsEl.querySelectorAll('[data-k]').forEach(el=>v[el.dataset.k]=el.value);
+    const out=g.card(v);
+    const loja=lojaEl.value||"Bigg's 13"; const data=fmtDate(dataEl.value); const accent=areaVar(g.area);
+    const tiles=out.kpis.map(k=>`<div class="tile ${k.tone||''}"><div class="tl">${k.l}</div><div class="tv">${k.v}</div></div>`).join('');
+    const st=out.status||{l:'',tone:'neutral'};
+    const insight=out.insight?`<div class="cinsight">💡 ${out.insight}</div>`:'';
+    const obs=obsEl.value.trim();
+    const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+    const obsBlock=obs?`<div class="cobs"><b>📝 Observações</b>${esc(obs)}</div>`:'';
+    hostEl.innerHTML=`<div id="card"><div class="ctop" style="background:${accent}">${leaf}<div><div class="cbrand">GESTÃO RAGGA</div><div style="font-size:13px;font-weight:bold">Suporte 13</div></div><div class="cicon">${g.icon}</div></div><div class="chead"><div class="ctitle">${g.nome}</div><div class="cmeta">${loja}${data?' · '+data:''}</div></div>${out.hero?`<div class="chero" style="background:${accent}"><div class="hl">${out.hero.l}</div><div class="hv">${out.hero.v}</div></div>`:''}<div class="ctiles">${tiles}</div>${st.l?`<div class="cstatus ${st.tone}">●&nbsp; ${st.l}</div>`:''}${insight}${obsBlock}<div class="cfoot"><span>Ragga Gestão &amp; Educação</span><span>📲 Gestão Assistida 13º</span></div></div>`;
+    lastName='gestao_'+g.id; dlrow.style.display='flex';
+    let txt=`📊 *${g.nome.toUpperCase()} — ${loja.toUpperCase()}*`+(data?`\n📅 ${data}`:'')+`\n\n`;
+    if(out.hero)txt+=`💰 *${out.hero.l}:* ${out.hero.v}\n\n`;
+    out.kpis.forEach(k=>{txt+=`• ${k.l}: ${k.v}\n`;});
+    if(st.l)txt+=`\n*${st.l}*`; if(out.insight)txt+=`\n💡 ${out.insight}`; if(obs)txt+=`\n📝 Obs: ${obs}`;
+    txt+=`\n\n— Gestão Ragga · Suporte 13`;
+    copypre.textContent=txt; copytg.style.display='block';
+  }
+  function download(){const card=hostEl.querySelector('#card');if(!card)return;if(typeof html2canvas==='undefined'){alert('Tire um print da imagem — ela já está pronta ao lado.');return;}html2canvas(card,{scale:2,backgroundColor:'#ffffff',useCORS:true}).then(cv=>{const a=document.createElement('a');a.download=lastName+'_'+(dataEl.value||'hoje')+'.png';a.href=cv.toDataURL('image/png');a.click();}).catch(()=>alert('Não foi possível baixar. Tire um print da imagem.'));}
+  function copyText(){const txt=copypre.textContent;const b=root.querySelector('.ag-copybtn');const done=()=>{b.textContent='✓ Copiado';setTimeout(()=>b.textContent='Copiar texto',1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done).catch(()=>fb(txt,done));}else fb(txt,done);function fb(t,cb){const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.top='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);cb();}}
+  function genText(){
+    const title=(ttitle.value||'Relatório').trim(); const body=ttext.value.trim();
+    if(!body){alert('Cole algum texto primeiro.');return;}
+    const loja=lojaEl.value||"Bigg's 13"; const data=fmtDate(dataEl.value); const accent=areaVar('financeiro');
+    hostEl.innerHTML=`<div id="card">${cardTop(accent,'📝')}<div class="chead"><div class="ctitle">${escH(title)}</div><div class="cmeta">${escH(loja)}${data?' · '+data:''}</div></div><div class="ctext">${fmtText(body)}</div>${cardFoot}</div>`;
+    lastName='gestao_texto'; dlrow.style.display='flex';
+    copypre.textContent=`*${title.toUpperCase()}*`+(data?`\n📅 ${data}`:'')+`\n\n${body}\n\n— Gestão Ragga · Suporte 13`; copytg.style.display='block';
+  }
+  function genImage(){
+    const title=(ftitle.value||'Arquivo').trim();
+    if(!state.imgData && !state.txtData){alert('Suba um arquivo primeiro.');return;}
+    const loja=lojaEl.value||"Bigg's 13"; const data=fmtDate(dataEl.value); const accent=areaVar('financeiro');
+    const body=state.imgData?`<div class="cimgwrap"><img src="${state.imgData}"></div>`:`<div class="ctext">${fmtText(state.txtData)}</div>`;
+    hostEl.innerHTML=`<div id="card">${cardTop(accent,'📎')}<div class="chead"><div class="ctitle">${escH(title)}</div><div class="cmeta">${escH(loja)}${data?' · '+data:''}</div></div>${body}${cardFoot}</div>`;
+    lastName='gestao_arquivo'; dlrow.style.display='flex';
+    if(state.txtData){copypre.textContent=`*${title.toUpperCase()}*\n\n${state.txtData}\n\n— Gestão Ragga · Suporte 13`; copytg.style.display='block';} else {copytg.style.display='none';}
+  }
+  fileEl.addEventListener('change',()=>{
+    const f=fileEl.files[0]; state.imgData=null; state.txtData=null;
+    if(!f){fnameEl.textContent='';return;}
+    fnameEl.textContent='📎 '+f.name; if(!ftitle.value)ftitle.value=f.name.replace(/\.[^.]+$/,'');
+    const r=new FileReader();
+    if(f.type.indexOf('image')===0){r.onload=()=>{state.imgData=r.result;};r.readAsDataURL(f);}
+    else{r.onload=()=>{state.txtData=r.result;};r.readAsText(f);}
+  });
+  function run(){ if(state.mode==='form'){genForm();}else if(state.mode==='text'){genText();}else{genImage();} }
+  root.querySelectorAll('.agtab').forEach(t=>t.addEventListener('click',()=>{
+    state.mode=t.dataset.mode;
+    root.querySelectorAll('.agtab').forEach(x=>x.classList.toggle('on',x===t));
+    root.querySelectorAll('.ag-mode').forEach(m=>m.style.display=(m.dataset.mode===state.mode)?'':'none');
+    hostEl.innerHTML='<div class="empty">Preencha e clique em <b>Gerar imagem de gestão</b>.</div>'; dlrow.style.display='none'; copytg.style.display='none';
+  }));
+  sel.addEventListener('change',renderFields);
+  root.querySelector('.ag-gen').addEventListener('click',run);
+  root.querySelector('.ag-dlbtn').addEventListener('click',download);
+  root.querySelector('.ag-copybtn').addEventListener('click',copyText);
+})();
+</script>
+
+</body>
+</html>
